@@ -1,0 +1,138 @@
+
+
+
+/* ------------------------- CONJUNTOS DEPORTIVOS ----------------------------*/
+/* ------------- BANDERAS / IMAGENES DE REFERENCIA ------------*/
+
+/*AC MILAN*/
+
+.contenedorCards .card .wrapper .bg_ac_milan_conjunto {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url();
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/*FC BARCELONA*/
+
+.contenedorCards .card .wrapper .bg_barcelona_conjunto {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url();
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/*AJAX*/
+
+.contenedorCards .card .wrapper .ajax_conjunto {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/barcelona2009.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/*PSG*/
+
+.contenedorCards .card .wrapper .bg_psg_conjunto {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url();
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+
+/*---------------------------------------------------------------*/
+
+
+
+/* -------------- IMAGENES DEL PRODUCTO (CAMISA) ---------------*/
+
+/* AC MILAN */
+.contenedorCards .card .wrapper .imgProd_ac_milan_conjunto {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 345px);
+  width: 100%;
+  height: 275px;
+  transition: ease all 0.3s;
+}
+
+
+
+/*BARCELONA*/
+
+.contenedorCards .card .wrapper .imgProd_barcelona_conjunto {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 345px);
+  width: 100%;
+  height: 275px;
+  transition: ease all 0.3s;
+}
+
+/*AJAX*/
+
+.contenedorCards .card .wrapper .imgProd_ajax_conjunto {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 345px);
+  width: 100%;
+  height: 275px;
+  transition: ease all 0.3s;
+}
+
+
+/*PSG*/
+
+.contenedorCards .card .wrapper .imgProd_psg_conjunto {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 345px);
+  width: 100%;
+  height: 275px;
+  transition: ease all 0.3s;
+}
+
+
+

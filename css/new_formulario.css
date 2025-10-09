@@ -1,0 +1,289 @@
+:root {
+            --primary: #0d6efd;
+            --secondary: #6c757d;
+            --success: #198754;
+            --danger: #dc3545;
+            --warning: #ffc107;
+            --light: #f8f9fa;
+            --dark: #212529;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.8rem;
+        }
+        
+        .form-container {
+            background-color: rgb(255, 255, 255);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .product-image {
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            width: 100%;
+            max-height: 400px;
+            object-fit: contain;
+        }
+        
+        .product-image:hover {
+            transform: scale(1.03);
+        }
+        
+        .price-tag {
+            font-weight: 700;
+            color: var(--success);
+            font-size: 1.5rem;
+        }
+        
+        .btn-whatsapp {
+            background-color: #25D366;
+            border-color: #25D366;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+            border-color: #128C7E;
+            color: white;
+        }
+        
+        .quantity-control {
+            width: 120px;
+        }
+        
+        .sport-badge {
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+        }
+        
+        .cart-notification {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1050;
+            display: none;
+        }
+        
+        .feature-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #fffbfb;
+        }
+        
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-list i {
+            color: var(--success);
+            margin-right: 10px;
+        }
+        
+        .product-info-card {
+            transition: all 0.3s;
+            cursor: pointer;
+            height: 100%;
+        }
+        
+        .product-info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-info-card.selected {
+            border: 3px solid var(--primary);
+        }
+        
+        .product-thumb {
+            width: 100%;
+            height: 250px;
+            object-fit: contain;
+            background: #f8f9fa;  /* gris clarito de fondo */
+            padding: 10px;        /* espacio alrededor si la imagen es más pequeña */
+        }
+        
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+        }
+        
+        .spinner {
+            width: 3rem;
+            height: 3rem;
+        }
+        
+        .size-table-container {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .size-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 0.5rem;
+        }
+        
+        .size-table th, .size-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        
+        .size-table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        
+        .size-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .size-table tr:hover {
+            background-color: #f1f1f1;
+        }
+        
+        .size-guide-toggle {
+            color: var(--primary);
+            cursor: pointer;
+            text-decoration: underline;
+            font-size: 0.9rem;
+        }
+        
+        .cart-item-image {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        
+        .empty-cart {
+            text-align: center;
+            padding: 3rem;
+        }
+        
+        .empty-cart i {
+            font-size: 5rem;
+            color: #ddd;
+            margin-bottom: 1rem;
+        }
+
+      .card-img-top {
+        
+        height: 100%;
+        }
+        
+
+
+
+
+
+
+
+/* Estilos responsivos para el carrito */
+    @media (max-width: 1024px) {
+    .modal-dialog.modal-lg {
+        margin: 10px;
+        max-width: calc(100% - 20px);
+    }
+    
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .cart-item-image {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+    }
+    
+    .modal-footer {
+        flex-direction: column;
+    }
+    
+    .modal-footer .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .cart-notification {
+        position: fixed;
+        top: 70px;
+        left: 10px;
+        right: 10px;
+        z-index: 1050;
+    }
+
+     .modal-dialog.modal-lg {
+        margin: 10px;
+        max-width: calc(100% - 20px);
+    }
+    
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .cart-item-image {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+    }
+    
+    .modal-footer {
+        flex-direction: column;
+    }
+    
+    .modal-footer .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .cart-notification {
+        position: fixed;
+        top: 70px;
+        left: 10px;
+        right: 10px;
+        z-index: 1050;
+    }
+    
+    /* Mejorar visibilidad del botón de WhatsApp */
+    .btn-whatsapp {
+        background-color: #25D366;
+        border-color: #25D366;
+        color: white;
+    }
+}
+        
+
+/*------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+

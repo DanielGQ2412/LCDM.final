@@ -1,0 +1,390 @@
+[
+    {
+        "id" : 1,
+        "equipo" : "Chicago Bulls",
+        "jugador" : "Michael Jordan",
+        "temporada" : "1995-96",
+        "talla" : ["S", "M", "L", "XL"],
+        "precio" : 25000,
+        "imagen" : "Productos/NBA/michael_jordan_camisa_roja_97-98.png",
+        "descripcion" : "Camisa oficial de los Chicago Bulls de Michael Jordan, temporada 1995-96",
+        "disponible" : true
+
+    },
+    {
+        "id" : 2,
+        "equipo" : "Los Angeles Lakers",
+        "jugador" : "Lebron James",
+        "temporada" : "2020-21",
+        "talla" : ["S", "M", "L", "XL"],
+        "precio" : 25000,
+        "imagen" : "Productos/NBA/lebron_james_camisa_amarilla.png",
+        "descripcion" : "Camisa oficial de los Los Angeles Lakers de Lebron James, temporada 2020-21",
+        "disponible" : true
+    }
+    ,
+    {
+        "id" : 3,
+        "equipo" : "Los Angeles Lakers",
+        "jugador" : "Kobe Bryant",
+        "temporada" : "2008-09",
+        "talla" : ["S", "M", "L", "XL"],
+        "precio" : 25000,
+        "imagen" : "Productos/NBA/kobe_bryant_camisa_amarilla_08-09.png",
+        "descripcion" : "Camisa oficial de los Los Angeles Lakers de Kobe Bryant, temporada 2008-09",
+        "disponible" : true
+    }
+    ,
+    {
+        "id" : 4,
+        "equipo" : "Los Angeles Lakers",
+        "jugador" : "Magic Johnson",
+        "temporada" : "1984-85",
+        "talla" : ["S", "M", "L", "XL"],
+        "precio" : 25000,
+        "imagen" : "Productos/NBA/magic_johnson_amarilla_84-85.png",
+        "descripcion" : "Camisa oficial de los Los Angeles Lakers de Magic Johnson, temporada 1984-85",
+        "disponible" : true
+    }
+    ,
+    {
+        "id" : 5,
+        "equipo" : "Boston Celtics",
+        "jugador" : "Larry Bird",
+        "temporada" : "1985-86",
+        "talla" : ["S", "M", "L", "XL"],
+        "precio" : 25000,
+        "imagen" : "Productos/NBA/larry_bird_verde_85-86.png",
+        "descripcion" : "Camisa oficial de los Boston Celtics de Larry Bird, temporada 1985-86",
+        "disponible" : true
+    }
+    ,
+    {
+        "id" : 6,
+        "equipo" : "Los Angeles Lakers",
+        "jugador" : "Kareem Abdul-Jabbar",
+        "temporada" : "1983-84",
+        "talla" : ["S", "M", "L", "XL"],
+        "precio" : 25000,
+        "imagen" : "Productos/NBA/kareem_abdul_jabbar_morada_83-84.png",
+        "descripcion" : "Camisa oficial de los Los Angeles Lakers de Kareem Abdul-Jabbar, temporada 1983-84",
+        "disponible" : true
+    }
+    ,
+    {
+        "id" : 7,
+        "equipo" : "Golden State Warriors",
+        "jugador" : "Stephen Curry",
+        "temporada" : "2025-26",
+        "talla" : ["S", "M", "L", "XL"],
+        "precio" : 25000,
+        "imagen" : "Productos/NBA/stephen_curry_azul_2025.png",
+        "descripcion" : "Camisa oficial de los Golden State Warriors de Stephen Curry, temporada 2025-26",
+        "disponible" : true
+    }
+    ,
+    {
+        "id" : 8,
+        "equipo" : "Los Angeles Lakers",
+        "jugador" : "Shaquille O'Neal",
+        "temporada" : "1999-00",
+        "talla" : ["S", "M", "L", "XL"],
+        "precio" : 25000,
+        "imagen" : "Productos/NBA/shaquille_o_neal_amarilla_99-00.png",
+        "descripcion" : "Camisa oficial de los Los Angeles Lakers de Shaquille O'Neal, temporada 1999-00",
+        "disponible" : true
+    }
+    ,
+    {
+        "id" : 9,
+        "equipo" : "San Antonio Spurs",
+        "jugador" : "Tim Duncan",
+        "temporada" : "1998-99",
+        "talla" : ["S", "M", "L", "XL"],
+        "precio" : 25000,
+        "imagen" : "Productos/NBA/tim_duncan_s.a_spurs_negra_98-99.png",
+        "descripcion" : "Camisa oficial de los San Antonio Spurs de Tim Duncan, temporada 1998-99",
+        "disponible" : true
+    }
+    ,
+    {
+        "id" : 10,
+        "equipo" : "Houston Rockets",
+        "jugador" : "Hakeem Olajuwon",
+        "temporada" : "1993-94",
+        "talla" : ["S", "M", "L", "XL"],
+        "precio" : 25000,
+        "imagen" : "Productos/NBA/hakeem_olajuwon_houston_rockets_roja_93-94.png",
+        "descripcion" : "Camisa oficial de los Houston Rockets de Hakeem Olajuwon, temporada 1993-94",
+        "disponible" : true
+    }
+    ,
+    {
+        "id" : 11,
+        "equipo" : "Phoenix Suns",
+        "jugador" : "Kevin Durant",
+        "temporada" : "2024-25",
+        "talla" : ["S", "M", "L", "XL"],
+        "precio" : 25000,
+        "imagen" : "Productos/NBA/kevin_durant_phoenix_suns_morada_24-25.png",
+        "descripcion" : "Camisa oficial de los Phoenix Suns de Kevin Durant, temporada 2024-25",
+        "disponible" : true
+    }
+    ,
+    {
+        "id" : 12,
+        "equipo" : "Dallas Mavericks",
+        "jugador" : "Dirk Nowitzki",
+        "temporada" : "1998-99",
+        "talla" : ["S", "M", "L", "XL"],
+        "precio" : 25000,
+        "imagen" : "Productos/NBA/dirk_nowitzki_dallas_maverick_azul_98-99.png",
+        "descripcion" : "Camisa oficial de los Dallas Mavericks de Dirk Nowitzki, temporada 1998-99",
+        "disponible" : true
+    }
+    ,
+    {
+        "id" : 13,
+        "equipo" : "Miami Heat",
+        "jugador" : "Dwyane Wade",
+        "temporada" : "2005-06",
+        "talla" : ["S", "M", "L", "XL"],
+        "precio" : 25000,
+        "imagen" : "Productos/NBA/dwyane_wade_miami_heat_blanca_05-06.png",
+        "descripcion" : "Camisa oficial de los Miami Heat de Dwyane Wade, temporada 2005-06",
+        "disponible" : true
+    }
+    ,
+    {
+        "id" : 14,
+        "equipo" : "Milwaukee Bucks",
+        "jugador" : "Giannis Antetokounmpo",
+        "temporada" : "2024-25",
+        "talla" : ["S", "M", "L", "XL"],
+        "precio" : 25000,
+        "imagen" : "Productos/NBA/giannis_antetokounmpo_milwaukee_bucks_azul_24-25.png",
+        "descripcion" : "Camisa oficial de los Milwaukee Bucks de Giannis Antetokounmpo, temporada 2024-25",
+        "disponible" : true
+    }
+    ,
+    {
+        "id" : 15,
+        "equipo" : "Denver Nuggets",
+        "jugador" : "Nikola Jokic",
+        "temporada" : "2019-20",
+        "talla" : ["S", "M", "L", "XL"],
+        "precio" : 25000,
+        "imagen" : "Productos/NBA/nikola_jokic_denver_nuggets_azulOscuro_19-20.png",
+        "descripcion" : "Camisa oficial de los Denver Nuggets de Nikola Jokic, temporada 2019-20",
+        "disponible" : true
+    }
+    ,
+    {
+        "id" : 16,
+        "equipo" : "Philadelphia 76ers",
+        "jugador" : "Allen Iverson",
+        "temporada" : "2000-01",
+        "talla" : ["S", "M", "L", "XL"],
+        "precio" : 25000,
+        "imagen" : "Productos/NBA/allen_iverson_philadelphia_76ers_negra_00-01.png",
+        "descripcion" : "Camisa oficial de los Philadelphia 76ers de Allen Iverson, temporada 2000-01",
+        "disponible" : true
+    }
+    ,
+    {
+        "id" : 17,
+        "equipo" : "Chicago Bulls",
+        "jugador" : "DeMar DeRozan",
+        "temporada" : "2023-24",
+        "talla" : ["S", "M", "L", "XL"],
+        "precio" : 25000,
+        "imagen" : "Productos/NBA/demar_derozan_bulls_negra_23-24.png",
+        "descripcion" : "Camisa oficial de los Chicago Bulls de DeMar DeRozan, temporada 2023-24",
+        "disponible" : true
+    }
+    ,
+    {
+        "id" : 18,
+        "equipo" : "Chicago Bulls",
+        "jugador" : "Scottie Pippen",
+        "temporada" : "1997-98",
+        "talla" : ["S", "M", "L", "XL"],
+        "precio" : 25000,
+        "imagen" : "Productos/NBA/scottie_pippen_bulls_blanca_97-98.png",
+        "descripcion" : "Camisa oficial de los Chicago Bulls de Scottie Pippen, temporada 1997-98",
+        "disponible" : true
+    }
+    ,
+    {
+        "id" : 19,
+        "equipo" : "Chicago Bulls",
+        "jugador" : "Dennis Rodman",
+        "temporada" : "1997-98",
+        "talla" : ["S", "M", "L", "XL"],
+        "precio" : 25000,
+        "imagen" : "Productos/NBA/dennis_rodman_bulls_negra_97-98.png",
+        "descripcion" : "Camisa oficial de los Chicago Bulls de Dennis Rodman, temporada 1997-98",
+        "disponible" : true
+    }
+
+    ,
+    {
+        "id" : 20,
+        "equipo" : "Los Angeles Clippers",
+        "jugador" : "Kawhi Leonard",
+        "temporada" : "2024-25",
+        "talla" : ["S", "M", "L", "XL"],
+        "precio" : 25000,
+        "imagen" : "Productos/NBA/kawhi_leonard_clippers_24-25.png",
+        "descripcion" : "Camisa oficial de los Los Angeles Clippers de Kawhi Leonard, temporada 2024-25",
+        "disponible" : true
+    }
+    ,
+    {
+        "id" : 21,
+        "equipo" : "Dallas Mavericks",
+        "jugador" : "Jason Kidd",
+        "temporada" : "1994-95",
+        "talla" : ["S", "M", "L", "XL"],
+        "precio" : 25000,
+        "imagen" : "Productos/NBA/jason_kidd_dallas_maverick_azul_94-95.png",
+        "descripcion" : "Camisa oficial de los Dallas Mavericks de Jason Kidd, temporada 1994-95",
+        "disponible" : true
+    }
+    ,
+    {
+        "id" : 22,
+        "equipo" : "Phoenix Suns",
+        "jugador" : "Steve Nash",
+        "temporada" : "1996-97",
+        "talla" : ["S", "M", "L", "XL"],
+        "precio" : 25000,
+        "imagen" : "Productos/NBA/steve_nash_phoenix_suns_morada_96-97.png",
+        "descripcion" : "Camisa oficial de los Phoenix Suns de Steve Nash, temporada 1996-97",
+        "disponible" : true
+    }
+    ,
+    {
+        "id" : 23,
+        "equipo" : "Toronto Raptors",
+        "jugador" : "Vince Carter",
+        "temporada" : "1997-98",
+        "talla" : ["S", "M", "L", "XL"],
+        "precio" : 25000,
+        "imagen" : "Productos/NBA/vince_carter_raptors_morada_98-97.png",
+        "descripcion" : "Camisa oficial de los Toronto Raptors de Vince Carter, temporada 1997-98",
+        "disponible" : true
+    }
+    
+    ,
+    {
+        "id" : 24,
+        "equipo" : "Toronto Raptors",
+        "jugador" : "Tracy McGrady",
+        "temporada" : "1998-99",
+        "talla" : ["S", "M", "L", "XL"],
+        "precio" : 25000,
+        "imagen" : "Productos/NBA/tracy_mcgrady_raptors_blanca_98-99.png",
+        "descripcion" : "Camisa oficial de los Toronto Raptors de Tracy McGrady, temporada 1998-99",
+        "disponible" : true
+    }
+    ,
+    {
+        "id" : 25,
+        "equipo" : "Houston Rockets",
+        "jugador" : "Reed Sheppard",
+        "temporada" : "2023-24",
+        "talla" : ["S", "M", "L", "XL"],
+        "precio" : 25000,
+        "imagen" : "Productos/NBA/reed_sheppard_houston_rockets_roja_2024.png",
+        "descripcion" : "Camisa oficial de los Houston Rockets de Reed Sheppard, temporada 2023-24",
+        "disponible" : true
+    }
+    ,
+    {
+        "id" : 26,
+        "equipo" : "Boston Celtics",
+        "jugador" : "Paul Pierce",
+        "temporada" : "2008-09",
+        "talla" : ["S", "M", "L", "XL"],
+        "precio" : 25000,
+        "imagen" : "Productos/NBA/paul_pierce_boston_celtics_verde_08-09.png",
+        "descripcion" : "Camisa oficial de los Boston Celtics de Paul Pierce, temporada 2008-09",
+        "disponible" : true
+    }
+    ,
+    {
+        "id" : 27,
+        "equipo" : "Minnesota Timberwolves",
+        "jugador" : "Kevin Garnett",
+        "temporada" : "1997-98",
+        "talla" : ["S", "M", "L", "XL"],
+        "precio" : 25000,
+        "imagen" : "Productos/NBA/kevin_garnett_timberwolves_negra_97-98.png",
+        "descripcion" : "Camisa oficial de los Minnesota Timberwolves de Kevin Garnett, temporada 1997-98",
+        "disponible" : true
+    }
+    ,
+    {
+        "id" : 28,
+        "equipo" : "Utah Jazz",
+        "jugador" : "Karl Malone",
+        "temporada" : "1996-97",
+        "talla" : ["S", "M", "L", "XL"],
+        "precio" : 25000,
+        "imagen" : "Productos/NBA/karl_malone_utah_jazz_morada_96-97.png",
+        "descripcion" : "Camisa oficial de los Utah Jazz de Karl Malone, temporada 1996-97",
+        "disponible" : true
+    }
+    ,
+    {
+        "id" : 29,
+        "equipo" : "San Antonio Spurs",
+        "jugador" : "David Robinson",
+        "temporada" : "1998-99",
+        "talla" : ["S", "M", "L", "XL"],
+        "precio" : 25000,
+        "imagen" : "Productos/NBA/david_robinson_san_antonio_spurs_negra_98-99.png",
+        "descripcion" : "Camisa oficial de los San Antonio Spurs de David Robinson, temporada 1998-99",
+        "disponible" : true
+    }
+    ,
+    {
+        "id" : 30,
+        "equipo" : "Los Angeles Lakers",
+        "jugador" : "Luka Doncic",
+        "temporada" : "2025-26",
+        "talla" : ["S", "M", "L", "XL"],
+        "precio" : 25000,
+        "imagen" : "Productos/NBA/luka_doncic_lakers_amarilla_25-26.png",
+        "descripcion" : "Camisa oficial de los Los Angeles Lakers de Luka Doncic, temporada 2025-26",
+        "disponible" : true
+    }
+    ,
+    {
+        "id" : 31,
+        "equipo" : "New York Knicks",
+        "jugador" : "Patrick Ewing",
+        "temporada" : "1991-92",
+        "talla" : ["S", "M", "L", "XL"],
+        "precio" : 25000,
+        "imagen" : "Productos/NBA/patrick_ewing_ny_kicks_azul_91-92.png",
+        "descripcion" : "Camisa oficial de los New York Knicks de Patrick Ewing, temporada 1991-92",
+        "disponible" : true
+    }
+    ,
+    {
+        "id" : 32,
+        "equipo" : "Los Angeles Lakers",
+        "jugador" : "Lamar Odom",
+        "temporada" : "2009-10",
+        "talla" : ["S", "M", "L", "XL"],
+        "precio" : 25000,
+        "imagen" : "Productos/NBA/lamar_odom_lakers_amarilla_09-10.png",
+        "descripcion" : "Camisa oficial de los Los Angeles Lakers de Lamar Odom, temporada 2009-10",
+        "disponible" : true
+    }
+    
+
+
+]

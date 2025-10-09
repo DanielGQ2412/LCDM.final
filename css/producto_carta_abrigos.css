@@ -1,0 +1,151 @@
+
+
+
+/* ------------------------- ABRIGOS ----------------------------*/
+/* ------------- BANDERAS / IMAGENES DE REFERENCIA ------------*/
+
+/*ARSENAL*/
+
+.contenedorCards .card .wrapper .bg_arsenal_abrigo {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url();
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/*FC BARCELONA*/
+
+.contenedorCards .card .wrapper .bg_barcelona_abrigo {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url();
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/*LIVERPOOL*/
+
+.contenedorCards .card .wrapper .liverpool_abrigo {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/barcelona2009.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/*PSG*/
+
+.contenedorCards .card .wrapper .bg_psg_abrigo {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url();
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+
+/*---------------------------------------------------------------*/
+
+
+
+/* -------------- IMAGENES DEL PRODUCTO (ABRIGOS) ---------------*/
+
+/* ARSENAL */
+.contenedorCards .card .wrapper .imgProd_arsenal_abrigo {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 345px);
+  width: 100%;
+  height: 300px;
+  transition: ease all 0.3s;
+}
+
+
+
+/*BARCELONA*/
+
+.contenedorCards .card .wrapper .imgProd_barcelona_abrigo {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 345px);
+  width: 100%;
+  height: 300px;
+  transition: ease all 0.3s;
+}
+
+/*LIVERPOOL*/
+
+.contenedorCards .card .wrapper .imgProd_liverpool_abrigo {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 345px);
+  width: 100%;
+  height: 300px;
+  transition: ease all 0.3s;
+}
+
+
+/*PSG*/
+
+.contenedorCards .card .wrapper .imgProd_psg_abrigo {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 345px);
+  width: 100%;
+  height: 300px;
+  transition: ease all 0.3s;
+}
+
+
+
+
+/*MOVIL & TABLETA*/
+
+@media (max-width: 1024px) {
+  .contenedorCards .card .wrapper .imgProd_arsenal_abrigo,
+  .contenedorCards .card .wrapper .imgProd_barcelona_abrigo,
+  .contenedorCards .card .wrapper .imgProd_liverpool_abrigo,
+  .contenedorCards .card .wrapper .imgProd_psg_abrigo {
+    height: 300px;
+    bottom: calc(100% - 300px);
+  }
+}
+

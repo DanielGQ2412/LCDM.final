@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - Las Chemas del Mapa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0d6efd;
+            --secondary: #6c757d;
+            --success: #198754;
+            --danger: #dc3545;
+            --warning: #ffc107;
+            --light: #f8f9fa;
+            --dark: #212529;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.8rem;
+        }
+        
+        .cart-container {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .cart-item {
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .cart-item:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .cart-item-image {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        
+        .quantity-control {
+            width: 120px;
+        }
+        
+        .price-tag {
+            font-weight: 700;
+            color: var(--success);
+            font-size: 1.2rem;
+        }
+        
+        .btn-whatsapp {
+            background-color: #25D366;
+            border-color: #25D366;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+            border-color: #128C7E;
+            color: white;
+        }
+        
+        .empty-cart {
+            text-align: center;
+            padding: 3rem;
+            color: #6c757d;
+        }
+        
+        .empty-cart i {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: #dee2e6;
+        }
+        
+        .summary-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-left: 4px solid var(--primary);
+        }
+        
+        .item-total {
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .delete-btn {
+            color: var(--danger);
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+        
+        .delete-btn:hover {
+            color: #b02a37;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- ============================================
+    SECCIÓN 1: BARRA DE NAVEGACIÓN
+    ============================================= -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fa-solid fa-shirt"></i> Las Chemas del Mapa
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nba.html">NBA</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nfl.html">NFL</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mlb.html">MLB</a></li>
+                    <li class="nav-item"><a class="nav-link" href="formula1.html">Fórmula 1</a></li>
+                </ul>
+                
+                <div class="d-flex">
+                    <button class="btn btn-outline-light position-relative">
+                        <i class="fa-solid fa-cart-shopping"></i> Carrito
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cartCount">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================
+    SECCIÓN 2: CONTENIDO PRINCIPAL DEL CARRITO
+    ============================================= -->
+    <div class="container mb-5">
+        <div class="row">
+            <!-- Columna principal: Lista de productos en el carrito -->
+            <div class="col-lg-8">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h1 class="mb-0"><i class="fa-solid fa-cart-shopping"></i> Tu Carrito de Compras</h1>
+                    <span class="badge bg-primary fs-6" id="itemsCount">0 productos</span>
+                </div>
+                
+                <!-- Contenedor del carrito - Se llena dinámicamente -->
+                <div class="cart-container">
+                    <div id="cartItemsContainer">
+                        <!-- Los productos del carrito se cargarán aquí dinámicamente -->
+                        <div class="empty-cart" id="emptyCartMessage">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <h3>Tu carrito está vacío</h3>
+                            <p class="lead">Agrega algunos productos increíbles para comenzar</p>
+                            <a href="nba.html" class="btn btn-primary btn-lg">
+                                <i class="fa-solid fa-shirt"></i> Explorar Productos
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Columna lateral: Resumen del pedido -->
+            <div class="col-lg-4">
+                <div class="cart-container summary-card">
+                    <h4 class="mb-4"><i class="fa-solid fa-receipt"></i> Resumen del Pedido</h4>
+                    
+                    <!-- Detalles del resumen -->
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between">
+                            <span>Subtotal:</span>
+                            <span id="subtotal">₡0</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <span>Envío:</span>
+                            <span id="shipping">₡0</span>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between fw-bold fs-5">
+                            <span>Total:</span>
+                            <span id="total">₡0</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Información de envío -->
+                    <div class="alert alert-info">
+                        <small>
+                            <i class="fa-solid fa-truck"></i> 
+                            <strong>Envío gratuito</strong> en compras superiores a ₡30,000
+                        </small>
+                    </div>
+                    
+                    <!-- Botones de acción -->
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-whatsapp btn-lg" id="checkoutBtn" disabled>
+                            <i class="fa-brands fa-whatsapp"></i> Completar Pedido por WhatsApp
+                        </button>
+                        <a href="nba.html" class="btn btn-outline-primary">
+                            <i class="fa-solid fa-plus"></i> Seguir Comprando
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Información de seguridad -->
+                <div class="cart-container mt-3">
+                    <h6><i class="fa-solid fa-shield-alt"></i> Compra Segura</h6>
+                    <small class="text-muted">
+                        Tu pedido se gestiona directamente con el vendedor por WhatsApp. 
+                        Pago contra entrega o transferencia bancaria.
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // ============================================
+        // FUNCIÓN PRINCIPAL: CUANDO EL DOCUMENTO ESTÁ LISTO
+        // ============================================
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log("Página del carrito cargada");
+            
+            // Cargar los productos del carrito
+            loadCartItems();
+            
+            // Configurar el botón de checkout
+            document.getElementById('checkoutBtn').addEventListener('click', function() {
+                checkoutCart();
+            });
+        });
+
+        // ============================================
+        // FUNCIÓN: CARGAR PRODUCTOS DEL CARRITO
+        // Obtiene los productos del localStorage y los muestra
+        // ============================================
+        function loadCartItems() {
+            // Obtener el carrito del localStorage
+            const cart = JSON.parse(localStorage.getItem('lasChemasCart')) || [];
+            const cartContainer = document.getElementById('cartItemsContainer');
+            const emptyCartMessage = document.getElementById('emptyCartMessage');
+            
+            // Mostrar mensaje si el carrito está vacío
+            if (cart.length === 0) {
+                emptyCartMessage.style.display = 'block';
+                document.getElementById('checkoutBtn').disabled = true;
+                updateCartSummary(cart);
+                updateCartCount();
+                return;
+            }
+            
+            // Ocultar mensaje de carrito vacío
+            emptyCartMessage.style.display = 'none';
+            document.getElementById('checkoutBtn').disabled = false;
+            
+            // Limpiar el contenedor
+            cartContainer.innerHTML = '';
+            
+            // Crear HTML para cada producto en el carrito
+            cart.forEach((item, index) => {
+                const itemTotal = item.price * item.quantity;
+                const cartItemHTML = `
+                    <div class="cart-item" data-index="${index}">
+                        <div class="row align-items-center">
+                            <!-- Columna de la imagen -->
+                            <div class="col-md-2">
+                                <img src="${item.image}" class="cart-item-image" alt="${item.name}">
+                            </div>
+                            
+                            <!-- Columna de información del producto -->
+                            <div class="col-md-4">
+                                <h6 class="mb-1">${item.name}</h6>
+                                <small class="text-muted">Talla: ${item.size}</small><br>
+                                <small class="text-muted">Deporte: ${item.sport || 'NBA'}</small>
+                            </div>
+                            
+                            <!-- Columna de cantidad -->
+                            <div class="col-md-3">
+                                <div class="d-flex align-items-center">
+                                    <label class="me-2">Cantidad:</label>
+                                    <div class="input-group quantity-control">
+                                        <button class="btn btn-outline-secondary btn-sm" type="button" onclick="decreaseQuantity(${index})">-</button>
+                                        <input type="number" class="form-control text-center" value="${item.quantity}" min="1" max="10" onchange="updateItemQuantity(${index}, this.value)">
+                                        <button class="btn btn-outline-secondary btn-sm" type="button" onclick="increaseQuantity(${index})">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Columna de precio y acciones -->
+                            <div class="col-md-3 text-end">
+                                <div class="item-total mb-2">₡${itemTotal.toLocaleString('es-CR')}</div>
+                                <div class="text-muted small">₡${item.price.toLocaleString('es-CR')} c/u</div>
+                                <button class="delete-btn" onclick="removeFromCart(${index})" title="Eliminar producto">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                cartContainer.innerHTML += cartItemHTML;
+            });
+            
+            // Actualizar resumen y contador
+            updateCartSummary(cart);
+            updateCartCount();
+        }
+
+        // ============================================
+        // FUNCIÓN: ACTUALIZAR CANTIDAD DE UN PRODUCTO
+        // Modifica la cantidad de un item específico
+        // ============================================
+        function updateItemQuantity(index, newQuantity) {
+            const cart = JSON.parse(localStorage.getItem('lasChemasCart')) || [];
+            
+            // Validar la cantidad
+            newQuantity = parseInt(newQuantity);
+            if (newQuantity < 1) newQuantity = 1;
+            if (newQuantity > 10) newQuantity = 10;
+            
+            // Actualizar la cantidad
+            if (cart[index]) {
+                cart[index].quantity = newQuantity;
+                localStorage.setItem('lasChemasCart', JSON.stringify(cart));
+                loadCartItems(); // Recargar la vista
+            }
+        }
+
+        // ============================================
+        // FUNCIÓN: DISMINUIR CANTIDAD
+        // Reduce la cantidad de un producto en 1
+        // ============================================
+        function decreaseQuantity(index) {
+            const cart = JSON.parse(localStorage.getItem('lasChemasCart')) || [];
+            
+            if (cart[index] && cart[index].quantity > 1) {
+                cart[index].quantity--;
+                localStorage.setItem('lasChemasCart', JSON.stringify(cart));
+                loadCartItems(); // Recargar la vista
+            }
+        }
+
+        // ============================================
+        // FUNCIÓN: AUMENTAR CANTIDAD
+        // Aumenta la cantidad de un producto en 1
+        // ============================================
+        function increaseQuantity(index) {
+            const cart = JSON.parse(localStorage.getItem('lasChemasCart')) || [];
+            
+            if (cart[index] && cart[index].quantity < 10) {
+                cart[index].quantity++;
+                localStorage.setItem('lasChemasCart', JSON.stringify(cart));
+                loadCartItems(); // Recargar la vista
+            }
+        }
+
+        // ============================================
+        // FUNCIÓN: ELIMINAR PRODUCTO DEL CARRITO
+        // Remueve completamente un producto del carrito
+        // ============================================
+        function removeFromCart(index) {
+            if (confirm('¿Estás seguro de que quieres eliminar este producto del carrito?')) {
+                const cart = JSON.parse(localStorage.getItem('lasChemasCart')) || [];
+                
+                // Eliminar el producto en la posición index
+                cart.splice(index, 1);
+                localStorage.setItem('lasChemasCart', JSON.stringify(cart));
+                
+                // Recargar la vista del carrito
+                loadCartItems();
+                
+                // Mostrar mensaje de confirmación
+                showNotification('Producto eliminado del carrito', 'success');
+            }
+        }
+
+        // ============================================
+        // FUNCIÓN: VACIAR CARRITO COMPLETAMENTE
+        // Elimina todos los productos del carrito
+        // ============================================
+        function clearCart() {
+            if (confirm('¿Estás seguro de que quieres vaciar completamente el carrito?')) {
+                localStorage.removeItem('lasChemasCart');
+                loadCartItems();
+                showNotification('Carrito vaciado', 'info');
+            }
+        }
+
+        // ============================================
+        // FUNCIÓN: ACTUALIZAR RESUMEN DEL CARRITO
+        // Calcula y muestra los totales
+        // ============================================
+        function updateCartSummary(cart) {
+            // Calcular subtotal
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            
+            // Calcular envío (gratis para compras mayores a ₡30,000)
+            const shipping = subtotal > 30000 ? 0 : 2000;
+            
+            // Calcular total
+            const total = subtotal + shipping;
+            
+            // Actualizar la interfaz
+            document.getElementById('subtotal').textContent = `₡${subtotal.toLocaleString('es-CR')}`;
+            document.getElementById('shipping').textContent = shipping === 0 ? 'Gratis' : `₡${shipping.toLocaleString('es-CR')}`;
+            document.getElementById('total').textContent = `₡${total.toLocaleString('es-CR')}`;
+            document.getElementById('itemsCount').textContent = `${cart.length} producto${cart.length !== 1 ? 's' : ''}`;
+            
+            // Actualizar información de envío gratuito
+            const shippingInfo = document.querySelector('.alert-info');
+            if (subtotal > 30000) {
+                shippingInfo.innerHTML = '<small><i class="fa-solid fa-check"></i> <strong>¡Felicidades!</strong> Tienes envío gratuito</small>';
+                shippingInfo.className = 'alert alert-success';
+            } else {
+                const remaining = 30000 - subtotal;
+                shippingInfo.innerHTML = `<small><i class="fa-solid fa-truck"></i> <strong>Envío gratuito</strong> te faltan ₡${remaining.toLocaleString('es-CR')}</small>`;
+                shippingInfo.className = 'alert alert-info';
+            }
+        }
+
+        // ============================================
+        // FUNCIÓN: ACTUALIZAR CONTADOR DEL CARRITO
+        // Muestra la cantidad total de items en el navbar
+        // ============================================
+        function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem('lasChemasCart')) || [];
+            const totalCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+            document.getElementById('cartCount').textContent = totalCount;
+        }
+
+        // ============================================
+        // FUNCIÓN: FINALIZAR COMPRA
+        // Abre WhatsApp con el resumen completo del pedido
+        // ============================================
+        function checkoutCart() {
+            const cart = JSON.parse(localStorage.getItem('lasChemasCart')) || [];
+            
+            if (cart.length === 0) {
+                alert('Tu carrito está vacío');
+                return;
+            }
+            
+            // Crear mensaje detallado para WhatsApp
+            let message = "¡Hola! Quiero realizar el siguiente pedido:%0A%0A";
+            message += "📦 *RESUMEN DE MI PEDIDO*%0A%0A";
+            
+            // Agregar cada producto al mensaje
+            cart.forEach((item, index) => {
+                message += `*Producto ${index + 1}:*%0A`;
+                message += `🏀 ${item.name}%0A`;
+                message += `📏 Talla: ${item.size}%0A`;
+                message += `🔢 Cantidad: ${item.quantity}%0A`;
+                message += `💵 Precio: ₡${(item.price * item.quantity).toLocaleString('es-CR')}%0A%0A`;
+            });
+            
+            // Calcular totales
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const shipping = subtotal > 30000 ? 0 : 2000;
+            const total = subtotal + shipping;
+            
+            // Agregar resumen financiero
+            message += "*--- RESUMEN FINANCIERO ---*%0A";
+            message += `Subtotal: ₡${subtotal.toLocaleString('es-CR')}%0A`;
+            message += `Envío: ${shipping === 0 ? 'GRATIS' : '₡' + shipping.toLocaleString('es-CR')}%0A`;
+            message += `*TOTAL: ₡${total.toLocaleString('es-CR')}*%0A%0A`;
+            
+            message += "Por favor confirmar disponibilidad y coordinar envío/pago.%0A";
+            message += "¡Gracias! 🏀";
+            
+            // Abrir WhatsApp
+            window.open('https://wa.me/50612345678?text=' + message, '_blank');
+        }
+
+        // ============================================
+        // FUNCIÓN: MOSTRAR NOTIFICACIÓN
+        // Muestra mensajes temporales al usuario
+        // ============================================
+        function showNotification(message, type = 'info') {
+            // Crear elemento de notificación
+            const notification = document.createElement('div');
+            notification.className = `alert alert-${type} alert-dismissible fade show`;
+            notification.style.position = 'fixed';
+            notification.style.top = '20px';
+            notification.style.right = '20px';
+            notification.style.zIndex = '1060';
+            notification.style.minWidth = '300px';
+            notification.innerHTML = `
+                ${message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            `;
+            
+            // Agregar al documento
+            document.body.appendChild(notification);
+            
+            // Eliminar después de 3 segundos
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.parentNode.removeChild(notification);
+                }
+            }, 3000);
+        }
+
+        // ============================================
+        // INICIALIZACIÓN: ACTUALIZAR CONTADOR AL CARGAR
+        // ============================================
+        updateCartCount();
+    </script>
+</body>
+</html>

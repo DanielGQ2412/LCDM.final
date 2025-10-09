@@ -1,0 +1,503 @@
+/* ------------------------- CAMISAS NBA  ----------------------------*/
+/* ------------- BANDERAS / IMAGENES DE REFERENCIA ------------*/
+
+/*BANDERA KOBE BRYANT*/
+
+.contenedorCards .card .wrapper .bg_kobe {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/kobe_bryant.jpg) !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/*MICHAEL JORDAN 97-98*/
+
+.contenedorCards .card .wrapper .bg_michael_jordan {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/michael_jordan.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/*BANDERA LEBRON JAMES*/
+
+.contenedorCards .card .wrapper .bg_lebron_james {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/lebron_james.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/*BANDERA LARRY BIRD*/
+
+.contenedorCards .card .wrapper .bg_larry_bird {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/larry-bird.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/*BANDERA KAREEM ABDUL-JABBAR*/
+
+.contenedorCards .card .wrapper .bg_kareem {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/kareem.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/*BANDERA MAGIC JOHNSON*/
+
+.contenedorCards .card .wrapper .bg_magic_johnson {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/magic_johnson.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/*BANDERA STEPHEN CURRY*/
+
+.contenedorCards .card .wrapper .bg_stephen_curry {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/stephen_curry.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/*BANDERA SHAQUILLE O'NEAL*/
+
+.contenedorCards .card .wrapper .bg_shaquille {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/shaquille.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/*ELIMINA FONDO OBLIGATORIO*/
+/* .contenedorCards .card .wrapper .bg_bandera_francia,
+.contenedorCards .card .wrapper .bg_bandera_inglaterra {
+  background-image: none !important;
+} */
+
+/*---------------------------------------------------------------*/
+
+
+
+/* -------------- IMAGENES DEL PRODUCTO (CAMISA) ---------------*/
+
+/*KOBE BRYANT 08-09*/
+.contenedorCards .card .wrapper .imgProd_kobe {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 320px);
+  width: 100%;
+  height: 240px;
+  transition: ease all 0.3s;
+}
+
+
+
+/*MICHAEL JORDAN 97-98*/
+
+.contenedorCards .card .wrapper .imgProd_michael_jordan {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 320px);
+  width: 100%;
+  height: 240px;
+  transition: ease all 0.3s;
+}
+
+/*LEBRON JAMES*/
+
+.contenedorCards .card .wrapper .imgProd_lebron_james {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 320px);
+  width: 100%;
+  height: 240px;
+  transition: ease all 0.3s;
+}
+
+
+/*LARRY BIRD*/
+
+.contenedorCards .card .wrapper .imgProd_larry_bird {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 320px);
+  width: 100%;
+  height: 240px;
+  transition: ease all 0.3s;
+}
+
+
+
+/*KAREEM ABDUL-JABBAR*/
+
+.contenedorCards .card .wrapper .imgProd_kareem {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 320px)!important;
+  width: 100%;
+  height: 240px!important;
+  transition: ease all 0.3s;
+}
+
+
+/*MAGIC JOHNSON*/
+
+.contenedorCards .card .wrapper .imgProd_magic_johnson {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 320px)!important;
+  width: 100%;
+  height: 240px!important;
+  transition: ease all 0.3s;
+}
+
+/*STEPHEN CURRY*/
+
+.contenedorCards .card .wrapper .imgProd_stephen_curry {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 320px)!important;
+  width: 100%;
+  height: 240px!important;
+  transition: ease all 0.3s;
+}
+
+/*SHAQUILLE O'NEAL*/
+
+.contenedorCards .card .wrapper .imgProd_shaquille {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 320px)!important;
+  width: 100%;
+  height: 240px!important;
+  transition: ease all 0.3s;
+}
+
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+
+/*--------------------    RESTO DE EQUIPOS     ------------------*/
+
+/* SAN ANTONIO SPURS */
+
+.contenedorCards .card .wrapper .imgProd_s_a_spurs {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 320px)!important;
+  width: 100%;
+  height: 240px!important;
+  transition: ease all 0.3s;
+}
+
+/*---------------------------------------------------------------*/
+
+/* HOUSTON ROCKETS */
+
+.contenedorCards .card .wrapper .imgProd_houston_rockets {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 320px)!important;
+  width: 100%;
+  height: 240px!important;
+  transition: ease all 0.3s;
+}
+
+/*---------------------------------------------------------------*/
+
+/* PHOENIX SUNS */
+
+.contenedorCards .card .wrapper .imgProd_phoenix_suns {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 320px)!important;
+  width: 100%;
+  height: 240px!important;
+  transition: ease all 0.3s;
+}
+
+/*---------------------------------------------------------------*/
+
+/* DALLAS MAVERICKS */
+
+.contenedorCards .card .wrapper .imgProd_dallas_mavericks {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 320px)!important;
+  width: 100%;
+  height: 240px!important;
+  transition: ease all 0.3s;
+}
+
+/*---------------------------------------------------------------*/
+
+/* MIAMI HEAT */
+
+.contenedorCards .card .wrapper .imgProd_miami_heat {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 320px)!important;
+  width: 100%;
+  height: 240px!important;
+  transition: ease all 0.3s;
+}
+
+/*---------------------------------------------------------------*/
+
+/* MILWAUKEE BUCKS */
+
+.contenedorCards .card .wrapper .imgProd_milwaukee_bucks {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 320px)!important;
+  width: 100%;
+  height: 240px!important;
+  transition: ease all 0.3s;
+}
+
+/*---------------------------------------------------------------*/
+
+/* DENVER NUGGETS */
+
+.contenedorCards .card .wrapper .imgProd_denver_nuggets {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 320px)!important;
+  width: 100%;
+  height: 240px!important;
+  transition: ease all 0.3s;
+}
+
+/*---------------------------------------------------------------*/
+
+/* PHILADELPHIA 76ERS */
+
+.contenedorCards .card .wrapper .imgProd_philadelphia_76ers {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 320px)!important;
+  width: 100%;
+  height: 240px!important;
+  transition: ease all 0.3s;
+}
+
+/*---------------------------------------------------------------*/
+
+/*CHICAGO BULLS*/
+
+.contenedorCards .card .wrapper .imgProd_chicago_bulls {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 320px)!important;
+  width: 100%;
+  height: 240px!important;
+  transition: ease all 0.3s;
+}
+
+/*---------------------------------------------------------------*/
+
+/*CLIPPERS*/
+
+.contenedorCards .card .wrapper .imgProd_clippers {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 320px)!important;
+  width: 100%;
+  height: 240px!important;
+  transition: ease all 0.3s;
+}
+
+/*---------------------------------------------------------------*/
+
+/*TORONTO RAPTORS*/
+
+.contenedorCards .card .wrapper .imgProd_toronto_raptors {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 320px)!important;
+  width: 100%;
+  height: 240px!important;
+  transition: ease all 0.3s;
+}
+
+/*---------------------------------------------------------------*/
+
+/*BOSTON CELTICS*/
+
+.contenedorCards .card .wrapper .imgProd_boston_celtics {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 320px)!important;
+  width: 100%;
+  height: 240px!important;
+  transition: ease all 0.3s;
+}
+
+
+/*TIMBERWOLVES*/
+
+.contenedorCards .card .wrapper .imgProd_timberwolves {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 320px)!important;
+  width: 100%;
+  height: 240px!important;
+  transition: ease all 0.3s;
+}
+
+/*---------------------------------------------------------------*/
+
+/*UTAH JAZZ*/
+
+.contenedorCards .card .wrapper .imgProd_utah_jazz {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 320px)!important;
+  width: 100%;
+  height: 240px!important;
+  transition: ease all 0.3s;
+}
+
+/*---------------------------------------------------------------*/
+
+
+/*NEW YORK KNICKS*/
+
+.contenedorCards .card .wrapper .imgProd_new_york_knicks {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 320px)!important;
+  width: 100%;
+  height: 240px!important;
+  transition: ease all 0.3s;
+}
+
+/*---------------------------------------------------------------*/
+
+/*LOS ANGELES LAKERS*/
+
+.contenedorCards .card .wrapper .imgProd_los_angeles_lakers {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 320px)!important;
+  width: 100%;
+  height: 240px!important;
+  transition: ease all 0.3s;
+}

@@ -1,0 +1,1000 @@
+
+
+
+/* ------------------------- CAMISAS RETRO----------------------------*/
+/* ------------- BANDERAS / IMAGENES DE REFERENCIA ------------*/
+
+/*CONJUNTO AC MILAN*/
+
+.contenedorCards .card .wrapper .bg_alemania_wc2014 {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/alemania_wc_2014.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/*BAYERN MUNICH 11-12*/
+
+.contenedorCards .card .wrapper .bg_bayern_munich_2012 {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/bayern_munich_2012.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/*FRANCIA 2006 VISITA*/
+
+.contenedorCards .card .wrapper .bg_francia2006 {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/zizou_henry.jpg );
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/*HOLANDA 1988*/
+
+.contenedorCards .card .wrapper .bg_holanda1988 {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/holanda_1988.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/*ARSENAL 14-15 LOCAL*/
+
+.contenedorCards .card .wrapper .bg_arsenal_14-15_local {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/arsenal14-15.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+/*ATLETICO DE MADRID 13-14 LOCAL*/
+
+.contenedorCards .card .wrapper .bg_atletico_madrid_13-14_local {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/atletico_madrid_13-14.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+
+/*BOCA JUNIORS 14-15 LOCAL*/
+
+.contenedorCards .card .wrapper .bg_boca_juniors_14-15_local {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/boca_jr_14-15.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+/*BRASIL 2013 LOCAL*/
+
+.contenedorCards .card .wrapper .bg_brasil_2013_local {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/brasil_2013_local.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/*CAMERUN 2010 LOCAL*/
+.contenedorCards .card .wrapper .bg_camerun_2010_local {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/camerun_2010.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+/*BARCELONA 08-09 VISITA*/
+.contenedorCards .card .wrapper .bg_barcelona_08-09_visita {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/barcelona2009.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+/*FRANCIA 2018 LOCAL*/
+.contenedorCards .card .wrapper .bg_francia_2018_local {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/francia_2018.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+/*INTER MILAN 09-10 LOCAL*/
+.contenedorCards .card .wrapper .bg_inter_milan_09-10_local {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/inter_milan2010.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/*BARCELONA 09-10 LOCAL*/
+.contenedorCards .card .wrapper .bg_barcelona_09-10_local {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/barcelona2010.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/*CROACIA 98-99*/
+.contenedorCards .card .wrapper .bg_croacia_98-99 {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/croacia98.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/*ESPANA 2010*/
+.contenedorCards .card .wrapper .bg_espana_2010 {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/espana2010.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/*PORTUGAL 2012*/
+.contenedorCards .card .wrapper .bg_portugal_2012 {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/portugal2012.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/*MAN UNITED 09-10 LOCAL*/
+.contenedorCards .card .wrapper .bg_man_united_09-10 {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/man_united_09-10.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/*HOLANDA 2010*/
+.contenedorCards .card .wrapper .bg_holanda_2010 {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/holanda2010.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+/*AC MILAN 06-07*/
+.contenedorCards .card .wrapper .bg_ac_milan_06-07 {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/ac_milan_06-07.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat
+  : no-repeat;
+}
+
+
+/*FIORENTINA 98-99*/
+.contenedorCards .card .wrapper .bg_fiorentina_98-99 {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/fiorentina98-99.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/*FRANCIA 98 LOCAL*/
+.contenedorCards .card .wrapper .bg_francia_98_local {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/francia98.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+/*BARCELONA 99-00*/
+.contenedorCards .card .wrapper .bg_barcelona_99-00 {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/barcelona99-00.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+/*GREMIO 2017 LOCAL*/
+.contenedorCards .card .wrapper .bg_gremio_2017_local {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/gremio2017.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+/*JAPON 98 LOCAL*/
+.contenedorCards .card .wrapper .bg_japon_98_local {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/japon98.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/*FIORENTINA 98-99 LOCAL*/
+.contenedorCards .card .wrapper .bg_fiorentina_98-99_local {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/fiorentina98-99_local.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/*JUVENTUS 02-03 LOCAL*/
+.contenedorCards .card .wrapper .bg_juventus_02-03_local {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/juventus02-03.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+/*LIVERPOOL 88-89 LOCAL*/
+.contenedorCards .card .wrapper .bg_liverpool_88-89_local {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/liverpool88-89.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/*MAN UNITED 94-96 LOCAL*/
+.contenedorCards .card .wrapper .bg_man_united_94-96_local {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/man_united_94-96.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/*REAL MADRID 00-01 LOCAL*/
+.contenedorCards .card .wrapper .bg_real_madrid_00-01_local {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/real_madrid_00-01.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/*INTER MILAN 01-02 LOCAL*/
+.contenedorCards .card .wrapper .bg_inter_milan_01-02_local {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/inter_milan01-02.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/*SPORTING LISBOA 02-03 LOCAL*/
+.contenedorCards .card .wrapper .bg_sporting_lisboa_02-03_local {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/sporting_cp_02-03.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/*ARSENAL 05-06 LOCAL*/
+.contenedorCards .card .wrapper .bg_arsenal_05-06_local {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background-color: #e3062b; */
+  background-image: url(/banderas/arsenal_05-06_local.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+
+
+
+
+
+
+/* -------------- IMAGENES DEL PRODUCTO (CAMISA) ---------------*/
+
+/*ARGENTINA 2022*/
+.contenedorCards .card .wrapper .imgProd_alemania_wc2014 {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 345px);
+  width: 100%;
+  height: 275px;
+  transition: ease all 0.3s;
+}
+
+
+
+/*BAYERN MUNICH 11-12*/
+
+.contenedorCards .card .wrapper .imgProd_bayern_munich_2012 {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 345px);
+  width: 100%;
+  height: 275px;
+  transition: ease all 0.3s;
+}
+
+/*BARCELONA 08-09*/
+
+.contenedorCards .card .wrapper .imgProd_francia2006 {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 345px);
+  width: 100%;
+  height: 275px;
+  transition: ease all 0.3s;
+}
+
+
+/*HOLANDA 1988*/
+
+.contenedorCards .card .wrapper .imgProd_holanda1988 {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 345px);
+  width: 100%;
+  height: 275px;
+  transition: ease all 0.3s;
+}
+
+
+
+/*ARSENAL 14-15 LOCAL*/
+
+.contenedorCards .card .wrapper .imgProd_arsenal_14-15_local {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 345px);
+  width: 100%;
+  height: 265px;
+  transition: ease all 0.3s;
+}
+
+
+
+
+/*ATLETICO DE MADRID 13-14 LOCAL*/
+
+.contenedorCards .card .wrapper .imgProd_atletico_madrid_13-14_local {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 345px);
+  width: 100%;
+  height: 265px;
+  transition: ease all 0.3s;
+}
+
+
+/*BOCA JUNIORS 14-15 LOCAL*/
+
+.contenedorCards .card .wrapper .imgProd_boca_juniors_14-15_local {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 345px);
+  width: 100%;
+  height: 265px;
+  transition: ease all 0.3s;
+}
+
+
+
+/*BRASIL 2013 LOCAL*/
+.contenedorCards .card .wrapper .imgProd_brasil_2013_local {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 345px);
+  width: 100%;
+  height: 265px;
+  transition: ease all 0.3s;
+}
+
+
+/*CAMERUN 2010 LOCAL*/
+.contenedorCards .card .wrapper .imgProd_camerun_2010_local {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 345px);
+  width: 100%;
+  height: 265px;
+  transition: ease all 0.3s;
+}
+
+
+/*BARCELONA 08-09 VISITA*/
+.contenedorCards .card .wrapper .imgProd_barcelona_08-09_visita {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 345px);
+  width: 100%;
+  height: 265px;
+  transition: ease all 0.3s;
+}
+
+/*FRANCIA 2018 LOCAL*/
+.contenedorCards .card .wrapper .imgProd_francia_2018_local {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 345px);
+  width: 100%;
+  height: 265px;
+  transition: ease all 0.3s;
+}
+
+
+/*INTER MILAN 09-10 LOCAL*/
+.contenedorCards .card .wrapper .imgProd_inter_milan_09-10_local {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 345px);
+  width: 100%;
+  height: 265px;
+  transition: ease all 0.3s;
+}
+
+
+/*BARCELONA 09-10 LOCAL*/
+.contenedorCards .card .wrapper .imgProd_barcelona_09-10_local {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 345px);
+  width: 100%;
+  height: 265px;
+  transition: ease all 0.3s;
+}
+
+
+/*CROACIA 98-99*/
+.contenedorCards .card .wrapper .imgProd_croacia_98-99 {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 345px);
+  width: 100%;
+  height: 265px;
+  transition: ease all 0.3s;
+}
+
+/*ESPANA 2010*/
+.contenedorCards .card .wrapper .imgProd_espana_2010 {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 345px);
+  width: 100%;
+  height: 265px;
+  transition: ease all 0.3s;
+}
+
+
+/*PORTUGAL 2012*/
+.contenedorCards .card .wrapper .imgProd_portugal_2012 {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 345px);
+  width: 100%;
+  height: 265px;
+  transition: ease all 0.3s;
+}
+
+
+/*MAN UNITED 09-10*/
+.contenedorCards .card .wrapper .imgProd_man_united_09-10 {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 345px);
+  width: 100%;
+  height: 265px;
+  transition: ease all 0.3s;
+}
+
+
+/*HOLANDA 2010*/
+.contenedorCards .card .wrapper .imgProd_holanda_2010 {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 345px);
+  width: 100%;
+  height: 265px;
+  transition: ease all 0.3s;
+}
+
+/*AC MILAN 06-07*/
+.contenedorCards .card .wrapper .imgProd_ac_milan_06-07 {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 345px);
+  width: 100%;
+  height: 265px;
+  transition: ease all 0.3s;
+}
+
+
+/*FIORENTINA 98-99*/
+.contenedorCards .card .wrapper .imgProd_fiorentina_98-99 {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 345px);
+  width: 100%;
+  height: 300px;
+  transition: ease all 0.3s;
+}
+
+
+
+/*FRANCIA 98 LOCAL*/
+.contenedorCards .card .wrapper .imgProd_francia_98_local {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 380px);
+  width: 100%;
+  height: 350px;
+  transition: ease all 0.3s;
+}
+
+
+/*BARCELONA 99-00*/
+.contenedorCards .card .wrapper .imgProd_barcelona_99-00 {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 340px);
+  width: 100%;
+  height: 265px;
+  transition: ease all 0.3s;
+}
+
+
+/*GREMIO 2017 LOCAL*/
+.contenedorCards .card .wrapper .imgProd_gremio_2017_local {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 340px);
+  width: 100%;
+  height: 265px;
+  transition: ease all 0.3s;
+}
+
+
+/*JAPON 98 LOCAL*/
+.contenedorCards .card .wrapper .imgProd_japon_98_local {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 340px);
+  width: 100%;
+  height: 290px;
+  transition: ease all 0.3s;
+}
+
+
+/*FIORENTINA 98-99 LOCAL*/
+.contenedorCards .card .wrapper .imgProd_fiorentina_98-99_local {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 375px);
+  width: 100%;
+  height: 340px;
+  transition: ease all 0.3s;
+}
+
+
+/*JUVENTUS 02-03 LOCAL*/
+.contenedorCards .card .wrapper .imgProd_juventus_02-03_local {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 375px);
+  width: 100%;
+  height: 340px;
+  transition: ease all 0.3s;
+}
+
+
+/*LIVERPOOL 88-89 LOCAL*/
+.contenedorCards .card .wrapper .imgProd_liverpool_88-89_local {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 375px);
+  width: 100%;
+  height: 340px;
+  transition: ease all 0.3s;
+}
+
+
+/*MAN UNITED 94-96 LOCAL*/
+.contenedorCards .card .wrapper .imgProd_man_united_94-96_local {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 335px);
+  width: 100%;
+  height: 275px;
+  transition: ease all 0.3s;
+}
+
+
+/*REAL MADRID 00-01 LOCAL*/
+.contenedorCards .card .wrapper .imgProd_real_madrid_00-01_local {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 350px);
+  width: 100%;
+  height: 300px;
+  transition: ease all 0.3s;
+}
+
+
+/*INTER MILAN 01-02 LOCAL*/
+.contenedorCards .card .wrapper .imgProd_inter_milan_01-02_local {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 350px);
+  width: 100%;
+  height: 300px;
+  transition: ease all 0.3s;
+}
+
+
+/*SPORTING LISBOA 02-03 LOCAL*/
+.contenedorCards .card .wrapper .imgProd_sporting_lisboa_02-03_local {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 385px);
+  width: 100%;
+  height: 360px;
+  transition: ease all 0.3s;
+}
+
+
+/*ARSENAL 05-06 LOCAL*/
+.contenedorCards .card .wrapper .imgProd_arsenal_05-06_local {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(100% - 350px);
+  width: 100%;
+  height: 300px;
+  transition: ease all 0.3s;
+}
+
+/*--------------------------------------------------------------*/
+/*--------------------------------------------------------------*/
+/*--------------------------------------------------------------*/
+/*--------------------------------------------------------------*/
+/*--------------------------------------------------------------*/
+/*--------------------------------------------------------------*/
+/*--------------------------------------------------------------*/
+/*--------------------------------------------------------------*/
+
+
+
+/*MOVIL y TABLETA*/
+@media screen and (max-width: 1024px) {
+  
+}

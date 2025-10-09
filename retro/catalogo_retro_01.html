@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/producto_carta.css">
+    <link rel="stylesheet" href="../css/producto_carta_retro.css">
+    <title>catalogo_retro_1</title>
+    
+
+</head>
+<body>
+
+
+    <header>
+        <div class="nav1-container">
+            <nav>
+                <a href="/index.html">
+                <img src="/logo-deporte/letras-chemasmapa.png" alt="logo" class="logo">
+                </a>
+                
+                <form class="barra-busqueda">
+                    <input type="text" placeholder="Buscar..." class="busqueda">
+                    <button type="submit" class="buscar">
+                        <img src="/logo-deporte/magnifying-glass-solid-full.svg" alt="buscar" class="icono-buscar">
+                    </button>
+                </form>
+
+                <!-- <img src="/logo-deporte/shopping-cart-svgrepo-com.svg" alt="carrito" class="carrito"> -->
+            </nav>
+        </div>
+    </header>
+
+    
+    <div class="nav2-container hidden md:block">
+
+        <!-- Botón menú hamburguesa -->
+        <!-- <button class="menu-toggle">☰</button> -->
+
+        <nav class="main-menu">
+            <ul>
+                <li class="dropdown-futbol">
+                    <a href="#">
+                        <img src="/logo-deporte/futbol-svgrepo-com 2.svg" alt="logo-futbol" class="logo-futbol"
+                        >Futbol</a>
+                    <div class="dropdown-content">
+                        <a href="#"><img src="/logo-deporte/clothes-svgrepo-com.svg" alt="conjuto" class="conjuntos">Conjuntos</a>
+                        <a href="#"><img src="/logo-deporte/clothes-clothing-hooded-top-svgrepo-com.svg" alt="abrigos" class="abrigos">Abrigos</a>
+                        <a href="#"><img src="/logo-deporte/soccer-jersey-soccer-svgrepo-com.svg" alt="camisas" class="camisas">Camisas</a>
+                    </div>
+                </li>
+
+                <li><a href="#" class="retro"><img src="/logo-deporte/futbol-svgrepo-com 2.svg" alt="logo-futbol" class="logo-futbol">Retro</a></li>
+                <li><a href="/nba/catalogo_nba_01.html" class="nba"><img src="/logo-deporte/game.png" alt="logo-nba" class="logo-nba">NBA</a></li>
+                <li><a href="#" class="nfl"><img src="/logo-deporte/football-svgrepo-com.svg" alt="logo-nfl" class="logo-nfl">NFL</a></li>
+                <li><a href="#" class="mlb"><img src="/logo-deporte/baseball-svgrepo-com.svg" alt="logo-mlb" class="logo-mlb">MLB</a></li>
+                <li><a href="#" class="formula"><img src="/logo-deporte/racing-car-svgrepo-com.svg" alt="logo-formula" class="logo-formula">F1</a></li>
+                <li><a href="#" class="contacto"><img src="/logo-deporte/contact-book-svgrepo-com.svg" alt="logo-contacto" class="logo-contacto"></a></li>
+            </ul>
+        </nav>
+
+    </div>
+    
+
+
+
+
+    <!-- Side menu SOLO móvil -->
+    
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/index.html"> <img src="/logo-deporte/letras-chemasmapa.png" alt=""></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title bg-dark" id="offcanvasNavbarLabel">Las Chemas del Mapa</h5>
+        <button type="button" class="btn-close bg-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle flex items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="/logo-deporte/futbol-svgrepo-com 2.svg" alt="" class="w-6 h-6 mr-4">Futbol
+            </a>
+            <ul class="dropdown-menu bg-dark">
+              <li><a class="dropdown-item flex items-center" href="#"> 
+                <img src="/logo-deporte/clothes-clothing-hooded-top-svgrepo-com.svg" alt="" class="w-6 h-6 mr-4">Abrigos
+              </a></li>
+              <li><a class="dropdown-item flex items-center" href="#">
+                <img src="/logo-deporte/soccer-jersey-soccer-svgrepo-com.svg" alt="" class="w-6 h-6 mr-4">Camisas
+              </a></li>
+              <li><a class="dropdown-item flex items-center" href="#">
+                <img src="/logo-deporte/clothes-svgrepo-com.svg" alt="" class="w-6 h-6 mr-4">Conjuntos Deportivos
+              </a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item flex items-center" href="#">
+                <img src="/logo-deporte/futbol-svgrepo-com 2.svg" alt="" class="w-6 h-6 mr-4">Retro
+              </a></li>
+            </ul>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link flex items-center" aria-current="page" href="/nba/catalogo_nba_01.html">
+              <img src="/logo-deporte/game.png" alt="" class="w-6 h-6 mr-4">NBA
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link flex items-center" href="#">
+              <img src="/logo-deporte/football-svgrepo-com.svg" alt="" class="w-6 h-6 mr-4">NFL
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link flex items-center" href="#">
+              <img src="/logo-deporte/baseball-svgrepo-com.svg" alt="" class="w-6 h-6 mr-4">MLB
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link flex items-center" href="#">
+              <img src="/logo-deporte/racing-car-svgrepo-com.svg" alt="" class="w-6 h-6 mr-4">Formula 1
+            </a>
+          </li>
+          
+        </ul>
+        <form class="d-flex mt-3" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"/>
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</nav>
+
+ 
+
+    <!-- Fin Side menu SOLO móvil -->
+
+
+
+<main>
+
+  <div class="w-full flex items-center justify-center my-8 mt-32">
+  <span class="h-px flex-1 bg-gray-300"></span>
+  <span class="shrink-0 px-4 text-gray-900 font-bold text-4xl text-center">RETRO</span>
+  <span class="h-px flex-1 bg-gray-300"></span>
+  </div>
+
+
+
+<div class="contenedorCards ">
+
+
+
+  <!-- ALEMANIA 2014 -->
+
+
+   <div class="card">
+    <div class="wrapper">
+      <div class="bg_alemania_wc2014"></div>
+      <div class="imgProd_alemania_wc2014" style="background-image: url(/Productos/camisas_retro/alemania_2014.png);"></div>
+      <div class="infoProd">
+        <p class="nombreProd">ALEMANIA 2014 | LOCAL</p>
+        <p class="extraInfo">₡20.000 - 25.000 CRC</p>
+      </div>
+    </div>
+  </div>
+
+
+    <!-- CAMISA BAYERN MUNICH 11-12 -->
+
+
+
+  <div class="card">
+    <div class="wrapper">
+      <div class="bg_bayern_munich_2012" style="background-color: #153a82;"></div>
+      <div class="imgProd_bayern_munich_2012" style="background-image: url(/Productos/camisas_retro/bayern_munich_11-12.jpg);"></div>
+      <div class="infoProd">
+        <p class="nombreProd">BAYERN MUNICH 11-12 | LOCAL</p>
+        <p class="extraInfo">₡20.000 - 25.000 CRC</p>
+      </div>
+    </div>
+  </div>
+
+
+    <!-- FRANCIA 2006 VISITA -->
+
+  <div class="card">
+    <div class="wrapper">
+      <div class="bg_francia2006" style="background-color: #3f4a69;"></div>
+      <div class="imgProd_francia2006" style="background-image: url(/Productos/camisas_retro/francia_2006.png);"></div>
+      <div class="infoProd">
+        <p class="nombreProd">FRANCIA 2006 | VISITANTE</p>
+        <p class="extraInfo">₡20.000 - 25.000 CRC</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- HOLANDA 1988 LOCAL -->
+
+  <div class="card">
+    <div class="wrapper">
+      <div class="bg_holanda1988"></div>
+      <div class="imgProd_holanda1988" style="background-image: url(/Productos/camisas_retro/holanda_1988.png);"></div>
+      <div class="infoProd">
+        <p class="nombreProd">HOLANDA 1988 | LOCAL</p>
+        <p class="extraInfo">₡20.000 - 25.000 CRC</p>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------->
+
+
+
+  <!-- ARSENAL 14-15 LOCAL -->
+
+
+   <div class="card">
+    <div class="wrapper">
+      <div class="bg_arsenal_14-15_local"></div>
+      <div class="imgProd_arsenal_14-15_local" style="background-image: url(/Productos/camisas_retro/arsenal_14-15_local.jpg);"></div>
+      <div class="infoProd">
+        <p class="nombreProd">ARSENAL 14-15 | LOCAL</p>
+        <p class="extraInfo">₡20.000 - 25.000 CRC</p>
+      </div>
+    </div>
+  </div>
+
+
+    <!-- CAMISA ATLETICO DE MADRID 13-14 LOCAL-->
+
+
+
+  <div class="card">
+    <div class="wrapper">
+      <div class="bg_atletico_madrid_13-14_local"></div>
+      <div class="imgProd_atletico_madrid_13-14_local" style="background-image: url(/Productos/camisas_retro/atletico_madrid_13-14.jpg);"></div>
+      <div class="infoProd">
+        <p class="nombreProd">ATLETICO DE MADRID 13-14  LOCAL</p>
+        <p class="extraInfo">₡20.000 - 25.000 CRC</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- BOCA JUNIORS 14-15 LOCAL -->
+
+  <div class="card">
+    <div class="wrapper">
+      <div class="bg_boca_juniors_14-15_local"></div>
+      <div class="imgProd_boca_juniors_14-15_local" style="background-image: url(/Productos/camisas_retro/boca_juniors_14-15.jpg);"></div>
+      <div class="infoProd">
+        <p class="nombreProd">BOCA JUNIORS 14-15 | LOCAL</p>
+        <p class="extraInfo">₡20.000 - 25.000 CRC</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- BRASIL 2013 LOCAL -->
+
+  <div class="card">
+    <div class="wrapper">
+      <div class="bg_brasil_2013_local" ></div>
+      <div class="imgProd_brasil_2013_local" style="background-image: url(/Productos/camisas_retro/brasil_2013.jpg);"></div>
+      <div class="infoProd">
+        <p class="nombreProd">BRASIL 2013 | LOCAL</p>
+        <p class="extraInfo">₡20.000 - 25.000 CRC</p>
+      </div>
+    </div>
+  </div>
+
+
+
+  
+<!-------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------->
+
+
+
+<!-- CAMERUN 2013 LOCAL -->
+    <div class="card">
+      <div class="wrapper">
+        <div class="bg_camerun_2010_local"></div>
+        <div class="imgProd_camerun_2010_local" style="background-image: url(/Productos/camisas_retro/cameroon_2010.jpg);"></div>
+        <div class="infoProd">
+          <p class="nombreProd">CAMERUN 2010 | LOCAL</p>
+          <p class="extraInfo">₡20.000 - 25.000 CRC</p>
+        </div>
+      </div>
+    </div>
+
+
+<!-- BARCELONA 08-09 VISITA -->
+      <div class="card">
+        <div class="wrapper">
+          <div class="bg_barcelona_08-09_visita"></div>
+          <div class="imgProd_barcelona_08-09_visita" style="background-image: url(/Productos/camisas_retro/fc_barcelona_08-09_visita.jpg);"></div>
+          <div class="infoProd">
+            <p class="nombreProd">BARCELONA 08-09 | VISITA</p>
+            <p class="extraInfo">₡20.000 - 25.000 CRC</p>
+          </div>
+        </div>
+      </div>
+
+
+<!-- FRANCIA 2018 LOCAL -->
+      <div class="card">
+        <div class="wrapper">
+          <div class="bg_francia_2018_local" style="background-color: #3f4a69;"></div>
+          <div class="imgProd_francia_2018_local" style="background-image: url(/Productos/camisas_retro/francia_2018.jpg);"></div>
+          <div class="infoProd">
+            <p class="nombreProd">FRANCIA 2018 | LOCAL</p>
+            <p class="extraInfo">₡20.000 - 25.000 CRC</p>
+          </div>
+        </div>
+      </div>
+
+
+<!-- INTER MILAN 09-10 LOCAL -->
+      <div class="card">
+        <div class="wrapper">
+          <div class="bg_inter_milan_09-10_local" style="background-color: #000000;"></div>
+          <div class="imgProd_inter_milan_09-10_local" style="background-image: url(/Productos/camisas_retro/inter_milan_09-10.jpg);"></div>
+          <div class="infoProd">
+            <p class="nombreProd">INTER MILAN 09-10 | LOCAL</p>
+            <p class="extraInfo">₡20.000 - 25.000 CRC</p>
+          </div>
+        </div>
+      </div>
+
+  
+<!-------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------->
+
+
+<!--BARCELONA 09-10 LOCAL-->
+      <div class="card">
+        <div class="wrapper">
+          <div class="bg_barcelona_09-10_local"></div>
+          <div class="imgProd_barcelona_09-10_local" style="background-image: url(/Productos/camisas_retro/fc_barcelona_09-10.png);"></div>
+          <div class="infoProd">
+            <p class="nombreProd">BARCELONA 09-10 | LOCAL</p>
+            <p class="extraInfo">₡20.000 - 25.000 CRC</p>
+          </div>
+        </div>
+      </div>
+
+
+<!--CROACIA 98-99-->
+      <div class="card">
+        <div class="wrapper">
+          <div class="bg_croacia_98-99"></div>
+          <div class="imgProd_croacia_98-99" style="background-image: url(/Productos/camisas_retro/croacia-98-99-locla.jpg);"></div>
+          <div class="infoProd">
+            <p class="nombreProd">CROACIA 98-99 | LOCAL</p>
+            <p class="extraInfo">₡20.000 - 25.000 CRC</p>
+          </div>
+        </div>
+      </div>
+
+
+<!--ESPANA 2010-->
+      <div class="card">
+        <div class="wrapper">
+          <div class="bg_espana_2010"></div>
+          <div class="imgProd_espana_2010" style="background-image: url(/Productos/camisas_retro/espana_2010_visita.jpg);"></div>
+          <div class="infoProd">
+            <p class="nombreProd">ESPAÑA 2010 | LOCAL</p>
+            <p class="extraInfo">₡20.000 - 25.000 CRC</p>
+          </div>
+        </div>
+      </div>
+
+
+<!--PORTUGAL 2012-->
+      <div class="card">
+        <div class="wrapper">
+          <div class="bg_portugal_2012"></div>
+          <div class="imgProd_portugal_2012" style="background-image: url(/Productos/camisas_retro/portugal_2012_visita.jpg);"></div>
+          <div class="infoProd">
+            <p class="nombreProd">PORTUGAL 2012 | LOCAL</p>
+            <p class="extraInfo">₡20.000 - 25.000 CRC</p>
+          </div>
+        </div>
+      </div>
+
+
+
+  </div> <!-- Fin contenedorCards -->
+
+</main>
+
+
+
+
+    
+
+    <!-- Pagination -->
+<div class="pt-16 mb-24">
+  <ul class="flex justify-center gap-1 text-gray-900">
+  <li>
+    <!-- <a
+      href="#"
+      class="grid size-8 place-content-center rounded border border-gray-200 transition-colors hover:bg-gray-50 rtl:rotate-180"
+      aria-label="Previous page"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="size-4"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+          clip-rule="evenodd"
+        />
+      </svg> -->
+    </a>
+  </li>
+
+  <li>
+    <a
+      href="/html/NBA/catalogo_nba_uno.html"
+      class="block size-8 rounded border border-indigo-600 bg-indigo-600 text-center text-sm/8 font-medium text-white"
+    >
+      1
+    </a>
+  </li>
+
+  <li
+    ><a
+      href="/retro/catalogo_retro_02.html"
+      class="block size-8 rounded border border-gray-200 text-center text-sm/8 font-medium transition-colors hover:bg-gray-50"
+    >
+      2
+    </a>
+  </li>
+
+
+  <li>
+    <a
+      href="/retro/catalogo_retro_02.html"
+      class="grid size-8 place-content-center rounded border border-gray-200 transition-colors hover:bg-gray-50 rtl:rotate-180 top-6"
+      aria-label="Next page"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="size-4"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    </a>
+  </li>
+</ul>
+</div>
+    <!-- Fin Pagination -->
+
+
+
+
+
+
+    
+
+<!-- Footer -->
+
+
+
+  <footer class="text-white py-8 mt-64" >
+
+    <h4 class="text-center font-bold">LAS CHEMAS DEL MAPA</h4>
+    <p class="text-center text-sm text-gray-100 mt-2 ">San José, Mora, Ciudad Colón</p>
+    <p class="text-center text-sm text-gray-100 mt-2">10701  Costa Rica</p>
+    <img src="/assets/logoOriginal2.0.png" alt="" class="mx-auto mb-4 mt-4" style="width: 150px; height: 125px;">
+    <p class="text-center text-base text-gray-100 mt-2 font-bold">Desde los clásicos inolvidables hasta los ídolos de hoy, nuestras chemas te acompañan con estilo y autenticidad</p>
+    <p class="text-center text-xl text-gray-100 mt-2 font-bold mt-8">Encuéntranos en nuestras plataformas</p>
+
+    <a href="https://www.instagram.com/laschemasdelmapa?igsh=MXdkdWkwbmt2Zm9pOA==">
+    <img src="/assets/instagram_logo.svg" alt="instagram" class="mx-auto mb-4 mt-4" style="width: 60px; height: 40px;">
+    </a>
+
+    <p class="text-center text-sm text-gray-100">
+      &copy; 2023 Your Company. All rights reserved | <a href="/html/terminos-servicio.html">Terminos de servicio</a> | <a href="/html/politica-privacidad.html">Política de privacidad</a>
+    </p>
+  </footer>
+<!-- Fin Footer -->
+
+
+    
+</body>
+</html>

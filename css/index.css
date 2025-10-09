@@ -1,0 +1,495 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    overflow-x: hidden; /* Evita scroll horizontal */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 95px;
+}
+
+header {
+    position: fixed;   /* fijo siempre arriba */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+
+main {
+    flex: 1; /* Hace que el main tome todo el espacio disponible */
+}
+
+/*LOGO, BARRA DE BUSQUEDA, CARRITO*/
+
+
+.nav1-container {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    padding: 0;
+    margin: 0;
+}
+
+.nav1-container nav {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav1-container .logo {
+    width: 220px;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    margin-left: 100px;
+     
+}
+
+.nav1-container #cartButton {
+    margin-right: 100px;
+}
+
+.nav1-container .barra-busqueda {
+    display: flex;
+    margin: 0 50px;
+}
+
+.nav1-container .barra-busqueda input[type="text"] {
+    width: 275px;
+    padding: 7px;
+    border-radius: 20px;
+    border: 1px solid #ffffff;
+    background-color: #fff;
+    color: #1e1e1e;
+}
+
+.nav1-container .barra-busqueda button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav1-container .barra-busqueda button:hover {
+    background-color: #aaa;
+}
+
+.nav1-container .barra-busqueda button .icono-buscar {
+    width: 24px;   /* ajusta el tamaño que quieras */
+    height: 24px;
+}
+
+
+
+/*ALERTA DE INFORMACION*/
+
+#alert-additional-content-5 {
+        z-index: 900;
+        position: relative;
+        margin-top: 20px !important;
+        padding-top: 20px !important;
+    }
+
+
+/*BARRA DE NAVEGACION DE PRODUCTOS*/
+
+.nav2-container {
+     
+    position: fixed;
+    top: 80px; /* altura de nav1-container */
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: #000; /* fondo sólido para que se vea */
+}
+
+
+
+.nav2-container ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav2-container a {
+    color: white;
+    text-decoration: none;
+    padding: 20px 20px;
+    display: block;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    
+}
+
+
+.nav2-container a:hover {
+    background-color: #555;
+}
+
+.nav2-container .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.nav2-container .dropdown-futbol:hover .dropdown-content {
+    display: block;
+}
+
+
+/*LOGOS DEPORTES*/
+
+.main-menu ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 30px;  /* espacio entre items */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-menu ul li a {
+  display: flex;
+  align-items: center;   /* alinea icono y texto en el centro vertical */
+  text-decoration: none;
+  color: white;          /* ajusta según tu diseño */
+  font-size: 14px;
+}
+
+.main-menu ul li a img {
+  width: 22.5px;
+  height: 22.5px;
+  margin-right: 14px;     /* espacio entre icono y palabra */
+}
+
+
+
+
+
+/*CONJUNTOS, ABRIGOS, CAMISAS*/
+
+.nav2-container .dropdown-content img {
+    width: 22.5px;
+    height: 22.5px;
+    margin-right: 20px;
+    align-items: center;
+    vertical-align: sub;
+}
+
+
+/* Por defecto: ocultar menu-toggle en escritorio */
+.menu-toggle {
+    display: none; /* nunca aparece en PC/Tablet grande */
+}
+
+.navbar.navbar-dark.bg-dark.fixed-top {
+        display: none;
+    }
+
+
+
+    /*SECCION DE CONTACTO + FORMULARIO*/
+
+    
+
+    .formulario {
+      background-color: #fff;
+      border: 2px solid #000000;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0px 30px 30px 10px  rgba(249, 0, 0, 0.3);
+
+    }
+
+    #SobreNosotros div img {
+        display: block;
+        margin: 5px;
+    }
+
+   
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 20px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 12.5px;
+      border: 1px solid #ccc;
+      font-size: 20px;
+      height: 35px;
+    }
+
+    textarea {
+      height: 150px;
+      resize: none;
+    }
+
+    .btn-enviar {
+      display: block;
+      margin: 30px auto 0;
+      background-color: #25348b;
+      color: white;
+      font-weight: bold;
+      padding: 10px 30px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .btn-enviar:hover {
+      background-color: #1b276c;
+    }
+
+    #SobreNosotros {
+        color: #000000;
+    }
+
+
+    
+
+    
+/* FOOTER SIN ESPACIOS BLANCOS */
+footer {
+  background-color: black !important;
+  width: 100vw !important;
+  margin: 0 !important;
+  padding: 40px 20px !important;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+  box-sizing: border-box;
+}
+
+
+.size-table-toggle i {
+  transition: transform 0.3s ease;
+}
+
+.size-table-toggle[aria-expanded="true"] i {
+  transform: rotate(90deg);
+}
+
+.size-table-container .mt-2 {
+  min-height: 100px; /* ajusta según tu tabla */
+}
+
+#sizeTable.collapse.show {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+
+
+
+
+
+
+/* MÓVIL & TABLETA*/
+
+ @media (max-width: 1024px) {
+
+    body, html {
+       padding-top: 50px;
+       margin: 0;
+    }
+
+
+    #alert-additional-content-5 {
+        z-index: 900;
+        position: relative;
+        margin-top: 20px !important;
+        padding-top: 20px !important;
+    }
+
+    #myCarousel {
+        margin-top: 51px !important;
+    }
+
+    .navbar-brand img {
+        height: 75px;
+        width: 175px;
+    }
+
+    .nav1-container nav {
+        display: none;
+    }
+
+    .nav2-container .main-menu {
+        display: none !important;
+    }
+
+    .nav2-container .main-menu{
+            display: flex;
+    }
+
+    .navbar.navbar-dark.bg-dark.fixed-top {
+        display: flex;
+        background-color: rgb(0, 0, 0) !important;
+    }
+
+    .offcanvas-header .offcanvas-title {
+        color: white;
+    }
+/* Menú desplegable con borde blanco */
+    .dropdown-menu {
+        border: 1px solid rgb(85, 78, 78) !important;
+        background-color: #1e1e1e; /* ajusta el fondo */
+    }
+
+    /* Items del dropdown con texto blanco */
+    .dropdown-menu .dropdown-item {
+        color: white;
+    }
+
+    /* Hover de los items */
+    .dropdown-menu .dropdown-item:hover {
+        background-color: #333;
+        color: white;
+    }
+
+    /* Línea divisoria en blanco */
+    .dropdown-divider {
+        border-top: 1px solid  rgb(85, 78, 78) !important;
+    }
+
+    .btn-close {
+        color: white;
+    }
+
+
+    .carousel-item .carousel-caption .d-none .d-md-block a button{
+        background-color: black !important;
+        color: white !important;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+    
+
+    
+    
+
+    
+
+
+    
+
+
+/* @media (max-width: 767px) {
+    .nav1-container nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav1-container .logo {
+        width: 150px;
+        margin-bottom: 10px;
+        margin-left: -130px;
+    }
+
+    .nav1-container .barra-busqueda {
+        width: 100%;
+        max-width: none;
+        justify-content: flex-start;
+        margin: 0 10px;
+    }
+
+    .nav1-container .barra-busqueda input[type="text"] {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .nav1-container .carrito {
+        margin-top: -40px;
+        margin-left: 275px;
+        height: 40px;
+    }
+
+    .nav2-container ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nav2-container a {
+        font-size: 18px;
+        padding: 15px;
+        justify-content: center;
+    }
+
+
+
+    .nav2-container nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #000;
+        width: 100%;
+        padding: 0;
+    }
+
+    .nav2-container nav ul.active {
+        display: flex; /* Se muestra cuando se activa */
+    }
+
+    /* .nav2-container nav ul li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #333;
+    }
+
+    .nav2-container a {
+        font-size: 18px;
+        padding: 15px;
+        justify-content: center;
+    }
+
+    /* ====== MENU HAMBURGUESA (MÓVIL) ====== */
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: rgb(255, 255, 255);
+        font-size: 28px;
+        cursor: pointer;
+        margin: 10px 15px;
+        z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+    } 
+
+    
