@@ -1,0 +1,1865 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/new_formulario.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/hero_abrigos.css">
+    
+    <title>Catálogo Fútbol - Las Chemas del Mapa</title>
+
+    <style>
+        .parche-example {
+            max-width: 200px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .form-section {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-section-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        .size-guide-toggle {
+            color: #007bff;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        
+        .size-guide-toggle:hover {
+            color: #0056b3;
+        }
+        
+        .size-table-container {
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border-radius: 0.375rem;
+        }
+        
+        .size-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .size-table th, .size-table td {
+            border: 1px solid #dee2e6;
+            padding: 0.5rem;
+            text-align: center;
+        }
+        
+        .size-table th {
+            background-color: #e9ecef;
+            font-weight: 600;
+        }
+    </style>
+
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0ZJ57PCKCQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0ZJ57PCKCQ');
+</script>
+
+
+
+</head>
+
+
+
+
+
+
+<body>
+    <!-- HEADER Y NAVEGACIÓN PRINCIPAL -->
+    <header>
+        <div class="nav1-container">
+            <nav>
+                <a href="/index.html">
+                    <img src="/logo-deporte/letras-chemasmapa.png" alt="logo" class="logo">
+                </a>
+                
+                <form class="barra-busqueda" id="desktopSearchForm">
+                    <input type="text" placeholder="Buscar..." class="busqueda" id="desktopSearchInput">
+                    <button type="submit" class="buscar">
+                        <img src="/logo-deporte/magnifying-glass-solid-full.svg" alt="buscar" class="icono-buscar">
+                    </button>
+                </form>
+
+                <div class="d-flex">
+                    <button class="btn btn-outline-light position-relative" id="cartButton">
+                        <i class="fa-solid fa-cart-shopping"></i> Carrito
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cartCount">0</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SECCIÓN HERO PARA FÚTBOL -->
+    <section class="nba-minimal-section">
+        <div class="nba-minimal-content">
+            <h1 class="nba-title">Colección Fútbol</h1>
+            <p class="nba-subtitle">Las mejores camisetas de fútbol actuales y retro de tus equipos favoritos</p>
+        </div>
+    </section>
+
+    <!-- MENÚ DE NAVEGACIÓN SECUNDARIO (Desktop) -->
+    <div class="nav2-container hidden md:block">
+        <nav class="main-menu">
+            <ul>
+                <li class="dropdown-futbol">
+                    <a href="#">
+                        <img src="/logo-deporte/futbol-svgrepo-com 2.svg" alt="logo-futbol" class="logo-futbol">Futbol
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="/catalogo_abrigos_01.html"><img src="/logo-deporte/clothes-clothing-hooded-top-svgrepo-com.svg" alt="abrigos" class="abrigos">Abrigos</a>
+                        <a href="/futbol/catalogo_futbol_01.html"><img src="/logo-deporte/soccer-jersey-soccer-svgrepo-com.svg" alt="camisas" class="camisas">Camisas</a>
+                        <a href="/conjuntos/catalogo_conjuntos_01.html"><img src="/logo-deporte/clothes-svgrepo-com.svg" alt="conjuto" class="conjuntos">Conjuntos</a>
+                    </div>
+                </li>
+
+                <li><a href="/retro/catalogo_retro_01.html" class="retro"><img src="/logo-deporte/futbol-svgrepo-com 2.svg" alt="logo-futbol" class="logo-futbol">Retro</a></li>
+                <li><a href="/nba/catalogo_nba_01.html" class="nba"><img src="/logo-deporte/game.png" alt="logo-nba" class="logo-nba">NBA</a></li>
+                <li><a href="/nfl/catalogo_nfl_01.html" class="nfl"><img src="/logo-deporte/football-svgrepo-com.svg" alt="logo-nfl" class="logo-nfl">NFL</a></li>
+                <li><a href="/mlb/catalogo_mlb_01.html" class="mlb"><img src="/logo-deporte/baseball-svgrepo-com.svg" alt="logo-mlb" class="logo-mlb">MLB</a></li>
+                <li><a href="/formula/catalogo_formula_01.html" class="formula"><img src="/logo-deporte/racing-car-svgrepo-com.svg" alt="logo-formula" class="logo-formula">F1</a></li>
+                <li><a href="#contactanos" class="contacto"><img src="/logo-deporte/contact-book-svgrepo-com.svg" alt="logo-contacto" class="logo-contacto"></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- SIDE MENU SOLO MÓVIL -->
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/index.html"> 
+                <img src="/logo-deporte/letras-chemasmapa.png" alt="">
+            </a>
+            
+            <div class="d-flex align-items-center">
+                <button class="btn btn-outline-light position-relative me-2" id="cartButtonMobile">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cartCountMobile">0</span>
+                </button>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title bg-dark" id="offcanvasNavbarLabel">Las Chemas del Mapa</h5>
+                    <button type="button" class="btn-close bg-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle flex items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="/logo-deporte/futbol-svgrepo-com 2.svg" alt="" class="w-6 h-6 mr-4">Futbol
+                            </a>
+                            <ul class="dropdown-menu bg-dark">
+                                <li><a class="dropdown-item flex items-center" href="/abrigos/catalogo_abrigos_01.html"> 
+                                    <img src="/logo-deporte/clothes-clothing-hooded-top-svgrepo-com.svg" alt="" class="w-6 h-6 mr-4">Abrigos
+                                </a></li>
+                                <li><a class="dropdown-item flex items-center" href="#">
+                                    <img src="/logo-deporte/soccer-jersey-soccer-svgrepo-com.svg" alt="" class="w-6 h-6 mr-4">Camisas
+                                </a></li>
+                                <li><a class="dropdown-item flex items-center" href="/conjuntos/catalogo_conjuntos_01.html">
+                                    <img src="/logo-deporte/clothes-svgrepo-com.svg" alt="" class="w-6 h-6 mr-4">Conjuntos Deportivos
+                                </a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item flex items-center" href="/retro/catalogo_retro_01.html">
+                                    <img src="/logo-deporte/futbol-svgrepo-com 2.svg" alt="" class="w-6 h-6 mr-4">Retro
+                                </a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link flex items-center" aria-current="page" href="/nba/catalogo_nba_01.html">
+                                <img src="/logo-deporte/game.png" alt="" class="w-6 h-6 mr-4">NBA
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link flex items-center" href="/nfl/catalogo_nfl_01.html">
+                                <img src="/logo-deporte/football-svgrepo-com.svg" alt="" class="w-6 h-6 mr-4">NFL
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link flex items-center" href="/mlb/catalogo_mlb_01.html">
+                                <img src="/logo-deporte/baseball-svgrepo-com.svg" alt="" class="w-6 h-6 mr-4">MLB
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link flex items-center" href="/formula/catalogo_formula_01.html">
+                                <img src="/logo-deporte/racing-car-svgrepo-com.svg" alt="" class="w-6 h-6 mr-4">Formula 1
+                            </a>
+                        </li>
+                    </ul>
+                    
+                    <form class="d-flex mt-3" role="search" id="mobileSearchForm">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" id="mobileSearchInput"/>
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="container mb-5">
+        <!-- SECCIÓN DE SELECCIÓN DE PRODUCTOS -->
+        <div class="row mb-4 ml-4" id="productSelection">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="productGrid">
+                <div class="loading">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Cargando...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- SECCIÓN DEL FORMULARIO (inicialmente oculta) -->
+        <div class="d-none" id="formSection">
+            <div class="row">
+                <!-- COLUMNA DE INFORMACIÓN DEL PRODUCTO -->
+                <div class="col-lg-6">
+                    <div class="form-container">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h2 class="mb-0 text-2xl font-bold" id="productName">Nombre del Producto</h2>
+                            <span class="badge bg-primary sport-badge" id="productSport">FÚTBOL</span>
+                        </div>
+                        
+                        <img src="" class="img-fluid product-image mb-4" id="productImage" alt="Imagen de la camiseta">
+                        
+                        <div class="mb-4">
+                            <h4 class="text-2xl font-bold">Descripción</h4>
+                            <p id="productDescription">Descripción del producto...</p>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="text-2xl font-bold">Características</h4>
+                            <ul class="feature-list" id="productFeatures">
+                                <!-- Las características se cargarán dinámicamente -->
+                            </ul>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="price-tag" id="productPrice">₡0</span>
+                            </div>
+                            <div id="productAvailability">
+                                <!-- Disponibilidad se cargará dinámicamente -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- COLUMNA DEL FORMULARIO DE PEDIDO -->
+                <div class="col-lg-6">
+                    <div class="form-container">
+                        <h3 class="text-center mb-4">Personaliza tu Camiseta de Fútbol</h3>
+                        
+                        <form id="orderForm">
+                            <input type="hidden" id="selectedProductId">
+                            
+                            <!-- CONTROL DE CANTIDAD -->
+                            <div class="form-section">
+                                <label for="quantity" class="form-label form-section-title">Cantidad</label>
+                                <div class="input-group quantity-control">
+                                    <button class="btn btn-outline-secondary" type="button" id="decrement">-</button>
+                                    <input type="number" class="form-control text-center" id="quantity" value="1" min="1" max="10">
+                                    <button class="btn btn-outline-secondary" type="button" id="increment">+</button>
+                                </div>
+                            </div>
+                            
+                            <!-- PERSONALIZACIÓN DE NOMBRE Y NÚMERO (UNIFICADO) -->
+                            <div class="form-section">
+                                <label for="playerCustomization" class="form-label form-section-title">Personalización</label>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="playerCustomization" placeholder="nombre jugador   10">
+                                    <div class="form-text">Escribe el nombre del jugador y su número separados por espacio. Ej: "Messi 10"</div>
+                                </div>
+                            </div>
+                            
+                            <!-- VERSIÓN (Fan o Player) -->
+                            <div class="form-section">
+                                <label for="version" class="form-label form-section-title">Versión</label>
+                                <select class="form-select" id="version" required>
+                                    <option value="" selected disabled>Selecciona una versión</option>
+                                    <option value="fan">Fan - ₡20,000</option>
+                                    <option value="player">Player - ₡22,000</option>
+                                </select>
+                            </div>
+                            
+                            <!-- SELECCIÓN DE TALLA -->
+                            <div class="form-section">
+                                <label for="size" class="form-label form-section-title">Talla</label>
+                                <select class="form-select" id="size" required>
+                                    <option value="" selected disabled>Selecciona una talla</option>
+                                    <!-- Las tallas se cargarán dinámicamente -->
+                                </select>
+                                
+                                <!-- GUÍAS DE TALLAS PARA FÚTBOL (FAN y PLAYER) -->
+                                <div class="mt-2">
+                                    <span class="size-guide-toggle me-3" id="sizeGuideToggleFan">
+                                        <i class="fa-solid fa-ruler"></i> Ver guía de tallas (FAN)
+                                    </span>
+                                    <span class="size-guide-toggle" id="sizeGuideTogglePlayer">
+                                        <i class="fa-solid fa-ruler"></i> Ver guía de tallas (PLAYER)
+                                    </span>
+                                </div>
+                                
+                                <!-- TABLA DE TALLAS FAN (oculta inicialmente) -->
+                                <div class="size-table-container d-none" id="sizeTableContainerFan">
+                                    <h5>Guía de Tallas FAN (en centímetros)</h5>
+                                    <table class="size-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Talla</th>
+                                                <th>Largo</th>
+                                                <th>Pecho</th>
+                                                <th>Altura</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr><td>S</td><td>71 - 73</td><td>48 - 50</td><td>160 - 175</td></tr>
+                                            <tr><td>M</td><td>73 - 75</td><td>52 - 54</td><td>165 - 170</td></tr>
+                                            <tr><td>L</td><td>75 - 77</td><td>54 - 56</td><td>170 - 175</td></tr>
+                                            <tr><td>XL</td><td>77 - 79</td><td>56 - 58</td><td>170 - 180</td></tr>
+                                            <tr><td>2XL</td><td>79 - 81</td><td>60 - 62</td><td>180 - 185</td></tr>
+                                        </tbody>
+                                    </table>
+                                    <small class="text-muted">ESTAS MEDIDAS SON APROXIMADAS Y PUEDEN VARIAR LIGERAMENTE DE 2 A 3 CM.</small>
+                                </div>
+                                
+                                <!-- TABLA DE TALLAS PLAYER (oculta inicialmente) -->
+                                <div class="size-table-container d-none" id="sizeTableContainerPlayer">
+                                    <h5>Guía de Tallas PLAYER (en centímetros)</h5>
+                                    <table class="size-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Talla</th>
+                                                <th>Largo</th>
+                                                <th>Pecho</th>
+                                                <th>Altura</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr><td>S</td><td>70 - 72</td><td>96 - 98</td><td>160 - 170</td></tr>
+                                            <tr><td>M</td><td>72 - 74</td><td>104 - 106</td><td>168 - 175</td></tr>
+                                            <tr><td>L</td><td>74 - 76</td><td>110 - 112</td><td>172 - 180</td></tr>
+                                            <tr><td>XL</td><td>76 - 78</td><td>118 - 120</td><td>178 - 185</td></tr>
+                                            <tr><td>2XL</td><td>78 - 80</td><td>128 - 130</td><td>183 - 200</td></tr>
+                                        </tbody>
+                                    </table>
+                                    <small class="text-muted">ESTAS MEDIDAS SON APROXIMADAS Y PUEDEN VARIAR LIGERAMENTE DE 2 A 3 CM.</small>
+                                </div>
+                            </div>
+                            
+                            <!-- PARCHES PERSONALIZADOS -->
+                            <div class="form-section">
+                                <label for="parches" class="form-label form-section-title">Parches (opcional)</label>
+                                <textarea class="form-control" id="parches" rows="2" placeholder="ej: Uefa Champions League"></textarea>
+                                <div class="mt-2">
+                                    <small class="text-muted">
+                                        <i class="fas fa-info-circle"></i> Ejemplo de parches:
+                                        <img src="/assets/parches_ej.png" alt="Ejemplo de parche" class="parche-example d-block mt-1 w-50">
+                                    </small>
+                                </div>
+                            </div>
+                            
+                            <!-- BOTONES DE ACCIÓN -->
+                            <div class="d-grid gap-2 mb-3">
+                                <button type="button" class="btn btn-primary btn-lg" id="addToCartBtn">
+                                    <i class="fa-solid fa-cart-plus"></i> Agregar al Carrito
+                                </button>
+                            </div>
+                            
+                            <div class="d-grid gap-2 mb-3">
+                                <button type="button" class="btn btn-whatsapp btn-lg" id="orderNowBtn">
+                                    <i class="fa-brands fa-whatsapp"></i> Ordenar por WhatsApp
+                                </button>
+                            </div>
+                            
+                            <div class="d-grid">
+                                <button type="reset" class="btn btn-outline-secondary" id="resetBtn">
+                                    <i class="fa-solid fa-trash"></i> Borrar Datos
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!-- RESUMEN DEL PEDIDO -->
+                    <div class="form-container mt-4">
+                        <h4>Resumen de tu Pedido</h4>
+                        <div class="d-flex justify-content-between">
+                            <span>Producto:</span>
+                            <span id="summaryProduct">-</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <span>Versión:</span>
+                            <span id="summaryVersion">-</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <span>Personalización:</span>
+                            <span id="summaryCustomization">-</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <span>Talla:</span>
+                            <span id="summarySize">-</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <span>Precio unitario:</span>
+                            <span id="summaryUnitPrice">₡0</span>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between fw-bold">
+                            <span>Total:</span>
+                            <span id="summaryTotal">₡0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="text-white py-8 mt-64">
+        <h4 class="text-center font-bold">LAS CHEMAS DEL MAPA</h4>
+        <p class="text-center text-sm text-gray-100 mt-2 ">San José, Mora, Ciudad Colón</p>
+        <p class="text-center text-sm text-gray-100 mt-2">10701  Costa Rica</p>
+        <img src="/assets/logoOriginal2.0.png" alt="" class="mx-auto mb-4 mt-4" style="width: 150px; height: 125px;">
+        <p class="text-center text-base text-gray-100 mt-2 font-bold">Desde los clásicos inolvidables hasta los ídolos de hoy, nuestras chemas te acompañan con estilo y autenticidad</p>
+        <p class="text-center text-xl text-gray-100 mt-2 font-bold mt-8">Encuéntranos en nuestras plataformas</p>
+
+        <a href="https://www.instagram.com/laschemasdelmapa?igsh=MXdkdWkwbmt2Zm9pOA==">
+            <img src="/assets/instagram_logo.svg" alt="instagram" class="mx-auto mb-4 mt-4" style="width: 60px; height: 40px;">
+        </a>
+
+        <p class="text-center text-sm text-gray-100">
+            &copy; 2023 Your Company. All rights reserved | <a href="/html/terminos-servicio.html">Terminos de servicio</a> | <a href="/html/politica-privacidad.html">Política de privacidad</a>
+        </p>
+    </footer>
+
+    <!-- NOTIFICACIÓN DEL CARRITO -->
+    <div class="cart-notification alert alert-success alert-dismissible fade show" role="alert" style="display: none;">
+        <strong>¡Producto agregado!</strong> Tu camiseta se ha añadido al carrito.
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+
+    <!-- MODAL DEL CARRITO -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">
+                        <i class="fa-solid fa-cart-shopping"></i> Tu Carrito de Compras
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="cartItemsContainer">
+                        <!-- Los elementos del carrito se cargarán aquí -->
+                    </div>
+                    <div class="d-flex justify-content-between mt-4 pt-3 border-top">
+                        <h5>Total del Pedido:</h5>
+                        <h5 id="cartTotalAmount">₡0</h5>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir Comprando</button>
+                    <button type="button" class="btn btn-whatsapp" id="checkoutWhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i> Finalizar Pedido por WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS Y JAVASCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // =============================================
+        // DATOS DE PRODUCTOS - FÚTBOL
+        // =============================================
+        const productosFutbol = [
+            {
+                "id": 200,
+                "equipo": "Ac Milan",
+                "Version": ["Fan", "Player"],
+                "temporada": "2021 - 22",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/Cp7SwMQK/ac-milan-21-22.png",
+                "descripcion": "Camisa oficial del Ac Milan, Temporada 2021 - 22 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            {
+                "id": 201,
+                "equipo": "Ac Milan",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025 - 26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/60343gFz/ac-milan-25-26-local.png",
+                "descripcion": "Camisa oficial del Ac Milan, temporada 2025 - 26 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            {
+                "id": 202,
+                "equipo": "Ajax",
+                "Version": ["Fan", "Player"],
+                "temporada": "2024 - 25",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/LXSq2Hbq/ajax-25-26-visitante-copy.png",
+                "descripcion": "Camisa oficial del Ajax, temporada 2025 - 26 | VISITA",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            {
+                "id": 203,
+                "equipo": "Alemania",
+                "Version": ["Fan", "Player"],
+                "temporada": "2024",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/NdPCgjNJ/alemania-2024.png",
+                "descripcion": "Camisa oficial de la selección de Alemania, temporada 2024 - 25 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            {
+                "id": 204,
+                "equipo": "Alemania",
+                "Version": ["Fan", "Player"],
+                "temporada": "2024",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/svFkGMxL/alemania-2024-visita.png",
+                "descripcion": "Camisa oficial de la selecciona Alemana, temporada 2024 - 25 | VISITA",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            {
+                "id": 205,
+                "equipo": "Argentina",
+                "Version": ["Fan", "Player"],
+                "temporada": "2022",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/WW3hT116/argentina-2022.png",
+                "descripcion": "Camisa oficial de la selección de Argentina, Campeona del mundo 2022 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            {
+                "id": 206,
+                "equipo": "Arsenal",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025 - 26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/DJVPWD8/arsenal-25-26-local.png",
+                "descripcion": "Camisa oficial del Arsenal, temporada 2025 - 26 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            {
+                "id": 207,
+                "equipo": "Arsenal",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025 - 26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/C3JrPYc5/arsenal-25-26-visitante.png",
+                "descripcion": "Camisa oficial del Arsenal, temporada 2025 - 26 | VISITANTE",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            {
+                "id": 208,
+                "equipo": "Bayern Munich",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025 - 26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/VW4PnX8T/bayern-munich-25-26-local.png",
+                "descripcion": "Camisa oficial del Bayern Munich, temporada 2025 - 26 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            {
+                "id": 209,
+                "equipo": "Borussia Dortmund",
+                "Version": ["Fan", "Player"],
+                "temporada": "2020 - 21",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/Cst75CPt/borussia-dortmund-20-21.png",
+                "descripcion": "Camisa oficial del Borussia Dortmund, temporada 2020 - 21 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            {
+                "id": 210,
+                "equipo": "Chelsea",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025 - 26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/vvX9y1WX/chelsea-25-26-local.png",
+                "descripcion": "Camisa oficial del Chelsea, temporada 2025 - 26 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            {
+                "id": 211,
+                "equipo": "Costa Rica",
+                "Version": ["Fan", "Player"],
+                "temporada": "2024",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/kgbXgqq6/costa-rica-2024.png",
+                "descripcion": "Camisa oficial de Costa Rica, temporada 2024 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            {
+                "id": 212,
+                "equipo": "Fc Barcelona",
+                "Version": ["Fan", "Player"],
+                "temporada": "2024 - 25",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/XxjNgRgJ/fc-barcelona-24-25-local.png",
+                "descripcion": "Camisa oficial del Fc Barcelona, temporada 2024 - 25 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            {
+                "id": 213,
+                "equipo": "Fc Barcelona",
+                "Version": ["Fan", "Player"],
+                "temporada": "2024 - 25",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/8g1yvkb5/fc-barcelona-24-25-visitante.png",
+                "descripcion": "Camisa oficial del Fc Barcelona, temporada 2024 - 25 | VISITANTE",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            {
+                "id": 214,
+                "equipo": "Fc Barcelona",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025 - 26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/MkLm9sX5/fc-barcelona-25-26-copy.png",
+                "descripcion": "Camisa oficial del Fc Barcelona, temporada 2025 - 26 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            {
+                "id": 215,
+                "equipo": "Liverpool",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025 - 26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/SDfS8rRv/liverpool-25-26-local.png",
+                "descripcion": "Camisa oficial del Liverpool, temporada 2025 - 26 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            {
+                "id": 216,
+                "equipo": "Paris Saint Germain",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025 - 26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/99bZLf6g/psg-25-26-visitante.png",
+                "descripcion": "Camisa oficial del Paris Saint Germain, temporada 2025 - 26 | VISITANTE",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            {
+                "id": 217,
+                "equipo": "Japon",
+                "Version": ["Fan", "Player"],
+                "temporada": "2022",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/kscm2qnC/japon-2022.png",
+                "descripcion": "Camisa oficial de Japon, Mundial de Qatar 2022 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            {
+                "id": 218,
+                "equipo": "Roma",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025 - 26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/p6yRNMV7/roma-25-26-local.png",
+                "descripcion": "Camisa oficial de la Roma, temporada 2025 - 26 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            {
+                "id": 219,
+                "equipo": "River Plate",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025 - 26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/wFvvYwZk/river-plate-2025.png",
+                "descripcion": "Camisa oficial de River Plate, temporada 2025 - 26 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            {
+                "id": 220,
+                "equipo": "Real Madrid",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025-26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/d4Ddj2Jj/real-madrid-25-26-visitante.png",
+                "descripcion": "Camisa oficial del Real Madrid, temporada 2025-26 | VISITA",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 221,
+                "equipo": "Inter Miami",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025-26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/4ZL0nSM9/inter-miami-25-26-local.png",
+                "descripcion": "Camisa oficial del Inter Miami, temporada 2025-26 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 222,
+                "equipo": "Japón",
+                "Version": ["Fan", "Player"],
+                "temporada": "2022",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/kscm2qnC/japon-2022.png",
+                "descripcion": "Camisa oficial de Japón, temporada 2022 | VISITA",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 223,
+                "equipo": "Portugal",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/DP030ZZP/portugal-2025-uefa-nations-league.png",
+                "descripcion": "Camisa oficial de Portugal, temporada 2025 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 224,
+                "equipo": "Paris Saint Germain",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025-26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/bMfCkNQf/psg-25-26-local-copy.png",
+                "descripcion": "Camisa oficial del Paris Saint Germain, temporada 2025-26 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 225,
+                "equipo": "Juventus",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025-26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/7xtSCBvr/juventus-25-26-local-copy.png",
+                "descripcion": "Camisa oficial de la Juventus, temporada 2025-26 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 226,
+                "equipo": "Real Madrid",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025-26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/KcgjgQdP/real-madrid-25-26-local.png",
+                "descripcion": "Camisa oficial del Real Madrid, temporada 2025-26 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 227,
+                "equipo": "Liverpool",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025-26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/5JtDVsC/liverpool-25-26-visita.png",
+                "descripcion": "Camisa oficial del Liverpool, temporada 2025-26 | VISITA",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 228,
+                "equipo": "Bayern Munich",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025-26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/PzQ5tFD0/bayern-munich-25-26-visita.png",
+                "descripcion": "Camisa oficial del Bayern Munich, temporada 2025-26 | VISITA",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 229,
+                "equipo": "AS Roma",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025-26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/KtWs8WS/roma-25-26-3ra-Equipacion.png",
+                "descripcion": "Camisa oficial del AS Roma, temporada 2025-26 | TERCERA EQUIPACIÓN",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 230,
+                "equipo": "Ajax",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025-26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/8nBz4T5j/ajax-25-26-local.png",
+                "descripcion": "Camisa oficial del Ajax, temporada 2025-26 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 231,
+                "equipo": "Al-Nassr FC",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025-26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/qY3r0P7t/al-nassr-25-26-local.png",
+                "descripcion": "Camisa oficial del Al-Nassr FC, temporada 2025-26 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 232,
+                "equipo": "Newcastle United",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025-26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/M5M3CYr3/newcastle-united-25-26-local.png",
+                "descripcion": "Camisa oficial del Newcastle United, temporada 2025-26 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 233,
+                "equipo": "Manchester City",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025-26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/BmBL5yX/man-city-25-26-visita.png",
+                "descripcion": "Camisa oficial del Manchester City, temporada 2025-26 | VISITA",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 234,
+                "equipo": "Borussia Dortmund",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025-26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/Kx0SmRxL/borussia-dortmund-25-26-local.png",
+                "descripcion": "Camisa oficial del Borussia Dortmund, temporada 2025-26 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 235,
+                "equipo": "AC Milan",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025-26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/JjGNVCN6/ac-milan-25-26-visita.png",
+                "descripcion": "Camisa oficial del AC Milan, temporada 2025-26 | VISITA",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 236,
+                "equipo": "Galatasaray",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025-26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/XfsLmm2W/galatasaray-25-26-local.png",
+                "descripcion": "Camisa oficial del Galatasaray, temporada 2025-26 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 237,
+                "equipo": "Deportivo Saprissa",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025-26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/d46YhQxh/saprissa-25-26-local.png",
+                "descripcion": "Camisa oficial del Deportivo Saprissa, temporada 2025-26 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 238,
+                "equipo": "LD Alajuelense",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025-26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/7ttkLS7v/ld-alajuelense-25-26-local.png",
+                "descripcion": "Camisa oficial del LD Alajuelense, temporada 2025-26 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 239,
+                "equipo": "CS Herediano",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025-26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/qLHz3NJG/herediano-24-25-local.png",
+                "descripcion": "Camisa oficial del CS Herediano, temporada 2025-26 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 240,
+                "equipo": "Bayern Munich",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025-26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/5x2jPccm/bayern-munich-25-26-3ra-equipacion.png",
+                "descripcion": "Camisa oficial del Bayern Munich, temporada 2025-26 | TERCERA EQUIPACIÓN",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 241,
+                "equipo": "Juventus",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025-26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/kg3C30Xn/juventus-25-26-visita.png",
+                "descripcion": "Camisa oficial de la Juventus, temporada 2025-26 | VISITA",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 242,
+                "equipo": "Borussia Dortmund",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025-26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/Cpbq3V7m/borussia-dortmund-25-26-visita.png",
+                "descripcion": "Camisa oficial del Borussia Dortmund, temporada 2025-26 | VISITA",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 243,
+                "equipo": "Arsenal",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025-26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/gFjp9j35/arsenal-25-26-3ra-equipacion.png",
+                "descripcion": "Camisa oficial del Arsenal, temporada 2025-26 | TERCERA EQUIPACIÓN",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 244,
+                "equipo": "AS Roma",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025-26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/GfbjpxPp/roma-25-26-visita.png",
+                "descripcion": "Camisa oficial del AS Roma, temporada 2025-26 | VISITA",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 245,
+                "equipo": "Al-Nassr FC",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025-26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/nNHfLyp4/al-nassr-25-26-visita.png",
+                "descripcion": "Camisa oficial del Al-Nassr FC, temporada 2025-26 | VISITA",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 246,
+                "equipo": "Deportivo Saprissa",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025-26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/Tqqh96NY/saprissa-25-26-visita.png",
+                "descripcion": "Camisa oficial del Deportivo Saprissa, temporada 2025-26 | VISITA",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 247,
+                "equipo": "LD Alajuelense",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025-26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/FLSswv6t/ld-alajuelense-25-26-visita.png",
+                "descripcion": "Camisa oficial del LD Alajuelense, temporada 2025-26 | VISITA",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 248,
+                "equipo": "CS Herediano",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025-26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/RpvsnrwD/herediano-24-25-visita.png",
+                "descripcion": "Camisa oficial del CS Herediano, temporada 2025-26 | VISITA",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 249,
+                "equipo": "Schalke 04",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025-26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/99wpmtVJ/schalke04-25-26-local.png",
+                "descripcion": "Camisa oficial del Schalke 04, temporada 2025-26 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 250,
+                "equipo": "Nottingham Forest",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025-26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/S41xjmG3/nottingham-forest-25-26-local.png",
+                "descripcion": "Camisa oficial del Nottingham Forest, temporada 2025-26 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 251,
+                "equipo": "Aston Villa",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025-26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/GvNsHr4P/aston-villa-25-26-local.png",
+                "descripcion": "Camisa oficial del Aston Villa, temporada 2025-26 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 252,
+                "equipo": "Chelsea",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025-26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/9kfQ3sK7/chelsea-25-26-3ra-equipacion.png",
+                "descripcion": "Camisa oficial del Chelsea, temporada 2025-26 | TERCERA EQUIPACIÓN",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 253,
+                "equipo": "Juventus",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025-26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/Ld6PR1GR/juventus-25-26-3-equipacion.png",
+                "descripcion": "Camisa oficial de la Juventus, temporada 2025-26 | TERCERA EQUIPACIÓN",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            }
+            
+        ];
+
+        // =============================================
+        // CONFIGURACIÓN INICIAL Y VARIABLES GLOBALES
+        // =============================================
+
+        // Carrito de compras (almacenado en localStorage para persistencia)
+        let cart = JSON.parse(localStorage.getItem('futbolCart')) || [];
+
+        // =============================================
+        // FUNCIONES PRINCIPALES - INICIALIZACIÓN
+        // =============================================
+
+        // Esperar a que cargue completamente el DOM antes de ejecutar el código
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log("🚀 Inicializando catálogo de fútbol...");
+            
+            // Configurar funcionalidad de búsqueda
+            setupSearchFunctionality();
+            
+            // Cargar productos en la cuadrícula de la página
+            loadProducts();
+            
+            // Actualizar el contador del carrito
+            updateCartCount();
+            
+            // Configurar los botones del carrito para desktop y móvil
+            setupCartButton('cartButton');      // Botón desktop
+            setupCartButton('cartButtonMobile'); // Botón móvil
+
+            // Obtener ID del producto desde la URL si existe (para enlaces directos)
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id');
+            if (productId) {
+                // Simular clic en el producto con el ID de la URL después de un breve delay
+                setTimeout(() => {
+                    const productElement = document.querySelector(`.product-card[data-id="${productId}"]`);
+                    if (productElement) {
+                        productElement.click();
+                    }
+                }, 500);
+            }
+
+            // =============================================
+            // CONFIGURACIÓN DE CONTROLES DE CANTIDAD
+            // =============================================
+            const quantityInput = document.getElementById('quantity');
+            
+            // Botón para disminuir cantidad
+            document.getElementById('decrement').addEventListener('click', () => {
+                if (quantityInput.value > 1) {
+                    quantityInput.value = parseInt(quantityInput.value) - 1;
+                    updateOrderSummary();
+                }
+            });
+            
+            // Botón para aumentar cantidad
+            document.getElementById('increment').addEventListener('click', () => {
+                if (quantityInput.value < 10) {
+                    quantityInput.value = parseInt(quantityInput.value) + 1;
+                    updateOrderSummary();
+                }
+            });
+            
+            // Validación manual de entrada de cantidad
+            quantityInput.addEventListener('change', () => {
+                if (quantityInput.value < 1) quantityInput.value = 1;
+                if (quantityInput.value > 10) quantityInput.value = 10;
+                updateOrderSummary();
+            });
+            
+            // =============================================
+            // CONFIGURACIÓN DE GUÍAS DE TALLAS (FAN Y PLAYER)
+            // =============================================
+            
+            // Configurar toggle para guía de tallas FAN
+            document.getElementById('sizeGuideToggleFan').addEventListener('click', function() {
+                const tableContainerFan = document.getElementById('sizeTableContainerFan');
+                const tableContainerPlayer = document.getElementById('sizeTableContainerPlayer');
+                
+                // Ocultar la otra tabla
+                tableContainerPlayer.classList.add('d-none');
+                // Mostrar/ocultar esta tabla
+                tableContainerFan.classList.toggle('d-none');
+                this.innerHTML = tableContainerFan.classList.contains('d-none') ? 
+                    '<i class="fa-solid fa-ruler"></i> Ver guía de tallas (FAN)' : 
+                    '<i class="fa-solid fa-ruler"></i> Ocultar guía de tallas (FAN)';
+                // Restaurar texto del otro toggle
+                document.getElementById('sizeGuideTogglePlayer').innerHTML = '<i class="fa-solid fa-ruler"></i> Ver guía de tallas (PLAYER)';
+            });
+            
+            // Configurar toggle para guía de tallas PLAYER
+            document.getElementById('sizeGuideTogglePlayer').addEventListener('click', function() {
+                const tableContainerFan = document.getElementById('sizeTableContainerFan');
+                const tableContainerPlayer = document.getElementById('sizeTableContainerPlayer');
+                
+                // Ocultar la otra tabla
+                tableContainerFan.classList.add('d-none');
+                // Mostrar/ocultar esta tabla
+                tableContainerPlayer.classList.toggle('d-none');
+                this.innerHTML = tableContainerPlayer.classList.contains('d-none') ? 
+                    '<i class="fa-solid fa-ruler"></i> Ver guía de tallas (PLAYER)' : 
+                    '<i class="fa-solid fa-ruler"></i> Ocultar guía de tallas (PLAYER)';
+                // Restaurar texto del otro toggle
+                document.getElementById('sizeGuideToggleFan').innerHTML = '<i class="fa-solid fa-ruler"></i> Ver guía de tallas (FAN)';
+            });
+            
+            // =============================================
+            // CONFIGURACIÓN DE EVENTOS QUE ACTUALIZAN EL RESUMEN
+            // =============================================
+            
+            // Actualizar resumen cuando cambian los campos
+            document.getElementById('size').addEventListener('change', updateOrderSummary);
+            document.getElementById('version').addEventListener('change', updateOrderSummary);
+            document.getElementById('playerCustomization').addEventListener('input', updateOrderSummary);
+            document.getElementById('parches').addEventListener('input', updateOrderSummary);
+            
+            // =============================================
+            // CONFIGURACIÓN DE BOTONES DE ACCIÓN
+            // =============================================
+            
+            // Agregar al carrito
+            document.getElementById('addToCartBtn').addEventListener('click', function() {
+                // Validar que se haya seleccionado una talla
+                if (!document.getElementById('size').value) {
+                    alert('Por favor selecciona una talla');
+                    return;
+                }
+                
+                // Validar que se haya seleccionado una versión
+                if (!document.getElementById('version').value) {
+                    alert('Por favor selecciona una versión (Fan o Player)');
+                    return;
+                }
+                
+                // Obtener datos del producto seleccionado
+                const productId = document.getElementById('selectedProductId').value;
+                const product = productosFutbol.find(p => p.id == productId);
+                
+                if (!product) {
+                    alert('Error: Producto no encontrado');
+                    return;
+                }
+                
+                // Obtener datos de personalización
+                const version = document.getElementById('version').value;
+                const playerCustomization = document.getElementById('playerCustomization').value;
+                const parches = document.getElementById('parches').value;
+                
+                // Determinar precio según versión seleccionada
+                const price = version === 'player' ? product.precio_player : product.precio_fan;
+                
+                // Crear objeto del item del carrito
+                const cartItem = {
+                    id: product.id,
+                    name: `${product.equipo} - ${product.temporada}`,
+                    price: price,
+                    quantity: parseInt(document.getElementById('quantity').value),
+                    size: document.getElementById('size').value,
+                    image: product.imagen,
+                    version: version,
+                    customization: {
+                        playerCustomization: playerCustomization,
+                        parches: parches
+                    }
+                };
+                
+                // Agregar al carrito
+                addToCart(cartItem);
+                
+                // Mostrar notificación de éxito
+                showCartNotification();
+            });
+            
+            // Ordenar producto individual por WhatsApp
+            document.getElementById('orderNowBtn').addEventListener('click', function() {
+                const size = document.getElementById('size').value;
+                if (!size) {
+                    alert('Por favor selecciona una talla');
+                    return;
+                }
+                
+                const version = document.getElementById('version').value;
+                if (!version) {
+                    alert('Por favor selecciona una versión');
+                    return;
+                }
+
+                const productId = document.getElementById('selectedProductId').value;
+                const product = productosFutbol.find(p => p.id == productId);
+
+                if (!product) {
+                    alert('Error: Producto no encontrado');
+                    return;
+                }
+
+                const quantity = document.getElementById('quantity').value;
+                const playerCustomization = document.getElementById('playerCustomization').value;
+                const parches = document.getElementById('parches').value;
+                
+                // Determinar precio según versión seleccionada
+                const price = version === 'player' ? product.precio_player : product.precio_fan;
+                const totalPrice = price * quantity;
+
+                // Construir mensaje con el formato solicitado
+                let message = 
+                    "Tienda Oficial de las Chemas del Mapa | Pedido camisa de futbol%0A%0A" +
+                    "Cantidad: " + quantity + "%0A" +
+                    "Producto: " + product.equipo + " - " + product.temporada + "%0A" +
+                    "Version: " + (version === 'player' ? 'Player' : 'Fan') + "%0A" +
+                    "Talla: " + size + "%0A" +
+                    "Personalizacion: " + (playerCustomization || "Sin personalizar") + "%0A" +
+                    "Parche: " + (parches || "Sin parches") + "%0A%0A" +
+                    "Precio: ₡" + totalPrice.toLocaleString('es-CR') + "%0A%0A" +
+                    "-------------------------------%0A%0A" +
+                    "www.laschemasdelmapa.com";
+
+                // Verificación del mensaje completo en consola
+                console.log("Mensaje de WhatsApp COMPLETO:", decodeURIComponent(message));
+
+                window.open(`https://wa.me/50685828670?text=${message}`, '_blank');
+            });
+
+            // Reset del formulario
+            document.getElementById('resetBtn').addEventListener('click', function() {
+                updateOrderSummary();
+            });
+
+            // Finalizar pedido desde el carrito por WhatsApp
+            document.getElementById('checkoutWhatsApp').addEventListener('click', function() {
+                if (cart.length === 0) {
+                    alert('Tu carrito está vacío');
+                    return;
+                }
+
+                const totalPrice = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+
+                // Construir mensaje con el formato solicitado para el carrito
+                let message = 
+                    "Tienda Oficial de las Chemas del Mapa | Pedido camisa de futbol%0A%0A";
+
+                cart.forEach((item, index) => {
+                    message += 
+                        "Cantidad: " + item.quantity + "%0A" +
+                        "Producto: " + item.name + "%0A" +
+                        "Version: " + (item.version === 'player' ? 'Player' : 'Fan') + "%0A" +
+                        "Talla: " + item.size + "%0A" +
+                        "Personalizacion: " + (item.customization.playerCustomization || "Sin personalizar") + "%0A" +
+                        "Parche: " + (item.customization.parches || "Sin parches") + "%0A%0A" +
+                        "Precio: ₡" + (item.price * item.quantity).toLocaleString('es-CR') + "%0A%0A";
+                });
+
+                message += "Total: ₡" + totalPrice.toLocaleString('es-CR') + "%0A%0A" +
+                    "-------------------------------%0A%0A" +
+                    "www.laschemasdelmapa.com";
+
+                // Verificación del mensaje del carrito en consola
+                console.log("Mensaje de WhatsApp (carrito) COMPLETO:", decodeURIComponent(message));
+
+                window.open(`https://wa.me/50685828670?text=${message}`, '_blank');
+            });
+            
+            console.log("✅ Catálogo de fútbol inicializado correctamente");
+        });
+
+        // =============================================
+        // FUNCIONALIDAD DE BÚSQUEDA
+        // =============================================
+        function setupSearchFunctionality() {
+            // Configurar búsqueda de escritorio
+            const desktopSearchForm = document.getElementById('desktopSearchForm');
+            const desktopSearchInput = document.getElementById('desktopSearchInput');
+            
+            if (desktopSearchForm && desktopSearchInput) {
+                desktopSearchForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    performSearch(desktopSearchInput.value);
+                });
+            }
+            
+            // Configurar búsqueda móvil
+            const mobileSearchForm = document.getElementById('mobileSearchForm');
+            const mobileSearchInput = document.getElementById('mobileSearchInput');
+            
+            if (mobileSearchForm && mobileSearchInput) {
+                mobileSearchForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    performSearch(mobileSearchInput.value);
+                    
+                    // Cerrar el menú offcanvas después de buscar
+                    const offcanvas = document.getElementById('offcanvasNavbar');
+                    if (offcanvas) {
+                        const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvas);
+                        if (bsOffcanvas) bsOffcanvas.hide();
+                    }
+                });
+            }
+        }
+
+        function performSearch(searchTerm) {
+            if (!searchTerm.trim()) {
+                alert('Por favor ingresa un término de búsqueda');
+                return;
+            }
+            
+            console.log(`Buscando: ${searchTerm}`);
+            
+            // Filtrar productos que coincidan con el término de búsqueda
+            const searchResults = productosFutbol.filter(product => {
+                const searchLower = searchTerm.toLowerCase();
+                return (
+                    product.equipo.toLowerCase().includes(searchLower) ||
+                    (product.temporada && product.temporada.toLowerCase().includes(searchLower)) ||
+                    (product.descripcion && product.descripcion.toLowerCase().includes(searchLower))
+                );
+            });
+            
+            if (searchResults.length === 0) {
+                alert(`No se encontraron productos para "${searchTerm}"`);
+                return;
+            }
+            
+            // Mostrar resultados de búsqueda
+            displaySearchResults(searchResults, searchTerm);
+        }
+
+        function displaySearchResults(results, searchTerm) {
+            // Ocultar sección de productos normal
+            document.getElementById('productSelection').style.display = 'none';
+            
+            // Crear sección de resultados de búsqueda
+            const mainContainer = document.querySelector('.container.mb-5');
+            
+            // Eliminar sección de resultados anterior si existe
+            const existingResults = document.getElementById('searchResultsSection');
+            if (existingResults) {
+                existingResults.remove();
+            }
+            
+            // Crear nueva sección de resultados
+            const resultsSection = document.createElement('div');
+            resultsSection.id = 'searchResultsSection';
+            resultsSection.innerHTML = `
+                <div class="flex items-center my-8 mt-12">
+                    <div class="flex-grow border-t border-black"></div>
+                    <span class="mx-4 text-black font-semibold text-xl">RESULTADOS DE BÚSQUEDA: "${searchTerm}"</span>
+                    <div class="flex-grow border-t border-black"></div>
+                </div>
+                <div class="row mb-4 ml-4">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="searchResultsGrid">
+                        <!-- Los resultados se cargarán aquí -->
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <button class="btn btn-outline-secondary" id="clearSearchBtn">
+                        <i class="fa-solid fa-arrow-left"></i> Volver al catálogo completo
+                    </button>
+                </div>
+            `;
+            
+            // Insertar antes de la sección del formulario
+            const formSection = document.getElementById('formSection');
+            mainContainer.insertBefore(resultsSection, formSection);
+            
+            // Cargar resultados en la grid
+            const resultsGrid = document.getElementById('searchResultsGrid');
+            resultsGrid.innerHTML = '';
+            
+            results.forEach(product => {
+                const card = createProductCard(product);
+                resultsGrid.appendChild(card);
+            });
+            
+            // Configurar botón para limpiar búsqueda
+            document.getElementById('clearSearchBtn').addEventListener('click', function() {
+                clearSearchResults();
+            });
+            
+            // Desplazarse a la sección de resultados
+            resultsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function clearSearchResults() {
+            const resultsSection = document.getElementById('searchResultsSection');
+            if (resultsSection) {
+                resultsSection.remove();
+            }
+            
+            // Mostrar sección de productos normal
+            document.getElementById('productSelection').style.display = 'block';
+            
+            // Desplazarse al inicio de la página
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // =============================================
+        // FUNCIÓN PARA CONFIGURAR BOTONES DEL CARRITO
+        // =============================================
+        function setupCartButton(buttonId) {
+            document.getElementById(buttonId).addEventListener('click', function() {
+                // Mostrar el modal del carrito usando Bootstrap
+                const cartModal = new bootstrap.Modal(document.getElementById('cartModal'));
+                cartModal.show();
+                
+                // Cargar los elementos del carrito en el modal
+                loadCartItems();
+            });
+        }
+
+        // =============================================
+        // FUNCIÓN PARA CARGAR PRODUCTOS EN LA CUADRÍCULA
+        // =============================================
+        function loadProducts() {
+            const productGrid = document.getElementById('productGrid');
+            productGrid.innerHTML = ''; // Limpiar indicador de carga
+            
+            // Crear una tarjeta para cada producto
+            productosFutbol.forEach(product => {
+                const productCard = createProductCard(product);
+                productGrid.appendChild(productCard);
+            });
+        }
+
+        function createProductCard(product) {
+            const productCard = document.createElement('div');
+            productCard.className = 'col';
+            productCard.innerHTML = `
+                <div class="card product-info-card h-100" data-id="${product.id}">
+                    <img src="${product.imagen}" class="card-img-top product-thumb" alt="${product.equipo} - ${product.temporada}">
+                    <div class="card-body text-start">
+                        <h5 class="card-title">${product.equipo}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">${product.temporada}</h6>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <p class="price-tag mb-0">₡${product.precio_fan.toLocaleString('es-CR')}</p>
+                                ${product.disponible ? 
+                                    '<span class="badge bg-success">Disponible</span>' : 
+                                    '<span class="badge bg-danger">Agotado</span>'}
+                        </div>
+                    </div>
+                    <div class="card-footer bg-green-700">
+                        <small class="text-white font-bold">Haz clic para Comprar</small>
+                    </div>
+                </div>
+            `;
+            
+            // Agregar evento de clic para seleccionar el producto
+            productCard.addEventListener('click', function() {
+                selectProduct(product.id);
+            });
+            
+            return productCard;
+        }
+
+        // =============================================
+        // FUNCIÓN PARA SELECCIONAR UN PRODUCTO
+        // =============================================
+        function selectProduct(productId) {
+            const product = productosFutbol.find(p => p.id == productId);
+            if (!product) return;
+            
+            // Actualizar UI con la información del producto seleccionado
+            document.getElementById('productName').textContent = `${product.equipo} - ${product.temporada}`;
+            document.getElementById('productImage').src = product.imagen;
+            document.getElementById('productDescription').textContent = product.descripcion;
+            document.getElementById('selectedProductId').value = product.id;
+            
+            // Actualizar lista de características
+            const featuresList = document.getElementById('productFeatures');
+            featuresList.innerHTML = `
+                <li><i class="fa-solid fa-check"></i> Equipo: ${product.equipo}</li>
+                <li><i class="fa-solid fa-check"></i> Temporada: ${product.temporada}</li>
+                <li><i class="fa-solid fa-check"></i> Versiones disponibles: Fan y Player</li>
+                <li><i class="fa-solid fa-check"></i> Material de alta calidad</li>
+                <li><i class="fa-solid fa-check"></i> Personalizable con nombre y número</li>
+            `;
+            
+            // Actualizar indicador de disponibilidad
+            const availabilityElement = document.getElementById('productAvailability');
+            availabilityElement.innerHTML = product.disponible ? 
+                '<span class="badge bg-success">Disponible</span>' : 
+                '<span class="badge bg-danger">Agotado</span>';
+            
+            // Actualizar opciones de tallas disponibles
+            const sizeSelect = document.getElementById('size');
+            sizeSelect.innerHTML = '<option value="" selected disabled>Selecciona una talla</option>';
+            
+            product.tallas.forEach(size => {
+                const option = document.createElement('option');
+                option.value = size;
+                option.textContent = size;
+                sizeSelect.appendChild(option);
+            });
+            
+            // Limpiar campos de personalización
+            document.getElementById('playerCustomization').value = '';
+            document.getElementById('parches').value = '';
+            document.getElementById('version').value = '';
+            
+            // Actualizar resumen del pedido
+            document.getElementById('summaryProduct').textContent = `${product.equipo} - ${product.temporada}`;
+            
+            // Mostrar sección del formulario (oculta inicialmente)
+            document.getElementById('formSection').classList.remove('d-none');
+            
+            // Desplazarse suavemente hacia el formulario
+            document.getElementById('formSection').scrollIntoView({ behavior: 'smooth' });
+            
+            // Actualizar resumen del pedido
+            updateOrderSummary();
+        }
+
+        // =============================================
+        // FUNCIÓN PARA ACTUALIZAR EL RESUMEN DEL PEDIDO
+        // =============================================
+        function updateOrderSummary() {
+            const productId = document.getElementById('selectedProductId').value;
+            if (!productId) return;
+            
+            const product = productosFutbol.find(p => p.id == productId);
+            if (!product) return;
+            
+            // Obtener valores actuales del formulario
+            const version = document.getElementById('version').value;
+            const quantity = parseInt(document.getElementById('quantity').value) || 1;
+            const playerCustomization = document.getElementById('playerCustomization').value;
+            const size = document.getElementById('size').value;
+            const parches = document.getElementById('parches').value;
+            
+            // Determinar precio según versión seleccionada
+            let unitPrice = 0;
+            if (version === 'player') {
+                unitPrice = product.precio_player;
+            } else if (version === 'fan') {
+                unitPrice = product.precio_fan;
+            }
+            
+            const totalPrice = unitPrice * quantity;
+            
+            // Actualizar elementos del resumen
+            document.getElementById('summaryVersion').textContent = version ? (version === 'player' ? 'Player' : 'Fan') : '-';
+            document.getElementById('summaryUnitPrice').textContent = unitPrice > 0 ? `₡${unitPrice.toLocaleString('es-CR')}` : '₡0';
+            document.getElementById('summaryTotal').textContent = `₡${totalPrice.toLocaleString('es-CR')}`;
+            
+            // Actualizar detalles de personalización en el resumen
+            let customizationText = playerCustomization || '-';
+            
+            // Incluir parches en el resumen si el cliente los especificó
+            if (parches) {
+                customizationText += (customizationText !== '-' ? ', ' : '') + 'Parches: ' + parches;
+            }
+            
+            document.getElementById('summaryCustomization').textContent = customizationText;
+            document.getElementById('summarySize').textContent = size || '-';
+            
+            // Actualizar precio en la sección de información del producto
+            if (unitPrice > 0) {
+                document.getElementById('productPrice').textContent = `₡${unitPrice.toLocaleString('es-CR')}`;
+            }
+        }
+
+        // =============================================
+        // FUNCIONES DEL CARRITO DE COMPRAS
+        // =============================================
+
+        // Función para agregar un producto al carrito
+        function addToCart(item) {
+            // Verificar si el producto ya está en el carrito
+            const existingItemIndex = cart.findIndex(cartItem => 
+                cartItem.id === item.id && 
+                cartItem.size === item.size &&
+                cartItem.version === item.version &&
+                JSON.stringify(cartItem.customization) === JSON.stringify(item.customization)
+            );
+            
+            if (existingItemIndex !== -1) {
+                // Si ya existe, actualizar la cantidad
+                cart[existingItemIndex].quantity += item.quantity;
+            } else {
+                // Si no existe, agregar nuevo item
+                cart.push(item);
+            }
+            
+            // Guardar en localStorage para persistencia
+            localStorage.setItem('futbolCart', JSON.stringify(cart));
+            
+            // Actualizar contador del carrito
+            updateCartCount();
+        }
+
+        // Función para actualizar el contador del carrito
+        function updateCartCount() {
+            const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+            document.getElementById('cartCount').textContent = totalItems;
+            document.getElementById('cartCountMobile').textContent = totalItems;
+        }
+
+        // =============================================
+        // FUNCIÓN PARA MOSTRAR NOTIFICACIÓN DEL CARRITO
+        // =============================================
+        function showCartNotification() {
+            const notification = document.querySelector('.cart-notification');
+            notification.style.display = 'block';
+            
+            // Ocultar notificación después de 3 segundos
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 3000);
+        }
+
+        // =============================================
+        // FUNCIÓN PARA CARGAR ELEMENTOS EN EL MODAL DEL CARRITO
+        // =============================================
+        function loadCartItems() {
+            const cartItemsContainer = document.getElementById('cartItemsContainer');
+            
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = `
+                    <div class="empty-cart text-center py-4">
+                        <i class="fa-solid fa-cart-shopping fa-3x mb-3 text-muted"></i>
+                        <h4>Tu carrito está vacío</h4>
+                        <p class="text-muted">Agrega algunas camisetas de fútbol para verlas aquí</p>
+                    </div>
+                `;
+                document.getElementById('cartTotalAmount').textContent = '₡0';
+                return;
+            }
+            
+            let cartHTML = '';
+            let totalAmount = 0;
+            
+            cart.forEach((item, index) => {
+                const itemTotal = item.price * item.quantity;
+                totalAmount += itemTotal;
+                
+                cartHTML += `
+                    <div class="cart-item d-flex align-items-center mb-3 pb-3 border-bottom">
+                        <img src="${item.image}" class="cart-item-image me-3" alt="${item.name}" style="width: 80px; height: auto;">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">${item.name}</h6>
+                            <div class="text-muted small">
+                                <span>Versión: ${item.version === 'player' ? 'Player' : 'Fan'}</span> | 
+                                <span>Talla: ${item.size}</span>
+                            </div>
+                            ${item.customization.playerCustomization ? 
+                                `<div class="text-muted small">
+                                    <span>Personalización: ${item.customization.playerCustomization}</span>
+                                </div>` : ''}
+                            <!-- Mostrar parches en el carrito si el cliente los especificó -->
+                            ${item.customization.parches ? 
+                                `<div class="text-muted small">
+                                    <span>Parches: ${item.customization.parches}</span>
+                                </div>` : ''}
+                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                <div>
+                                    <span class="fw-bold">₡${itemTotal.toLocaleString('es-CR')}</span>
+                                    <small class="text-muted"> (₡${item.price.toLocaleString('es-CR')} x ${item.quantity})</small>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <button class="btn btn-sm btn-outline-secondary decrease-quantity" data-index="${index}">-</button>
+                                    <span class="mx-2">${item.quantity}</span>
+                                    <button class="btn btn-sm btn-outline-secondary increase-quantity" data-index="${index}">+</button>
+                                    <button class="btn btn-sm btn-outline-danger ms-2 remove-item" data-index="${index}">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            cartItemsContainer.innerHTML = cartHTML;
+            document.getElementById('cartTotalAmount').textContent = `₡${totalAmount.toLocaleString('es-CR')}`;
+            
+            // Agregar event listeners a los botones del carrito
+            document.querySelectorAll('.increase-quantity').forEach(button => {
+                button.addEventListener('click', function() {
+                    const index = parseInt(this.getAttribute('data-index'));
+                    cart[index].quantity += 1;
+                    localStorage.setItem('futbolCart', JSON.stringify(cart));
+                    updateCartCount();
+                    loadCartItems();
+                });
+            });
+            
+            document.querySelectorAll('.decrease-quantity').forEach(button => {
+                button.addEventListener('click', function() {
+                    const index = parseInt(this.getAttribute('data-index'));
+                    if (cart[index].quantity > 1) {
+                        cart[index].quantity -= 1;
+                    } else {
+                        cart.splice(index, 1);
+                    }
+                    localStorage.setItem('futbolCart', JSON.stringify(cart));
+                    updateCartCount();
+                    loadCartItems();
+                });
+            });
+            
+            document.querySelectorAll('.remove-item').forEach(button => {
+                button.addEventListener('click', function() {
+                    const index = parseInt(this.getAttribute('data-index'));
+                    cart.splice(index, 1);
+                    localStorage.setItem('futbolCart', JSON.stringify(cart));
+                    updateCartCount();
+                    loadCartItems();
+                });
+            });
+        }
+    </script>
+</body>
+</html>

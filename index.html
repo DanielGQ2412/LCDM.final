@@ -1,696 +1,2494 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- METADATOS BÁSICOS -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-      <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/css/producto_carta.css">
-    <link rel="stylesheet" href="/css/producto_carta_retro.css">
-    <link rel="stylesheet" href="/css/producto_carta_conjuntos.css">
-    <link rel="stylesheet" href="/css/producto_carta_abrigos.css">
-    <link rel="stylesheet" href="/css/barra_busqueda.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/Formularios/formulario_futbol_eu.js"></script>
-    <link rel="stylesheet" href="/css/formulario_futbol.css">
 
-    <title>inicio</title>
+    <!-- FRAMEWORKS Y LIBRERÍAS EXTERNAS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- ESTILOS PERSONALIZADOS -->
+    <link rel="stylesheet" href="./css/new_formulario.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0ZJ57PCKCQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0ZJ57PCKCQ');
+</script>
+
+    <title>Inicio - Las Chemas del Mapa</title>
 </head>
-<body>
 
+<body>
+    
+    <!-- HEADER Y NAVEGACIÓN PRINCIPAL -->
     <header>
         <div class="nav1-container">
             <nav>
-              <a href="/index.html">
-                <img src="/logo-deporte/letras-chemasmapa.png" alt="logo" class="logo">
-              </a>
-                <form class="barra-busqueda">
-                    <input type="text" placeholder="Buscar..." class="busqueda">
+                <!-- LOGO DE LA EMPRESA -->
+                <a href="/index.html">
+                    <img src="/logo-deporte/letras-chemasmapa.png" alt="logo" class="logo">
+                </a>
+                
+                <!-- BARRA DE BÚSQUEDA ESCRITORIO -->
+                <form class="barra-busqueda" id="desktopSearchForm">
+                    <input type="text" placeholder="Buscar..." class="busqueda" id="desktopSearchInput">
                     <button type="submit" class="buscar">
                         <img src="/logo-deporte/magnifying-glass-solid-full.svg" alt="buscar" class="icono-buscar">
                     </button>
                 </form>
 
-                
-               <!-- Botón del carrito de compras -->
+                <!-- BOTÓN DEL CARRITO DE COMPRAS -->
                 <div class="d-flex">
                     <button class="btn btn-outline-light position-relative" id="cartButton">
-                        <i class="fa-solid fa-cart-shopping"></i>  <a href=""></a>Carrito
-                        <!-- Contador de productos en el carrito -->
+                        <i class="fa-solid fa-cart-shopping"></i> Carrito
+                        <!-- CONTADOR DE PRODUCTOS EN EL CARRITO -->
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cartCount">0</span>
                     </button>
-
+                </div>
             </nav>
         </div>
+    </header>
 
-
-        <div class="nav2-container hidden md:block">
-
-        <!-- Botón menú hamburguesa -->
-        <!-- <button class="menu-toggle">☰</button> -->
-
+    <!-- MENÚ DE NAVEGACIÓN SECUNDARIO (Desktop) -->
+    <div class="nav2-container hidden md:block">
         <nav class="main-menu">
             <ul>
+                <!-- DROPDOWN DE FÚTBOL CON SUBMENÚ -->
                 <li class="dropdown-futbol">
                     <a href="#">
-                        <img src="/logo-deporte/futbol-svgrepo-com 2.svg" alt="logo-futbol" class="logo-futbol"
-                        >Futbol</a>
+                        <img src="/logo-deporte/futbol-svgrepo-com 2.svg" alt="logo-futbol" class="logo-futbol">Fútbol
+                    </a>
+                    <!-- CONTENIDO DEL DROPDOWN -->
                     <div class="dropdown-content">
-                        <a href="#"><img src="/logo-deporte/clothes-svgrepo-com.svg" alt="conjuto" class="conjuntos">Conjuntos</a>
-                        <a href="#"><img src="/logo-deporte/clothes-clothing-hooded-top-svgrepo-com.svg" alt="abrigos" class="abrigos">Abrigos</a>
-                        <a href="#"><img src="/logo-deporte/soccer-jersey-soccer-svgrepo-com.svg" alt="camisas" class="camisas">Camisas</a>
+                        <a href="/abrigos/catalogo_abrigos_01.html"><img src="/logo-deporte/clothes-clothing-hooded-top-svgrepo-com.svg" alt="abrigos" class="abrigos">Abrigos</a>
+                        <a href="/futbol/catalogo_futbol_01.html"><img src="/logo-deporte/soccer-jersey-soccer-svgrepo-com.svg" alt="camisas" class="camisas">Camisas</a>
+                        <a href="/conjuntos/catalogo_conjuntos_01.html"><img src="/logo-deporte/clothes-svgrepo-com.svg" alt="conjuto" class="conjuntos">Conjuntos</a>
                     </div>
                 </li>
 
-                <li><a href="retro/catalogo_retro_01.html" class="retro"><img src="/logo-deporte/futbol-svgrepo-com 2.svg" alt="logo-futbol" class="logo-futbol">Retro</a></li>
+                <!-- OTRAS CATEGORÍAS DE PRODUCTOS -->
+                <li><a href="/retro/catalogo_retro_01.html" class="retro"><img src="/logo-deporte/futbol-svgrepo-com 2.svg" alt="logo-futbol" class="logo-futbol">Retro</a></li>
                 <li><a href="/nba/catalogo_nba_01.html" class="nba"><img src="/logo-deporte/game.png" alt="logo-nba" class="logo-nba">NBA</a></li>
                 <li><a href="/nfl/catalogo_nfl_01.html" class="nfl"><img src="/logo-deporte/football-svgrepo-com.svg" alt="logo-nfl" class="logo-nfl">NFL</a></li>
-                <li><a href="/mlb/catalogo_mlb_01.html" class="mlb"><img src="/logo-deporte/baseball-svgrepo-com.svg" alt="logo-mlb" class="logo-mlb">MLB</a></li>
+                <li><a href="#" class="mlb"><img src="/logo-deporte/baseball-svgrepo-com.svg" alt="logo-mlb" class="logo-mlb">MLB</a></li>
                 <li><a href="/formula/catalogo_formula_01.html" class="formula"><img src="/logo-deporte/racing-car-svgrepo-com.svg" alt="logo-formula" class="logo-formula">F1</a></li>
                 <li><a href="#contactanos" class="contacto"><img src="/logo-deporte/contact-book-svgrepo-com.svg" alt="logo-contacto" class="logo-contacto"></a></li>
             </ul>
         </nav>
-
     </div>
-    </header>
 
-    
-    
-  
-
-
-
-    <!-- Side menu SOLO móvil -->
-    
+    <!-- SIDE MENU SOLO MÓVIL -->
     <nav class="navbar navbar-dark bg-dark fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/index.html"> <img src="/logo-deporte/letras-chemasmapa.png" alt=""></a>
-
-
-
-   
-
-
-   
-
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title bg-dark" id="offcanvasNavbarLabel">Las Chemas del Mapa</h5> 
-         <button type="button" class="btn-close bg-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-
-            <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle flex items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <img src="/logo-deporte/futbol-svgrepo-com 2.svg" alt="" class="w-6 h-6 mr-4">Futbol
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/index.html"> 
+                <img src="/logo-deporte/letras-chemasmapa.png" alt="">
             </a>
-            <ul class="dropdown-menu bg-dark">
-              <li><a class="dropdown-item flex items-center" href="#"> 
-                <img src="/logo-deporte/clothes-clothing-hooded-top-svgrepo-com.svg" alt="" class="w-6 h-6 mr-4">Abrigos
-              </a></li>
-              <li><a class="dropdown-item flex items-center" href="#">
-                <img src="/logo-deporte/soccer-jersey-soccer-svgrepo-com.svg" alt="" class="w-6 h-6 mr-4">Camisas
-              </a></li>
-              <li><a class="dropdown-item flex items-center" href="#">
-                <img src="/logo-deporte/clothes-svgrepo-com.svg" alt="" class="w-6 h-6 mr-4">Conjuntos Deportivos
-              </a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item flex items-center" href="/retro/catalogo_retro_01.html">
-                <img src="/logo-deporte/futbol-svgrepo-com 2.svg" alt="" class="w-6 h-6 mr-4">Retro
-              </a></li>
-            </ul>
-
-          </li>
-          <li class="nav-item">
-            <a class="nav-link flex items-center" aria-current="page" href="/nba/catalogo_nba_01.html">
-              <img src="/logo-deporte/game.png" alt="" class="w-6 h-6 mr-4">NBA
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link flex items-center" href="/nfl/catalogo_nfl_01.html">
-              <img src="/logo-deporte/football-svgrepo-com.svg" alt="" class="w-6 h-6 mr-4">NFL
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link flex items-center" href="/mlb/catalogo_mlb_01.html">
-              <img src="/logo-deporte/baseball-svgrepo-com.svg" alt="" class="w-6 h-6 mr-4">MLB
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link flex items-center" href="/formula/catalogo_formula_01.html">
-              <img src="/logo-deporte/racing-car-svgrepo-com.svg" alt="" class="w-6 h-6 mr-4">Formula 1
-            </a>
-          </li>
-          
-        </ul>
-       
-        <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-
-      </div> 
-    </div>
-  </div>
-</nav>
-
-
- 
-
-    <!-- Fin Side menu SOLO móvil -->
-
-
-<!-- Carrusel de imágenes -->
-<div id="myCarousel" class="carousel slide mt-36" data-bs-ride="carousel" data-bs-interval="3000">
-  <!-- Indicators -->
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
-
-  </div>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="/assets/57ab8252e0e096f142ef13abef58432b.jpg" class="d-block w-100" alt="maradona_napoli">
-      <div class="carousel-caption">
-        <a href="/nba/catalogo_nba_01.html">
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-          Comprar Ahora
-        </button>
-        </a>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="/assets/nfl_jugadores.jpg" class="d-block w-100" alt="Chicago">
-      <div class="carousel-caption d-none d-md-block">
-        <h3>Chicago</h3>
-        <p>Thank you, Chicago!</p>
-      </div>
-    </div>
-
-    <div class="carousel-item">
-      <img src="/assets/jordan&kobe_carrousel.jpg" class="d-block w-100" alt="New York">
-      <div class="carousel-caption">
-        <a href="/nba/catalogo_nba_01.html">
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-          Comprar Ahora
-        </button>
-        </a>
-      </div>
-    </div>
-    
-    <div class="carousel-item">
-      <img src="/assets/messi_carrousel.jpg" class="d-block w-100" alt="New York">
-      <div class="carousel-caption d-none d-md-block">
-        <h3>New York</h3>
-        <p>We love the Big Apple!</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="/assets/f1_modelos.png" class="d-block w-100" alt="New York">
-      <div class="carousel-caption d-none d-md-block">
-        <h3>New York</h3>
-        <p>We love the Big Apple!</p>
-      </div>
-    </div>
-  </div> 
-
-  <!-- Controls -->
-   <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Anterior</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Siguiente</span>
-  </button>
-</div>
-
-
-   <!-- Alerta de información -->
-
-
-<div id="alert-additional-content-5" class="flex items-center p-4 text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400" role="alert">
-  <svg class="shrink-0 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
-  </svg>
-  <span class="sr-only">Info</span>
-  <div class="ms-3 text-sm font-medium">
-    Nuestro catálogo crece contigo. <a href="#SobreNosotros" class="font-semibold underline hover:no-underline">¡Contáctanos</a>. y lo conseguimos por ti!.
-  </div>
-    <button type="button" class="ms-auto -mx-1.5 -my-1.5 bg-blue-50 text-blue-500 rounded-lg focus:ring-2 focus:ring-blue-400 p-1.5 hover:bg-blue-200 inline-flex items-center justify-center h-8 w-8 dark:bg-gray-800 dark:text-blue-400 dark:hover:bg-gray-700" data-dismiss-target="#alert-1" aria-label="Close">
-      <span class="sr-only">Close</span>
-      <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-      </svg>
-  </button>
-</div>
-
-
-
-
-<main>  
-
-<!------------------->
-<!------------------->
-    <!--FUTBOL-->
-<!------------------->
-<!------------------->
-
-
-    
-<!--Seccion de mas vendidos-->
-     
-    <!-- Main Content -->
-    <div class="container mb-5">
-        <!-- Product Selection -->
-        <div class="row mb-4" id="productSelection">
-            <div class="col-12">
-                <h2 class="section-title">Selecciona tu camiseta</h2>
-                <p class="text-muted">Haz clic en la camiseta que deseas personalizar</p>
+            
+            <!-- BOTÓN DEL CARRITO PARA MÓVIL -->
+            <div class="d-flex align-items-center">
+                <button class="btn btn-outline-light position-relative me-2" id="cartButtonMobile">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cartCountMobile">0</span>
+                </button>
+                
+                <!-- BOTÓN TOGGLER PARA EL MENÚ MÓVIL -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
             </div>
-            <div class="row row-cols-2 row-cols-md-2 row-cols-lg-4 g-4" id="productGrid">
-                <!-- Los productos se cargarán dinámicamente con JavaScript -->
+
+            <!-- MENÚ DESPLEGABLE MÓVIL -->
+            <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title bg-dark" id="offcanvasNavbarLabel">Las Chemas del Mapa</h5>
+                    <button type="button" class="btn-close bg-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <!-- DROPDOWN DE FÚTBOL EN MÓVIL -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle flex items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="/logo-deporte/futbol-svgrepo-com 2.svg" alt="" class="w-6 h-6 mr-4">Fútbol
+                            </a>
+                            <ul class="dropdown-menu bg-dark">
+                                <li><a class="dropdown-item flex items-center" href="/abrigos/catalogo_abrigos_01.html"> 
+                                    <img src="/logo-deporte/clothes-clothing-hooded-top-svgrepo-com.svg" alt="" class="w-6 h-6 mr-4">Abrigos
+                                </a></li>
+                                <li><a class="dropdown-item flex items-center" href="#">
+                                    <img src="/logo-deporte/soccer-jersey-soccer-svgrepo-com.svg" alt="" class="w-6 h-6 mr-4">Camisas
+                                </a></li>
+                                <li><a class="dropdown-item flex items-center" href="/conjuntos/catalogo_conjuntos_01.html">
+                                    <img src="/logo-deporte/clothes-svgrepo-com.svg" alt="" class="w-6 h-6 mr-4">Conjuntos Deportivos
+                                </a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item flex items-center" href="/retro/catalogo_retro_01.html">
+                                    <img src="/logo-deporte/futbol-svgrepo-com 2.svg" alt="" class="w-6 h-6 mr-4">Retro
+                                </a></li>
+                            </ul>
+                        </li>
+                        
+                        <!-- OTRAS CATEGORÍAS EN MÓVIL -->
+                        <li class="nav-item">
+                            <a class="nav-link flex items-center" aria-current="page" href="/nba/catalogo_nba_01.html">
+                                <img src="/logo-deporte/game.png" alt="" class="w-6 h-6 mr-4">NBA
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link flex items-center" href="/nfl/catalogo_nfl_01.html">
+                                <img src="/logo-deporte/football-svgrepo-com.svg" alt="" class="w-6 h-6 mr-4">NFL
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link flex items-center" href="/mlb/catalogo_mlb_01.html">
+                                <img src="/logo-deporte/baseball-svgrepo-com.svg" alt="" class="w-6 h-6 mr-4">MLB
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link flex items-center" href="/formula/catalogo_formula_01.html">
+                                <img src="/logo-deporte/racing-car-svgrepo-com.svg" alt="" class="w-6 h-6 mr-4">Formula 1
+                            </a>
+                        </li>
+                    </ul>
+                    
+                    <!-- BARRA DE BÚSQUEDA MÓVIL -->
+                    <form class="d-flex mt-3" role="search" id="mobileSearchForm">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" id="mobileSearchInput"/>
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CARRUSEL DE IMÁGENES -->
+    <div id="myCarousel" class="carousel slide mt-10" data-bs-ride="carousel" data-bs-interval="3000">
+        <!-- INDICADORES DEL CARRUSEL -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+        </div>
+
+      <!-- SLIDES DEL CARRUSEL -->
+        <div class="carousel-inner relative">
+
+            <!-- SLIDE 1 -->
+            <div class="carousel-item active relative">
+                <img
+                src="/assets/mapache_carrousel.png"
+                alt="Futbol"
+                class="w-full h-[300px] sm:h-[400px] md:h-[550px] lg:h-[700px] object-cover object-center"
+                >
+                <div class="absolute inset-0 flex flex-col justify-center items-center text-center bg-black/60 px-4">
+                <h3 class="mb-4 text-lg sm:text-2xl md:text-3xl text-white font-bold drop-shadow-lg">
+                    La mejor colección de camisetas de fútbol
+                </h3>
+                <a href="/futbol/catalogo_futbol_01.html">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-full text-sm sm:text-base">
+                    Comprar Ahora
+                    </button>
+                </a>
+                </div>
+            </div>
+
+            <!-- SLIDE 2 -->
+            <div class="carousel-item relative">
+                <img
+                src="/assets/pareja_ronaldo.jpg"
+                alt="Camisas retro"
+                class="w-full h-[300px] sm:h-[400px] md:h-[550px] lg:h-[700px] object-cover object-center"
+                >
+                <div class="absolute inset-0 flex flex-col justify-center items-center text-center bg-black/60 px-4">
+                <h3 class="text-lg sm:text-2xl md:text-3xl font-bold mb-4 text-white drop-shadow-lg">
+                    Las mejores camisas retro
+                </h3>
+                <a href="/retro/catalogo_retro_01.html">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-full text-sm sm:text-base">
+                    Comprar Ahora
+                    </button>
+                </a>
+                </div>
+            </div>
+
+            <!-- SLIDE 3 -->
+            <div class="carousel-item relative">
+                <img
+                src="/assets/kobe-bryant-michael-jordan-the-bench-john-farr.jpg"
+                alt="Leyendas del baloncesto"
+                class="w-full h-[300px] sm:h-[400px] md:h-[550px] lg:h-[700px] object-cover object-center"
+                >
+                <div class="absolute inset-0 flex flex-col justify-center items-center text-center bg-black/60 px-4">
+                <h3 class="text-lg sm:text-2xl md:text-3xl font-bold mb-4 text-white drop-shadow-lg">
+                    Leyendas del baloncesto
+                </h3>
+                <a href="/nba/catalogo_nba_01.html">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-full text-sm sm:text-base">
+                    Comprar Ahora
+                    </button>
+                </a>
+                </div>
+            </div>
+
+            <!-- SLIDE 4 -->
+            <div class="carousel-item relative">
+                <img
+                src="/assets/nfl_img_2.jpg"
+                alt="Leyendas del baloncesto"
+                class="w-full h-[300px] sm:h-[400px] md:h-[550px] lg:h-[700px] object-cover object-center"
+                >
+                <div class="absolute inset-0 flex flex-col justify-center items-center text-center bg-black/60 px-4">
+                <h3 class="text-lg sm:text-2xl md:text-3xl font-bold mb-4 text-white drop-shadow-lg">
+                    Orgullo y estilo en cada yarda
+                </h3>
+                <a href="/nfl/catalogo_nfl_01.html">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-full text-sm sm:text-base">
+                    Comprar Ahora
+                    </button>
+                </a>
+                </div>
+            </div>
+
+            <!-- SLIDE 5 -->
+            <div class="carousel-item relative">
+                <img
+                src="/assets/mlb_22.jpg"
+                alt="Orgullo y estilo en cada yarda"
+                class="w-full h-[300px] sm:h-[400px] md:h-[550px] lg:h-[700px] object-cover object-center"
+                >
+                <div class="absolute inset-0 flex flex-col justify-center items-center text-center bg-black/60 px-4">
+                <h3 class="text-lg sm:text-2xl md:text-3xl font-bold mb-4 text-white drop-shadow-lg">
+                    Tu pasión por el béisbol nunca pasa de moda
+                </h3>
+                <a href="/mlb/catalogo_mlb_01.html">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-full text-sm sm:text-base">
+                    Comprar Ahora
+                    </button>
+                </a>
+                </div>
+            </div>
+
+            <!-- SLIDE 6 -->
+            <div class="carousel-item relative">
+                <img
+                src="/assets/F1-mapache.png"
+                alt="Orgullo y estilo en cada yarda"
+                class="w-full h-[300px] sm:h-[400px] md:h-[550px] lg:h-[700px] object-cover object-center"
+                >
+                <div class="absolute inset-0 flex flex-col justify-center items-center text-center bg-black/60 px-4">
+                <h3 class="text-lg sm:text-2xl md:text-3xl font-bold mb-4 text-white drop-shadow-lg">
+                    La carrera empieza en tu armario
+                </h3>
+                <a href="/formula/catalogo_formula_01.html">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-full text-sm sm:text-base">
+                    Comprar Ahora
+                    </button>
+                </a>
+                </div>
+            </div>  
+
+        </div>
+
+
+
+        <!-- CONTROLES DEL CARRUSEL -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+
+    <!-- ALERTA INFORMATIVA -->
+    <div id="alert-additional-content-5" class="flex items-center p-4 text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400" role="alert">
+        <svg class="shrink-0 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+        </svg>
+        <span class="sr-only">Info</span>
+        <div class="ms-3 text-sm font-medium">
+            Nuestro catálogo crece contigo. <a href="#SobreNosotros" class="font-semibold underline hover:no-underline">¡Contáctanos</a>. y lo conseguimos por ti!.
+        </div>
+        <button type="button" class="ms-auto -mx-1.5 -my-1.5 bg-blue-50 text-blue-500 rounded-lg focus:ring-2 focus:ring-blue-400 p-1.5 hover:bg-blue-200 inline-flex items-center justify-center h-8 w-8 dark:bg-gray-800 dark:text-blue-400 dark:hover:bg-gray-700" data-dismiss-target="#alert-1" aria-label="Close">
+            <span class="sr-only">Close</span>
+            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- SECCIÓN PRINCIPAL DE PRODUCTOS -->
+    <div class="container mb-5">
+        
+        <!-- SECCIÓN FÚTBOL -->
+        <div class="flex items-center my-8 mt-12">
+            <div class="flex-grow border-t border-black"></div>
+            <span class="mx-4 text-black font-semibold text-xl">FÚTBOL</span>
+            <div class="flex-grow border-t border-black"></div>
+        </div>
+
+        <div class="flex justify-center mb-4">
+            <a href="/futbol/catalogo_futbol_01.html" class="text-blue-500 hover:underline text-lg font-semibold">Ver más</a>
+        </div>
+
+        <div class="row mb-4 ml-4" id="futbolSelection">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="futbolGrid">
+                <!-- Los productos de fútbol se cargarán dinámicamente con JavaScript -->
                 <div class="loading">
-                    <div class="spinner-border text-success" role="status">
+                    <div class="spinner-border text-primary" role="status">
                         <span class="visually-hidden">Cargando...</span>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <!-- Form Section (inicialmente oculta) -->
-        <div class="d-none" id="formSection">
-            <div class="row">
-                <!-- Product Info Column -->
-                <div class="col-lg-6">
-                    <div class="form-container">
-                        <div class="d-flex justify-content-between align-items-center mb-4">
-                            <h2 class="mb-0" id="productName">Nombre del Producto</h2>
-                            <span class="badge sport-badge" id="productSport">FÚTBOL</span>
-                        </div>
-                        
-                        <div class="image-container mb-4">
-                            <img src="" class="img-fluid product-image" id="productImage" alt="Imagen de la camiseta">
-                        </div>
-                        
-                        <div class="mb-4">
-                            <h4 class="section-title">Descripción</h4>
-                            <p id="productDescription" class="text-muted">Descripción del producto...</p>
-                        </div>
-                        
-                        <div class="mb-4">
-                            <h4 class="section-title">Características</h4>
-                            <ul class="feature-list" id="productFeatures">
-                                <!-- Las características se cargarán dinámicamente -->
-                            </ul>
-                        </div>
-                        
-                        <div class="d-flex justify-content-between align-items-center mt-4 p-3 bg-light rounded">
-                            <div>
-                                <span class="price-tag" id="productPrice">₡0</span>
-                                <small class="text-muted d-block">Precio base</small>
-                            </div>
-                            <div id="productAvailability">
-                                <!-- Disponibilidad se cargará dinámicamente -->
-                            </div>
-                        </div>
+
+        <!-- SECCIÓN FÚTBOL RETRO -->
+        <div class="flex items-center my-8 mt-16">
+            <div class="flex-grow border-t border-black"></div>
+            <span class="mx-4 text-black font-semibold text-xl">FÚTBOL RETRO</span>
+            <div class="flex-grow border-t border-black"></div>
+        </div>
+
+         <div class="flex justify-center mb-4">
+            <a href="/retro/catalogo_retro_01.html" class="text-blue-500 hover:underline text-lg font-semibold">Ver más</a>
+        </div>
+
+        <div class="row mb-4 ml-4" id="retroSelection">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="retroGrid">
+                <!-- Los productos retro se cargarán dinámicamente con JavaScript -->
+                <div class="loading">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Cargando...</span>
                     </div>
                 </div>
-                
-                <!-- Form Column -->
-                <div class="col-lg-6">
-                    <div class="form-container">
-                        <h3 class="section-title text-center">Personaliza tu Pedido</h3>
-                        
-                        <form id="orderForm">
-                            <input type="hidden" id="selectedProductId">
-                            
-                            <!-- Cantidad -->
-                            <div class="mb-4">
-                                <label for="quantity" class="form-label">Cantidad</label>
-                                <div class="input-group quantity-control">
-                                    <!-- <button class="btn btn-outline-secondary" type="button" id="decrement">-</button> -->
-                                    <input type="number" class="form-control text-center" id="quantity" value="1" min="1" max="99">
-                                    <!-- <button class="btn btn-outline-secondary" type="button" id="increment">+</button> -->
-                                </div>
-                            </div>
-                            
-                            <!-- Nombre y número del jugador -->
-                            <div class="mb-4">
-                                <label for="playerName" class="form-label">Personalización de Jugador</label>
-                                <div class="row g-2">
-                                    <div class="col-8">
-                                        <input type="text" class="form-control" id="playerName" placeholder="Nombre del jugador (Ej: Messi)">
-                                    </div>
-                                    <div class="col-4">
-                                        <input type="number" class="form-control" id="playerNumber" min="1" max="99" placeholder="Número">
-                                    </div>
-                                </div>
-                                <small class="text-muted">Opcional - Déjalo vacío si no deseas personalización</small>
-                            </div>
-                            
-                            <!-- Versión -->
-                            <div class="mb-4">
-                                <label class="form-label">Versión</label>
-                                <div class="d-flex gap-4">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="version" id="versionFan" value="fan" checked>
-                                        <label class="form-check-label fw-bold" for="versionFan">
-                                            <i class="fa-solid fa-user me-1"></i> Versión Fan
-                                            <small class="d-block text-muted">₡20,000</small>
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="version" id="versionPlayer" value="player">
-                                        <label class="form-check-label fw-bold" for="versionPlayer">
-                                            <i class="fa-solid fa-shield me-1"></i> Versión Player
-                                            <small class="d-block text-muted">₡22,000</small>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Tallas -->
-                            <div class="mb-4">
-                                <label for="size" class="form-label">Talla</label>
-                                <select class="form-select" id="size" required>
-                                    <option value="" selected disabled>Selecciona una talla</option>
-                                    <option value="S">Small (S)</option>
-                                    <option value="M">Medium (M)</option>
-                                    <option value="L">Large (L)</option>
-                                    <option value="XL">Extra Large (XL)</option>
-                                    <option value="2XL">2X Large (2XL)</option>
-                                    
-                                </select>
-                                <small class="text-muted">Consulta nuestra <a href="#">guía de tallas</a> si tienes dudas</small>
-                            </div>
-                            
-                            <!-- Parches -->
-                            <div class="mb-4">
-                                <label class="form-label">Parches (Opcional)</label>
-                                <small class="text-muted d-block mb-2">Selecciona un parche o escribe uno personalizado</small>
-                                <div class="patch-options">
-                                    <div class="patch-option" data-patch="ninguno">
-                                        <input type="radio" class="patch-radio" name="patchOption" id="patchNone" value="ninguno" checked>
-                                        <label class="patch-label" for="patchNone">Sin parche</label>
-                                        <span class="patch-description">Camiseta sin parches adicionales</span>
-                                    </div>
-                                    <div class="patch-option" data-patch="liga">
-                                        <input type="radio" class="patch-radio" name="patchOption" id="patchLiga" value="liga">
-                                        <label class="patch-label" for="patchLiga">Liga Nacional</label>
-                                        <span class="patch-description">Parche de competición local</span>
-                                    </div>
-                                    <div class="patch-option" data-patch="champions">
-                                        <input type="radio" class="patch-radio" name="patchOption" id="patchChampions" value="champions">
-                                        <label class="patch-label" for="patchChampions">Champions League</label>
-                                        <span class="patch-description">Competición europea</span>
-                                    </div>
-                                    <div class="patch-option" data-patch="europa-league">
-                                        <input type="radio" class="patch-radio" name="patchOption" id="patch-europa-league" value="Europa-League">
-                                        <label class="patch-label" for="patch-europa-league">Europa League</label>
-                                        <span class="patch-description">Competición europea</span>
-                                     </div>
-                                    <!-- <div class="patch-option" data-patch="copa">
-                                        <input type="radio" class="patch-radio" name="patchOption" id="patchCopa" value="copa">
-                                        <label class="patch-label" for="patchCopa">Copa del Rey</label>
-                                        <span class="patch-description">Competición nacional</span>
-                                    </div> -->
-                                    <div class="patch-option" data-patch="personalizado">
-                                        <input type="radio" class="patch-radio" name="patchOption" id="patchCustom" value="personalizado">
-                                        <label class="patch-label" for="patchCustom">Personalizado</label>
-                                        <span class="patch-description">Escribe tu parche especial</span>
-                                    </div>
-                                </div>
-                                
-                                <!-- Campo para parche personalizado -->
-                                <div class="custom-patch-input mt-3" id="customPatchContainer">
-                                    <label for="customPatchText" class="form-label">Especifica el parche que deseas:</label>
-                                    <input type="text" class="form-control" id="customPatchText" placeholder="Ej: Mundial 2022, Eurocopa, etc.">
-                                    <small class="text-muted">Describe el parche que quieres agregar</small>
-                                </div>
-                                
-                                <input type="hidden" id="selectedPatches" value="ninguno">
-                            </div>
-                            
-                            <!-- Botones de acción -->
-                            <div class="d-grid gap-2 mb-3">
-                                <button type="button" class="btn btn-primary btn-lg py-3" id="addToCartBtn">
-                                    <i class="fa-solid fa-cart-plus me-2"></i> Agregar al Carrito
-                                </button>
-                            </div>
-                            
-                            <div class="d-grid gap-2 mb-3">
-                                <button type="button" class="btn btn-whatsapp btn-lg py-3" id="orderNowBtn">
-                                    <i class="fa-brands fa-whatsapp me-2"></i> Ordenar por WhatsApp
-                                </button>
-                            </div>
-                            
-                            <div class="d-grid">
-                                <button type="reset" class="btn btn-outline-secondary py-2" id="resetBtn">
-                                    <i class="fa-solid fa-trash me-2"></i> Borrar Datos
-                                </button>
-                            </div>
-                        </form>
+            </div>
+        </div>
+
+        <!-- NUEVA SECCIÓN: ABRIGOS -->
+        <div class="flex items-center my-8 mt-16">
+            <div class="flex-grow border-t border-black"></div>
+            <span class="mx-4 text-black font-semibold text-xl">ABRIGOS</span>
+            <div class="flex-grow border-t border-black"></div>
+        </div>
+
+        <div class="flex justify-center mb-4">
+            <p>Por el momento, las órdenes solo pueden realizarse desde el catálogo</p>
+        </div>
+
+        <div class="flex justify-center mb-4">
+            <a href="/abrigos/catalogo_abrigos_01.html" class="text-blue-500 hover:underline text-lg font-semibold">Ver más</a>
+        </div>
+
+
+        
+        <div class="row mb-4 ml-4" id="abrigosSelection">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="abrigosGrid">
+                <!-- Los productos de abrigos se cargarán dinámicamente con JavaScript -->
+                <div class="loading">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Cargando...</span>
                     </div>
-                    
-                    <!-- Order Summary -->
-                    <div class="form-container mt-4">
-                        <h4 class="section-title">Resumen de tu Pedido</h4>
-                        <div class="summary-item d-flex justify-content-between">
-                            <span>Producto:</span>
-                            <span id="summaryProduct" class="fw-semibold">-</span>
-                        </div>
-                        <div class="summary-item d-flex justify-content-between">
-                            <span>Versión:</span>
-                            <span id="summaryVersion" class="fw-semibold">Fan</span>
-                        </div>
-                        <div class="summary-item d-flex justify-content-between">
-                            <span>Personalización:</span>
-                            <span id="summaryPersonalization" class="fw-semibold">No</span>
-                        </div>
-                        <div class="summary-item d-flex justify-content-between">
-                            <span>Parches:</span>
-                            <span id="summaryPatches" class="fw-semibold">Ninguno</span>
-                        </div>
-                        <hr>
-                        <div class="summary-item d-flex justify-content-between fw-bold fs-5">
-                            <span>Total:</span>
-                            <span id="summaryTotal" class="text-success">₡0</span>
-                        </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NUEVA SECCIÓN: CONJUNTOS -->
+        <div class="flex items-center my-8 mt-16">
+            <div class="flex-grow border-t border-black"></div>
+            <span class="mx-4 text-black font-semibold text-xl">CONJUNTOS</span>
+            <div class="flex-grow border-t border-black"></div>
+        </div>
+
+         <div class="flex justify-center mb-4">
+            <p>Por el momento, las órdenes solo pueden realizarse desde el catálogo</p>
+        </div>
+
+         <div class="flex justify-center mb-4">
+            <a href="/conjuntos/catalogo_conjuntos_01.html" class="text-blue-500 hover:underline text-lg font-semibold">Ver más</a>
+        </div>
+
+        <div class="row mb-4 ml-4" id="conjuntosSelection">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="conjuntosGrid">
+                <!-- Los productos de conjuntos se cargarán dinámicamente con JavaScript -->
+                <div class="loading">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Cargando...</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
-    <!-- Floating Notification -->
-    <div class="floating-notification alert alert-success alert-dismissible fade show" role="alert" id="floatingNotification">
+
+    <!-- FORMULARIO FÚTBOL (Inicialmente oculto) -->
+    <div class="d-none" id="futbolFormSection">
+        <div class="row">
+            <!-- COLUMNA DE INFORMACIÓN DEL PRODUCTO -->
+            <div class="col-lg-6">
+                <div class="form-container">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h2 class="mb-0 text-2xl font-bold" id="futbolProductName">Nombre del Producto</h2>
+                        <span class="badge bg-primary sport-badge" id="futbolProductSport">FÚTBOL</span>
+                    </div>
+                    
+                    <img src="" class="img-fluid product-image mb-4" id="futbolProductImage" alt="Imagen de la camiseta">
+                    
+                    <div class="mb-4">
+                        <h4 class="text-2xl font-bold">Descripción</h4>
+                        <p id="futbolProductDescription" >Descripción del producto...</p>
+                    </div>
+                    
+                    <!-- CARACTERÍSTICAS DEL PRODUCTO -->
+                    <div class="mb-4">
+                        <h4 class="text-2xl font-bold">Características</h4>
+                        <ul class="feature-list" id="futbolProductFeatures">
+                            <!-- Las características se cargarán dinámicamente -->
+                        </ul>
+                    </div>
+                    
+                    <!-- PRECIO Y DISPONIBILIDAD -->
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <span class="price-tag" id="futbolProductPrice">₡0</span>
+                        </div>
+                        <div id="futbolProductAvailability">
+                            <!-- Disponibilidad se cargará dinámicamente -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- COLUMNA DEL FORMULARIO DE PEDIDO -->
+            <div class="col-lg-6">
+                <div class="form-container">
+                    <h3 class="text-center mb-4">Personaliza tu Camiseta</h3>
+                    
+                    <form id="futbolOrderForm">
+                        <input type="hidden" id="futbolSelectedProductId">
+                        
+                        <!-- CONTROL DE CANTIDAD -->
+                        <div class="mb-4">
+                            <label for="futbolQuantity" class="form-label">Cantidad</label>
+                            <div class="input-group quantity-control">
+                                <button class="btn btn-outline-secondary" type="button" id="futbolDecrement">-</button>
+                                <input type="number" class="form-control text-center" id="futbolQuantity" value="1" min="1" max="10">
+                                <button class="btn btn-outline-secondary" type="button" id="futbolIncrement">+</button>
+                            </div>
+                        </div>
+                        
+                        <!-- PERSONALIZACIÓN: NOMBRE Y NÚMERO UNIFICADO -->
+                        <div class="mb-4">
+                            <label for="futbolPlayerCustomization" class="form-label">Personalización (opcional)</label>
+                            <input type="text" class="form-control" id="futbolPlayerCustomization" placeholder="nombre jugador   #10">
+                            <div class="form-text">Escribe el nombre del jugador y su número separados por espacio. Ej: "Messi #10"</div>
+                        </div>
+                        
+                        <!-- VERSIÓN (Fan o Player) -->
+                        <div class="mb-4">
+                            <label for="futbolVersion" class="form-label">Versión</label>
+                            <select class="form-select" id="futbolVersion" required>
+                                <option value="" selected disabled>Selecciona una versión</option>
+                                <option value="fan">Fan - ₡20,000</option>
+                                <option value="player">Player - ₡22,000</option>
+                            </select>
+                        </div>
+                        
+                        <!-- SELECCIÓN DE TALLA -->
+                        <div class="mb-4">
+                            <label for="futbolSize" class="form-label">Talla</label>
+                            <select class="form-select" id="futbolSize" required>
+                                <option value="" selected disabled>Selecciona una talla</option>
+                                <!-- Las tallas se cargarán dinámicamente -->
+                            </select>
+                            
+                            <!-- GUÍAS DE TALLAS PARA FÚTBOL -->
+                            <div class="mt-2">
+                                <span class="size-guide-toggle me-3" id="futbolSizeGuideToggleFan">
+                                    <i class="fa-solid fa-ruler"></i> Ver guía de tallas (FAN)
+                                </span>
+                                <span class="size-guide-toggle" id="futbolSizeGuideToggleRetro">
+                                    <i class="fa-solid fa-ruler"></i> Ver guía de tallas (PLAYER)
+                                </span>
+                            </div>
+                            
+                            <!-- TABLA DE TALLAS FAN (oculta inicialmente) -->
+                            <div class="size-table-container d-none" id="futbolSizeTableContainerFan">
+                                <h5>Guía de Tallas FAN (en centímetros)</h5>
+                                <table class="size-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Talla</th>
+                                            <th>Largo</th>
+                                            <th>Pecho</th>
+                                            <th>Altura</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>S</td><td>71 - 73</td><td>48 - 50</td><td>160 - 175</td></tr>
+                                        <tr><td>M</td><td>73 - 75</td><td>52 - 54</td><td>165 - 170</td></tr>
+                                        <tr><td>L</td><td>75 - 77</td><td>54 - 56</td><td>170 - 175</td></tr>
+                                        <tr><td>XL</td><td>77 - 79</td><td>56 - 58</td><td>170 - 180</td></tr>
+                                        <tr><td>2XL</td><td>79 - 81</td><td>60 - 62</td><td>180 - 185</td></tr>
+                                    </tbody>
+                                </table>
+                                <small class="text-muted">ESTAS MEDIDAS SON APROXIMADAS Y PUEDEN VARIAR LIGERAMENTE DE 2 A 3 CM.</small>
+                            </div>
+                            
+                            <!-- TABLA DE TALLAS PLAYER (oculta inicialmente) -->
+                            <div class="size-table-container d-none" id="futbolSizeTableContainerRetro">
+                                <h5>Guía de Tallas PLAYER (en centímetros)</h5>
+                                <table class="size-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Talla</th>
+                                            <th>Largo</th>
+                                            <th>Pecho</th>
+                                            <th>Altura</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>S</td><td>70 - 72</td><td>96 - 98</td><td>160 - 170</td></tr>
+                                        <tr><td>M</td><td>72 - 74</td><td>104 - 106</td><td>168 - 175</td></tr>
+                                        <tr><td>L</td><td>74 - 76</td><td>110 - 112</td><td>172 - 180</td></tr>
+                                        <tr><td>XL</td><td>76 - 78</td><td>118 - 120</td><td>178 - 185</td></tr>
+                                        <tr><td>2XL</td><td>78 - 80</td><td>128 - 130</td><td>183 - 200</td></tr>
+                                    </tbody>
+                                </table>
+                                <small class="text-muted">ESTAS MEDIDAS SON APROXIMADAS Y PUEDEN VARIAR LIGERAMENTE DE 2 A 3 CM.</small>
+                            </div>
+                        </div>
+                        
+                        <!-- PARCHES PERSONALIZADOS -->
+                        <div class="mb-4">
+                            <label for="futbolParches" class="form-label">Parches (opcional)</label>
+                            <textarea class="form-control" id="futbolParches" rows="2" placeholder="ej: Uefa Champions League"></textarea>
+                            <div class="mt-2">
+                                <small class="text-muted">
+                                    <i class="fas fa-info-circle"></i> Ejemplo de parches:
+                                    <img src="/assets/parches_ej.png" alt="Ejemplo de parche" class="parche-example d-block mt-1 w-50">
+                                </small>
+                            </div>
+                        </div>
+                        
+                        <!-- BOTONES DE ACCIÓN -->
+                        <div class="d-grid gap-2 mb-3">
+                            <button type="button" class="btn btn-primary btn-lg" id="futbolAddToCartBtn">
+                                <i class="fa-solid fa-cart-plus"></i> Agregar al Carrito
+                            </button>
+                        </div>
+                        
+                        <div class="d-grid gap-2 mb-3">
+                            <button type="button" class="btn btn-whatsapp btn-lg" id="futbolOrderNowBtn">
+                                <i class="fa-brands fa-whatsapp"></i> Ordenar por WhatsApp
+                            </button>
+                        </div>
+                        
+                        <div class="d-grid">
+                            <button type="reset" class="btn btn-outline-secondary" id="futbolResetBtn">
+                                <i class="fa-solid fa-trash"></i> Borrar Datos
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- RESUMEN DEL PEDIDO -->
+                <div class="form-container mt-4">
+                    <h4>Resumen de tu Pedido</h4>
+                    <div class="d-flex justify-content-between">
+                        <span>Producto:</span>
+                        <span id="futbolSummaryProduct">-</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <span>Versión:</span>
+                        <span id="futbolSummaryVersion">-</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <span>Personalización:</span>
+                        <span id="futbolSummaryCustomization">-</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <span>Talla:</span>
+                        <span id="futbolSummarySize">-</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <span>Precio unitario:</span>
+                        <span id="futbolSummaryUnitPrice">₡0</span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between fw-bold">
+                        <span>Total:</span>
+                        <span id="futbolSummaryTotal">₡0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FORMULARIO RETRO (Inicialmente oculto) -->
+    <div class="d-none" id="retroFormSection">
+        <div class="row">
+            <!-- COLUMNA DE INFORMACIÓN DEL PRODUCTO -->
+            <div class="col-lg-6">
+                <div class="form-container">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h2 class="mb-0" id="retroProductName">Nombre del Producto</h2>
+                        <span class="badge bg-warning sport-badge" id="retroProductSport">RETRO</span>
+                    </div>
+                    
+                    <img src="" class="img-fluid product-image mb-4" id="retroProductImage" alt="Imagen de la camiseta">
+                    
+                    <div class="mb-4">
+                        <h4>Descripción</h4>
+                        <p id="retroProductDescription">Descripción del producto...</p>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h4>Características</h4>
+                        <ul class="feature-list" id="retroProductFeatures">
+                            <!-- Las características se cargarán dinámicamente -->
+                        </ul>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <span class="price-tag" id="retroProductPrice">₡0</span>
+                        </div>
+                        <div id="retroProductAvailability">
+                            <!-- Disponibilidad se cargará dinámicamente -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- COLUMNA DEL FORMULARIO DE PEDIDO -->
+            <div class="col-lg-6">
+                <div class="form-container">
+                    <h3 class="text-center mb-4">Personaliza tu Camiseta Retro</h3>
+                    
+                    <form id="retroOrderForm">
+                        <input type="hidden" id="retroSelectedProductId">
+                        
+                        <!-- CONTROL DE CANTIDAD -->
+                        <div class="mb-4">
+                            <label for="retroQuantity" class="form-label">Cantidad</label>
+                            <div class="input-group quantity-control">
+                                <button class="btn btn-outline-secondary" type="button" id="retroDecrement">-</button>
+                                <input type="number" class="form-control text-center" id="retroQuantity" value="1" min="1" max="10">
+                                <button class="btn btn-outline-secondary" type="button" id="retroIncrement">+</button>
+                            </div>
+                        </div>
+                        
+                        <!-- PERSONALIZACIÓN: NOMBRE Y NÚMERO UNIFICADO -->
+                        <div class="mb-4">
+                            <label for="retroPlayerCustomization" class="form-label">Personalización (opcional)</label>
+                            <input type="text" class="form-control" id="retroPlayerCustomization" placeholder="nombre jugador   #10">
+                            <div class="form-text">Escribe el nombre del jugador y su número separados por espacio. Ej: "Maradona #10"</div>
+                        </div>
+                        
+                        <!-- VERSIÓN (solo Retro) -->
+                        <div class="mb-4">
+                            <label class="form-label">Versión</label>
+                            <div class="form-control bg-light">Retro - ₡22,000</div>
+                        </div>
+                        
+                        <!-- TALLA -->
+                        <div class="mb-4">
+                            <label for="retroSize" class="form-label">Talla</label>
+                            <select class="form-select" id="retroSize" required>
+                                <option value="" selected disabled>Selecciona una talla</option>
+                                <!-- Las tallas se cargarán dinámicamente -->
+                            </select>
+                            
+                            <!-- ENLACE PARA MOSTRAR/OCULTAR LA TABLA DE TALLAS -->
+                            <div class="mt-2">
+                                <span class="size-guide-toggle" id="retroSizeGuideToggle">
+                                    <i class="fa-solid fa-ruler"></i> Ver guía de tallas
+                                </span>
+                            </div>
+                            
+                            <!-- CONTENEDOR DE LA TABLA DE TALLAS (inicialmente oculto) -->
+                            <div class="size-table-container d-none" id="retroSizeTableContainer">
+                                <h5>Guía de Tallas (en centímetros)</h5>
+                                <table class="size-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Talla</th>
+                                            <th>Largo</th>
+                                            <th>Pecho</th>
+                                            <th>Altura</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>S</td>
+                                            <td>70</td>
+                                            <td>98</td>
+                                            <td>160-170</td>
+                                        </tr>
+                                        <tr>
+                                            <td>M</td>
+                                            <td>72</td>
+                                            <td>106</td>
+                                            <td>168-175</td>
+                                        </tr>
+                                        <tr>
+                                            <td>L</td>
+                                            <td>75</td>
+                                            <td>112</td>
+                                            <td>172-180</td>
+                                        </tr>
+                                        <tr>
+                                            <td>XL</td>
+                                            <td>77</td>
+                                            <td>120</td>
+                                            <td>178-185</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2XL</td>
+                                            <td>80</td>
+                                            <td>130</td>
+                                            <td>183-200</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <small class="text-muted">Las medidas pueden variar ligeramente según el fabricante.</small>
+                            </div>
+                        </div>
+                        
+                        <!-- PARCHES -->
+                        <div class="mb-4">
+                            <label for="retroParches" class="form-label">Parches (opcional)</label>
+                            <textarea class="form-control" id="retroParches" rows="2" placeholder="Describe los parches que deseas agregar"></textarea>
+                            <div class="mt-2">
+                                <small class="text-muted">
+                                    <i class="fas fa-info-circle"></i> Ejemplo de parches:
+                                    <img src="/assets/parches_ej.png" alt="Ejemplo de parche retro" class="parche-example d-block mt-1">
+                                </small>
+                            </div>
+                        </div>
+                        
+                        <!-- BOTONES DE ACCIÓN -->
+                        <div class="d-grid gap-2 mb-3">
+                            <button type="button" class="btn btn-primary btn-lg" id="retroAddToCartBtn">
+                                <i class="fa-solid fa-cart-plus"></i> Agregar al Carrito
+                            </button>
+                        </div>
+                        
+                        <div class="d-grid gap-2 mb-3">
+                            <button type="button" class="btn btn-whatsapp btn-lg" id="retroOrderNowBtn">
+                                <i class="fa-brands fa-whatsapp"></i> Ordenar por WhatsApp
+                            </button>
+                        </div>
+                        
+                        <div class="d-grid">
+                            <button type="reset" class="btn btn-outline-secondary" id="retroResetBtn">
+                                <i class="fa-solid fa-trash"></i> Borrar Datos
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- RESUMEN DEL PEDIDO -->
+                <div class="form-container mt-4">
+                    <h4>Resumen de tu Pedido</h4>
+                    <div class="d-flex justify-content-between">
+                        <span>Producto:</span>
+                        <span id="retroSummaryProduct">-</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <span>Versión:</span>
+                        <span id="retroSummaryVersion">Retro</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <span>Personalización:</span>
+                        <span id="retroSummaryCustomization">-</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <span>Talla:</span>
+                        <span id="retroSummarySize">-</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <span>Precio unitario:</span>
+                        <span id="retroSummaryUnitPrice">₡0</span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between fw-bold">
+                        <span>Total:</span>
+                        <span id="retroSummaryTotal">₡0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NUEVO FORMULARIO: ABRIGOS (Inicialmente oculto) -->
+    <div class="d-none" id="abrigosFormSection">
+        <div class="row">
+            <!-- COLUMNA DE INFORMACIÓN DEL PRODUCTO -->
+            <div class="col-lg-6">
+                <div class="form-container">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h2 class="mb-0 text-2xl font-bold" id="abrigosProductName">Nombre del Producto</h2>
+                        <span class="badge bg-info sport-badge" id="abrigosProductSport">ABRIGOS</span>
+                    </div>
+                    
+                    <img src="" class="img-fluid product-image mb-4" id="abrigosProductImage" alt="Imagen del abrigo">
+                    
+                    <div class="mb-4">
+                        <h4 class="text-2xl font-bold">Descripción</h4>
+                        <p id="abrigosProductDescription">Descripción del producto...</p>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h4 class="text-2xl font-bold">Características</h4>
+                        <ul class="feature-list" id="abrigosProductFeatures">
+                            <!-- Las características se cargarán dinámicamente -->
+                        </ul>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <span class="price-tag" id="abrigosProductPrice">₡0</span>
+                        </div>
+                        <div id="abrigosProductAvailability">
+                            <!-- Disponibilidad se cargará dinámicamente -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- COLUMNA DEL FORMULARIO DE PEDIDO - FORMULARIO SIMPLIFICADO -->
+            <div class="col-lg-6">
+                <div class="form-container">
+                    <h3 class="text-center mb-4">Personaliza tu Abrigo</h3>
+                    
+                    <form id="abrigosOrderForm">
+                        <input type="hidden" id="abrigosSelectedProductId">
+                        
+                        <!-- CONTROL DE CANTIDAD -->
+                        <div class="mb-4">
+                            <label for="abrigosQuantity" class="form-label">Cantidad</label>
+                            <div class="input-group quantity-control">
+                                <button class="btn btn-outline-secondary" type="button" id="abrigosDecrement">-</button>
+                                <input type="number" class="form-control text-center" id="abrigosQuantity" value="1" min="1" max="10">
+                                <button class="btn btn-outline-secondary" type="button" id="abrigosIncrement">+</button>
+                            </div>
+                        </div>
+                        
+                        <!-- TALLA SIMPLIFICADA - Solo tallas básicas -->
+                        <div class="mb-4">
+                            <label for="abrigosSize" class="form-label">Talla</label>
+                            <select class="form-select" id="abrigosSize" required>
+                                <option value="" selected disabled>Selecciona una talla</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="2XL">2XL</option>
+                            </select>
+                        </div>
+                        
+                        <!-- BOTONES DE ACCIÓN -->
+                        <div class="d-grid gap-2 mb-3">
+                            <button type="button" class="btn btn-primary btn-lg" id="abrigosAddToCartBtn">
+                                <i class="fa-solid fa-cart-plus"></i> Agregar al Carrito
+                            </button>
+                        </div>
+                        
+                        <div class="d-grid gap-2 mb-3">
+                            <button type="button" class="btn btn-whatsapp btn-lg" id="abrigosOrderNowBtn">
+                                <i class="fa-brands fa-whatsapp"></i> Ordenar por WhatsApp
+                            </button>
+                        </div>
+                        
+                        <div class="d-grid">
+                            <button type="reset" class="btn btn-outline-secondary" id="abrigosResetBtn">
+                                <i class="fa-solid fa-trash"></i> Borrar Datos
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- RESUMEN DEL PEDIDO -->
+                <div class="form-container mt-4">
+                    <h4>Resumen de tu Pedido</h4>
+                    <div class="d-flex justify-content-between">
+                        <span>Producto:</span>
+                        <span id="abrigosSummaryProduct">-</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <span>Precio unitario:</span>
+                        <span id="abrigosSummaryUnitPrice">₡0</span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between fw-bold">
+                        <span>Total:</span>
+                        <span id="abrigosSummaryTotal">₡0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NUEVO FORMULARIO: CONJUNTOS (Inicialmente oculto) -->
+    <div class="d-none" id="conjuntosFormSection">
+        <div class="row">
+            <!-- COLUMNA DE INFORMACIÓN DEL PRODUCTO -->
+            <div class="col-lg-6">
+                <div class="form-container">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h2 class="mb-0 text-2xl font-bold" id="conjuntosProductName">Nombre del Producto</h2>
+                        <span class="badge bg-success sport-badge" id="conjuntosProductSport">CONJUNTOS</span>
+                    </div>
+                    
+                    <img src="" class="img-fluid product-image mb-4" id="conjuntosProductImage" alt="Imagen del conjunto">
+                    
+                    <div class="mb-4">
+                        <h4 class="text-2xl font-bold">Descripción</h4>
+                        <p id="conjuntosProductDescription">Descripción del producto...</p>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h4 class="text-2xl font-bold">Características</h4>
+                        <ul class="feature-list" id="conjuntosProductFeatures">
+                            <!-- Las características se cargarán dinámicamente -->
+                        </ul>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <span class="price-tag" id="conjuntosProductPrice">₡0</span>
+                        </div>
+                        <div id="conjuntosProductAvailability">
+                            <!-- Disponibilidad se cargará dinámicamente -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- COLUMNA DEL FORMULARIO DE PEDIDO - FORMULARIO SIMPLIFICADO -->
+            <div class="col-lg-6">
+                <div class="form-container">
+                    <h3 class="text-center mb-4">Personaliza tu Conjunto</h3>
+                    
+                    <form id="conjuntosOrderForm">
+                        <input type="hidden" id="conjuntosSelectedProductId">
+                        
+                        <!-- CONTROL DE CANTIDAD -->
+                        <div class="mb-4">
+                            <label for="conjuntosQuantity" class="form-label">Cantidad</label>
+                            <div class="input-group quantity-control">
+                                <button class="btn btn-outline-secondary" type="button" id="conjuntosDecrement">-</button>
+                                <input type="number" class="form-control text-center" id="conjuntosQuantity" value="1" min="1" max="10">
+                                <button class="btn btn-outline-secondary" type="button" id="conjuntosIncrement">+</button>
+                            </div>
+                        </div>
+                        
+                        <!-- TALLA SIMPLIFICADA - Solo tallas básicas -->
+                        <div class="mb-4">
+                            <label for="conjuntosSize" class="form-label">Talla</label>
+                            <select class="form-select" id="conjuntosSize" required>
+                                <option value="" selected disabled>Selecciona una talla</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="2XL">2XL</option>
+                            </select>
+                        </div>
+                        
+                        <!-- BOTONES DE ACCIÓN -->
+                        <div class="d-grid gap-2 mb-3">
+                            <button type="button" class="btn btn-primary btn-lg" id="conjuntosAddToCartBtn">
+                                <i class="fa-solid fa-cart-plus"></i> Agregar al Carrito
+                            </button>
+                        </div>
+                        
+                        <div class="d-grid gap-2 mb-3">
+                            <button type="button" class="btn btn-whatsapp btn-lg" id="conjuntosOrderNowBtn">
+                                <i class="fa-brands fa-whatsapp"></i> Ordenar por WhatsApp
+                            </button>
+                        </div>
+                        
+                        <div class="d-grid">
+                            <button type="reset" class="btn btn-outline-secondary" id="conjuntosResetBtn">
+                                <i class="fa-solid fa-trash"></i> Borrar Datos
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- RESUMEN DEL PEDIDO -->
+                <div class="form-container mt-4">
+                    <h4>Resumen de tu Pedido</h4>
+                    <div class="d-flex justify-content-between">
+                        <span>Producto:</span>
+                        <span id="conjuntosSummaryProduct">-</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <span>Precio unitario:</span>
+                        <span id="conjuntosSummaryUnitPrice">₡0</span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between fw-bold">
+                        <span>Total:</span>
+                        <span id="conjuntosSummaryTotal">₡0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECCIÓN SOBRE NOSOTROS Y CONTACTO -->
+    <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+        <section class="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-12" id="SobreNosotros">
+            <!-- SECCIÓN SOBRE NOSOTROS -->
+            <div class="mt-[-48px]">
+                <h2 class="mb-4 mt-32 text-3xl font-black">Sobre Nosotros</h2>
+                <p class="mt-16">Somos una tienda online especializada en camisas de fútbol, retro, NBA, MLB, NFL y Fórmula 1. Nuestra misión es ofrecer calidad y variedad a los fanáticos del deporte.</p>
+            </div>
+
+            <!-- SECCIÓN DE CONTACTO -->
+            <div class="lg:w-1/2 mt-4" id="contactanos">
+                <h2 class="mt-16 text-center text-3xl font-black">CONTÁCTANOS</h2>
+                <form class="formulario mt-16" onsubmit="enviarWhatsApp(); return false;">
+                    <label for="nombre">Nombre:</label>
+                    <input class="pl-[4px]" type="text" id="nombre" placeholder="Ejemplo: Carlos Ramírez" required>
+
+                    <label for="asunto">Asunto:</label>
+                    <input class="pl-[4px]" type="text" id="asunto" placeholder="Ejemplo: Consulta sobre un producto" required>
+
+                    <label for="descripcion">Descripción:</label>
+                    <textarea class="pl-[6px] py-4" id="descripcion" placeholder="Ejemplo: Hola, me interesa obtener más información sobre la camisa del Barcelona de la temporada 2007 en manga larga. ¿Tienen disponibilidad?" required></textarea>
+
+                    <button type="submit" class="btn-enviar">ENVIAR</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="text-white py-8 mt-64">
+        <h4 class="text-center font-bold">LAS CHEMAS DEL MAPA</h4>
+        <p class="text-center text-sm text-gray-100 mt-2 ">San José, Mora, Ciudad Colón</p>
+        <p class="text-center text-sm text-gray-100 mt-2">10701  Costa Rica</p>
+        <img src="/assets/logoOriginal2.0.png" alt="" class="mx-auto mb-4 mt-4" style="width: 150px; height: 125px;">
+        <p class="text-center text-base text-gray-100 mt-2 font-bold">Desde los clásicos inolvidables hasta los ídolos de hoy, nuestras chemas te acompañan con estilo y autenticidad</p>
+        <p class="text-center text-xl text-gray-100 mt-2 font-bold mt-8">Encuéntranos en nuestras plataformas</p>
+
+        <a href="https://www.instagram.com/laschemasdelmapa?igsh=MXdkdWkwbmt2Zm9pOA==">
+            <img src="/assets/instagram_logo.svg" alt="instagram" class="mx-auto mb-4 mt-4" style="width: 60px; height: 40px;">
+        </a>
+
+        <p class="text-center text-sm text-gray-100">
+            &copy; 2023 Your Company. All rights reserved | <a href="/terminos-servicio.html">Terminos de servicio</a> | <a href="/politica-privacidad.html">Política de privacidad</a>
+        </p>
+    </footer>
+
+    <!-- NOTIFICACIÓN DEL CARRITO -->
+    <div class="cart-notification alert alert-success alert-dismissible fade show" role="alert" style="display: none;">
         <strong>¡Producto agregado!</strong> Tu camiseta se ha añadido al carrito.
         <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
     </div>
 
-
-
-
-
-
-   <!-- --------------------------------------------------------------------------------------------------------- -->
-   <!-- --------------------------------------------------------------------------------------------------------- -->
-   <!-- --------------------------------------------------------------------------------------------------------- -->
-
-
-    <!-- ------------------------------------------------ SECCION RETRO -------------------------------------------->
-
-
-
-
-  <div class="w-full flex items-center justify-center my-8 mt-32">
-  <span class="h-px flex-1 bg-gray-300"></span>
-  <span class="shrink-0 px-4 text-gray-900 font-bold text-4xl text-center">RETRO</span>
-  <span class="h-px flex-1 bg-gray-300"></span>
-  </div>
-
-  <div class="flex justify-center w-full">
-  <a href="/retro/catalogo_retro_01.html" class="text-gray-900 font-bold hover:underline hover:text-blue-700 transition-colors">Ver más</a>
-  </div>
-
-
-
-
-
-   <!-- --------------------------------------------------------------------------------------------------------- -->
-   <!-- --------------------------------------------------------------------------------------------------------- -->
-   <!-- --------------------------------------------------------------------------------------------------------- -->
-
-
-    <!-- ------------------------------------------------ SECCION CONJUNTOS DEPORTIVOS -------------------------------------------->
-
-
-<div class="w-full flex items-center justify-center my-8 mt-32">
-  <span class="h-px flex-1 bg-gray-300"></span>
-  <span class="shrink-0 px-4 text-gray-900 font-bold text-4xl text-center">CONJUNTOS</span>
-  <span class="h-px flex-1 bg-gray-300"></span>
-  </div>
-
-  <div class="flex justify-center w-full">
-  <a href="" class="text-gray-900 font-bold hover:underline hover:text-blue-700 transition-colors">Ver más</a>
-  </div>
-
-
-
-
-
-
-
-
-   <!-- --------------------------------------------------------------------------------------------------------- -->
-   <!-- --------------------------------------------------------------------------------------------------------- -->
-   <!-- --------------------------------------------------------------------------------------------------------- -->
-
-
-    <!-- ------------------------------------------------ SECCION ABRIGOS -------------------------------------------->
-
-
-<div class="w-full flex items-center justify-center my-8 mt-32">
-  <span class="h-px flex-1 bg-gray-300"></span>
-  <span class="shrink-0 px-4 text-gray-900 font-bold text-4xl text-center">ABRIGOS</span>
-  <span class="h-px flex-1 bg-gray-300"></span>
-  </div>
-
-  <div class="flex justify-center w-full">
-  <a href="" class="text-gray-900 font-bold hover:underline hover:text-blue-700 transition-colors">Ver más</a>
-  </div>
-
-
-
-
-
-
-
-      
-
-</main>
-
-      
-
-<div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
-  <section class="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-12" id="SobreNosotros">
-
-    <!-- Sobre Nosotros (izquierda) -->
-    <div class="mt-[-48px]">
-      <h2 class="mb-4 mt-32  text-3xl font-black">Sobre Nosotros</h2>
-      <p class="mt-16">Somos una tienda online especializada en camisas de fútbol, retro, NBA, MLB, NFL y Fórmula 1. Nuestra misión es ofrecer calidad y variedad a los fanáticos del deporte.</p>
- 
-      <div class="flex items-center gap-2 mt-4">
-        <img src="/assets/camion_entrega.png" alt="" height="100px" width="100px" class="mt-8">
-        <p>Entrega por correo de Costa Rica Dentro y fuera de la GAM</p>
-      </div>
-      <div class="flex items-center gap-2 mt-4">
-        <img src="/assets/relog_dias_entrega.png" alt="" height="100px" width="100px" class="mt-8">
-        <p>Entrega en 15-22 días hábiles</p>
-      </div>
-      <div class="flex items-center gap-2 mt-4">
-        <img src="/assets/pago_simpe.png" alt="" height="100px" width="100px" class="mt-8">
-        <p>Pago seguro garantizado</p>
-      </div>
-      <div class="flex items-center gap-2 mt-4">
-        <img src="/assets/icon_confiable.png" alt="" height="100px" width="100px" class="mt-8">
-        <p>Compra confiable y garantizada</p>
-      </div>
+    <!-- MODAL DEL CARRITO -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">
+                        <i class="fa-solid fa-cart-shopping"></i> Tu Carrito de Compras
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="cartItemsContainer">
+                        <!-- Los elementos del carrito se cargarán aquí -->
+                    </div>
+                    <div class="d-flex justify-content-between mt-4 pt-3 border-top">
+                        <h5>Total del Pedido:</h5>
+                        <h5 id="cartTotalAmount">₡0</h5>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir Comprando</button>
+                    <button type="button" class="btn btn-whatsapp" id="checkoutWhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i> Finalizar Pedido por WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- Contáctanos (derecha) -->
-    <div class="lg:w-1/2 mt-4" id="contactanos">
-      <h2 class="mt-16 text-center text-3xl font-black" >CONTACTANOS</h2>
-      <form class="formulario mt-16" onsubmit="enviarWhatsApp(); return false;">
-        <label for="nombre">Nombre:</label>
-        <input class="pl-[4px]" type="text" id="nombre" required>
- 
-    <label for="asunto">Asunto:</label>
-    <input class="pl-[4px]" type="text" id="asunto" required>
-
-    <label for="descripcion">Descripción:</label>
-    <textarea class="pl-[6px] py-4" id="descripcion" required></textarea>
-
-    <button type="submit" class="btn-enviar">ENVIAR</button>
-
-      </form>
-     
-    </div>
-
-  </section>
-</div>
-
-
-
-
-
-
-<!-- Footer -->
-
-
-
-  <footer class="text-white py-8 mt-64" >
-
-    <h4 class="text-center font-bold">LAS CHEMAS DEL MAPA</h4>
-    <p class="text-center text-sm text-gray-100 mt-2 ">San José, Mora, Ciudad Colón</p>
-    <p class="text-center text-sm text-gray-100 mt-2">10701  Costa Rica</p>
-    <img src="/assets/logoOriginal2.0.png" alt="" class="mx-auto mb-4 mt-4" style="width: 150px; height: 125px;">
-    <p class="text-center text-base text-gray-100 mt-2 font-bold">Desde los clásicos inolvidables hasta los ídolos de hoy, nuestras chemas te acompañan con estilo y autenticidad</p>
-    <p class="text-center text-xl text-gray-100 mt-2 font-bold mt-8">Encuéntranos en nuestras plataformas</p>
-
-    <a href="https://www.instagram.com/laschemasdelmapa?igsh=MXdkdWkwbmt2Zm9pOA==">
-    <img src="/assets/instagram_logo.svg" alt="instagram" class="mx-auto mb-4 mt-4" style="width: 60px; height: 40px;">
-    </a>
-
-    <p class="text-center text-sm text-gray-100">
-      &copy; 2023 Your Company. All rights reserved | <a href="/html/terminos-servicio.html">Terminos de servicio</a> | <a href="/html/politica-privacidad.html">Política de privacidad</a>
-    </p>
-  </footer>
-
-
-<!-- //script para cerrar la alerta -->
-
-
-
-
-<script>
-
-
-
-
-/* ------------ ALERTA DE INFORMACION ------------*/
-  document.querySelector('#alert-additional-content-5 button').addEventListener('click', function() {
-    const alert = document.getElementById('alert-additional-content-5');
-    if(alert) alert.style.display = 'none';
-  });
-/*------------------------------------------------*/
-
-
-
-
-
-
-
-
-</script>
+    <!-- SCRIPTS Y JAVASCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
+    <script>
+        // =============================================
+        // DATOS DE PRODUCTOS - ESTRUCTURAS JSON CORREGIDAS
+        // =============================================
 
+        // Productos de Fútbol
+        const productosFutbol = [
+            {
+                "id": 205,
+                "equipo": "Argentina",
+                "Version": ["Fan", "Player"],
+                "temporada": "2022",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/WW3hT116/argentina-2022.png",
+                "descripcion": "Camisa oficial de la selección argentina, Campeona Mundial de Qatar 2022 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            {
+                "id": 214,
+                "equipo": "Barcelona",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025-26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/MkLm9sX5/fc-barcelona-25-26-copy.png",
+                "descripcion": "Camisa oficial del Barcelona, temporada 2025-26 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            {
+               "id": 206,
+                "equipo": "Arsenal",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025-26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/DJVPWD8/arsenal-25-26-local.png",
+                "descripcion": "Camisa oficial del Arsenal, temporada 2025-26 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"] 
+            },
+            {
+               "id": 220,
+                "equipo": "Real Madrid",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025-26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/d4Ddj2Jj/real-madrid-25-26-visitante.png",
+                "descripcion": "Camisa oficial del Real Madrid, temporada 2025-26 | VISITA",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"] 
+            },
+            {
+               "id": 223,
+                "equipo": "Portugal",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025-26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/DP030ZZP/portugal-2025-uefa-nations-league.png",
+                "descripcion": "Camisa oficial de la Seleccion de Portugal, Uefa Nations League 2025 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"] 
+            },
+            {
+               "id": 211,   
+                "equipo": "Costa Rica",
+                "Version": ["Fan", "Player"],
+                "temporada": "2024",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/kgbXgqq6/costa-rica-2024.png",
+                "descripcion": "Camisa oficial de la Seleccion de Costa Rica, temporada 2024 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"] 
+            },
+            {
+               "id": 210,   
+                "equipo": "Chelsea",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025-26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/vvX9y1WX/chelsea-25-26-local.png",
+                "descripcion": "Camisa oficial del Chelsea, temporada 2025-26 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"] 
+            },
+            {
+               "id": 229,   
+                "equipo": "AS Roma",
+                "Version": ["Fan", "Player"],
+                "temporada": "2025 - 26",
+                "precio_fan": 20000,
+                "precio_player": 22000,
+                "imagen": "https://i.ibb.co/GfbjpxPp/roma-25-26-visita.png",
+                "descripcion": "Camisa oficial de la AS Roma, temporada 2025-26 | VISITA",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"] 
+            }
+        ];
+
+        // Productos de Fútbol Retro - CORREGIDOS (IDs únicos)
+        const productosRetro = [
+            {
+                "id": 350,
+                "equipo": "Argentina",
+                "Version": ["Retro"],
+                "temporada": "1986",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/999rt52L/argentina-1986-local.png",
+                "descripcion": "Camisa retro de la selección argentina del mundial 1986",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            {
+                "id": 351, 
+                "equipo": "Brasil",
+                "Version": ["Retro"],
+                "temporada": "2002",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/p6T06Qhw/brasil-2002-local.png",
+                "descripcion": "Camisa retro de la selección brasileña del mundial 2002",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            {
+                "id": 352, 
+                "equipo": "Manchester United",
+                "Version": ["Retro"],
+                "temporada": "1998 - 99",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/MyF852wn/man-united-1999-local.png",
+                "descripcion": "Camisa retro del Manchester United, temporada 1998-99",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            
+            {
+                "id": 353, 
+                "equipo": "AC Milan",
+                "Version": ["Retro"],
+                "temporada": "1993 - 94",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/5gJwGwST/ac-milan-1998-99-local.png",
+                "descripcion": "Camisa retro del AC Milan, temporada 1993-94 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            {
+                "id": 354, 
+                "equipo": "Alemania",
+                "Version": ["Retro"],
+                "temporada": "2014",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/XrgzChqB/alemania-2014.png",
+                "descripcion": "Camisa retro de Alemania, Campeona del Mundo Brasil 2014 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            {
+                "id": 356, 
+                "equipo": "Arsenal",
+                "Version": ["Retro"],
+                "temporada": "2006 - 07",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/qFLwGkdh/arsenal-05-06-local.png",
+                "descripcion": "Camisa retro del Arsenal, temporada 2006-07 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            {
+                "id": 365, 
+                "equipo": "Fc Barcelona",
+                "Version": ["Retro"],
+                "temporada": "2008 - 09",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/dsxLFrH5/fcbarcelona-08-09.png",
+                "descripcion": "Camisa retro del Fc Barcelona, temporada 2008-09 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            {
+                "id": 369,
+                "equipo": "Holanda",
+                "Version": ["Retro"],
+                "temporada": "1988",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/23qSWGJm/holanda-1988.png",
+                "descripcion": "Camisa retro de Holanda, temporada 1988 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            }
+        ];
+
+        // Productos de Abrigos
+        const productosAbrigos = [
+            {
+                "id": 651,
+                "equipo": "Chelsea",
+                "descripcion_corta": "Abrigo Blanco",
+                "version": "Abrigos",
+                "tallas": ["S", "M", "L", "XL", "2XL"],
+                "precio": 30000,
+                "imagen": "https://i.ibb.co/m5tsNKdm/chelsea-abrigo-blanco.png",
+                "descripcion": "Abrigo oficial del Chelsea - Color blanco, edición especial",
+                "disponible": true
+            },
+            {
+                "id": 652,
+                "equipo": "Chelsea",
+                "descripcion_corta": "Abrigo Negro",
+                "version": "Abrigos",
+                "tallas": ["S", "M", "L", "XL", "2XL"],
+                "precio": 30000,
+                "imagen": "https://i.ibb.co/HD0zjJVm/chelsea-abrigo-negro.png",
+                "descripcion": "Abrigo oficial del Chelsea - Color negro, edición especial",
+                "disponible": true
+            },
+            {
+                "id": 659,
+                "equipo": "Palmeiras",
+                "descripcion_corta": "Abrigo Verde con Blanco",
+                "version": "Abrigos",
+                "tallas": ["S", "M", "L", "XL", "2XL"],
+                "precio": 30000,
+                "imagen": "https://i.ibb.co/Q3XzsVdX/palmeiras-abrigo-verde.png",
+                "descripcion": "Abrigo oficial del Palmeiras - Color verde con blanco, edición especial",
+                "disponible": true
+            },
+            {
+                "id": 656,
+                "equipo": "Liverpool",
+                "descripcion_corta": "Abrigo Rojo con blanco",
+                "version": "Abrigos",
+                "tallas": ["S", "M", "L", "XL", "2XL"],
+                "precio": 30000,
+                "imagen": "https://i.ibb.co/dJtsSFxd/liverpool-abrigo-rojo-blanco.png",
+                "descripcion": "Abrigo oficial del Liverpool - Color rojo con blanco, edición especial",
+                "disponible": true
+            },
+        ];
+
+        // Productos de Conjuntos
+        const productosConjuntos = [
+            {
+                "id": 600,
+                "equipo": "AC Milan",
+                "version": "Conjunto Deportivo",
+                "tallas": ["S", "M", "L", "XL", "2XL"],
+                "precio": 35000,
+                "imagen": "https://i.ibb.co/Fq87vpmR/ac-milan-conjunto-negro.png",
+                "descripcion": "Conjunto deportivo completo del AC Milan - Negro",
+                "disponible": true
+            },
+            {
+                "id": 601,
+                "equipo": "Ajax",
+                "version": "Conjunto Deportivo",
+                "tallas": ["S", "M", "L", "XL", "2XL"],
+                "precio": 35000,
+                "imagen": "https://i.ibb.co/sv82156L/ajax-conjunto-blanco.png",
+                "descripcion": "Conjunto deportivo completo del Ajax - Blanco",
+                "disponible": true
+            },
+            {
+                "id": 602,
+                "equipo": "Arsenal",
+                "version": "Conjunto Deportivo",
+                "tallas": ["S", "M", "L", "XL", "2XL"],
+                "precio": 35000,
+                "imagen": "https://i.ibb.co/RTpS063f/arsenal-conjunto-negro.png",
+                "descripcion": "Conjunto deportivo completo del Arsenal - Negro",
+                "disponible": true
+            },
+            {
+                "id": 606,
+                "equipo": "Juventus",
+                "version": "Conjunto Deportivo",
+                "tallas": ["S", "M", "L", "XL", "2XL"],
+                "precio": 35000,
+                "imagen": "https://i.ibb.co/8nBSDdFF/juventus-conjunto-rosado.png",
+                "descripcion": "Conjunto deportivo completo del Juventus - Rosado",
+                "disponible": true
+            }
+        ];
+
+        // Carrito de compras
+        let cart = JSON.parse(localStorage.getItem('futbolCart')) || [];
+
+        // =============================================
+        // INICIALIZACIÓN DE LA PÁGINA
+        // =============================================
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log("🚀 Inicializando página...");
+            
+            // Configurar funcionalidad de búsqueda
+            setupSearchFunctionality();
+            
+            // Cerrar alerta informativa
+            document.querySelector('#alert-additional-content-5 button').addEventListener('click', function() {
+                const alert = document.getElementById('alert-additional-content-5');
+                if(alert) alert.style.display = 'none';
+            });
+
+            // Cargar productos
+            loadFutbolProducts();
+            loadRetroProducts();
+            loadAbrigosProducts();
+            loadConjuntosProducts();
+            
+            // Actualizar contador del carrito
+            updateCartCount();
+            
+            // Configurar botones del carrito
+            setupCartButton('cartButton');
+            setupCartButton('cartButtonMobile');
+            
+            // Configurar controles de formularios
+            setupFormControls('futbol');
+            setupFormControls('retro');
+            setupFormControls('abrigos');
+            setupFormControls('conjuntos');
+            
+            // Configurar botones de WhatsApp
+            setupWhatsAppButtons();
+            
+            console.log("✅ Página inicializada correctamente");
+        });
+
+        // =============================================
+        // FUNCIONALIDAD DE BÚSQUEDA
+        // =============================================
+        function setupSearchFunctionality() {
+            // Configurar búsqueda de escritorio
+            const desktopSearchForm = document.getElementById('desktopSearchForm');
+            const desktopSearchInput = document.getElementById('desktopSearchInput');
+            
+            if (desktopSearchForm && desktopSearchInput) {
+                desktopSearchForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    performSearch(desktopSearchInput.value);
+                });
+            }
+            
+            // Configurar búsqueda móvil
+            const mobileSearchForm = document.getElementById('mobileSearchForm');
+            const mobileSearchInput = document.getElementById('mobileSearchInput');
+            
+            if (mobileSearchForm && mobileSearchInput) {
+                mobileSearchForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    performSearch(mobileSearchInput.value);
+                    
+                    // Cerrar el menú offcanvas después de buscar
+                    const offcanvas = document.getElementById('offcanvasNavbar');
+                    if (offcanvas) {
+                        const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvas);
+                        if (bsOffcanvas) bsOffcanvas.hide();
+                    }
+                });
+            }
+        }
+
+        function performSearch(searchTerm) {
+            if (!searchTerm.trim()) {
+                alert('Por favor ingresa un término de búsqueda');
+                return;
+            }
+            
+            console.log(`Buscando: ${searchTerm}`);
+            
+            // Combinar todos los productos en un solo array para buscar
+            const allProducts = [
+                ...productosFutbol.map(p => ({...p, type: 'futbol'})),
+                ...productosRetro.map(p => ({...p, type: 'retro'})),
+                ...productosAbrigos.map(p => ({...p, type: 'abrigos'})),
+                ...productosConjuntos.map(p => ({...p, type: 'conjuntos'}))
+            ];
+            
+            // Filtrar productos que coincidan con el término de búsqueda
+            const searchResults = allProducts.filter(product => {
+                const searchLower = searchTerm.toLowerCase();
+                return (
+                    product.equipo.toLowerCase().includes(searchLower) ||
+                    (product.temporada && product.temporada.toLowerCase().includes(searchLower)) ||
+                    (product.descripcion && product.descripcion.toLowerCase().includes(searchLower)) ||
+                    (product.descripcion_corta && product.descripcion_corta.toLowerCase().includes(searchLower))
+                );
+            });
+            
+            if (searchResults.length === 0) {
+                alert(`No se encontraron productos para "${searchTerm}"`);
+                return;
+            }
+            
+            // Mostrar resultados de búsqueda
+            displaySearchResults(searchResults, searchTerm);
+        }
+
+        function displaySearchResults(results, searchTerm) {
+            // Ocultar todas las secciones de productos
+            hideAllProductSections();
+            
+            // Crear sección de resultados de búsqueda
+            const mainContainer = document.querySelector('.container.mb-5');
+            
+            // Eliminar sección de resultados anterior si existe
+            const existingResults = document.getElementById('searchResultsSection');
+            if (existingResults) {
+                existingResults.remove();
+            }
+            
+            // Crear nueva sección de resultados
+            const resultsSection = document.createElement('div');
+            resultsSection.id = 'searchResultsSection';
+            resultsSection.innerHTML = `
+                <div class="flex items-center my-8 mt-12">
+                    <div class="flex-grow border-t border-black"></div>
+                    <span class="mx-4 text-black font-semibold text-xl">RESULTADOS DE BÚSQUEDA: "${searchTerm}"</span>
+                    <div class="flex-grow border-t border-black"></div>
+                </div>
+                <div class="row mb-4 ml-4">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="searchResultsGrid">
+                        <!-- Los resultados se cargarán aquí -->
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <button class="btn btn-outline-secondary" id="clearSearchBtn">
+                        <i class="fa-solid fa-arrow-left"></i> Volver al catálogo completo
+                    </button>
+                </div>
+            `;
+            
+            // Insertar antes de la primera sección de productos
+            mainContainer.insertBefore(resultsSection, mainContainer.firstChild);
+            
+            // Cargar resultados en la grid
+            const resultsGrid = document.getElementById('searchResultsGrid');
+            resultsGrid.innerHTML = '';
+            
+            results.forEach(product => {
+                let card;
+                if (product.type === 'futbol' || product.type === 'retro') {
+                    card = createProductCard(product, product.type);
+                } else {
+                    card = createSimpleProductCard(product, product.type);
+                }
+                resultsGrid.appendChild(card);
+            });
+            
+            // Configurar botón para limpiar búsqueda
+            document.getElementById('clearSearchBtn').addEventListener('click', function() {
+                clearSearchResults();
+            });
+            
+            // Desplazarse a la sección de resultados
+            resultsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function hideAllProductSections() {
+            const sections = ['futbolSelection', 'retroSelection', 'abrigosSelection', 'conjuntosSelection'];
+            sections.forEach(sectionId => {
+                const section = document.getElementById(sectionId);
+                if (section) section.style.display = 'none';
+            });
+        }
+
+        function showAllProductSections() {
+            const sections = ['futbolSelection', 'retroSelection', 'abrigosSelection', 'conjuntosSelection'];
+            sections.forEach(sectionId => {
+                const section = document.getElementById(sectionId);
+                if (section) section.style.display = 'block';
+            });
+        }
+
+        function clearSearchResults() {
+            const resultsSection = document.getElementById('searchResultsSection');
+            if (resultsSection) {
+                resultsSection.remove();
+            }
+            
+            showAllProductSections();
+            
+            // Desplazarse al inicio de la página
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // =============================================
+        // FUNCIONES PARA CARGAR PRODUCTOS
+        // =============================================
+
+        function loadFutbolProducts() {
+            const grid = document.getElementById('futbolGrid');
+            grid.innerHTML = '';
+            
+            productosFutbol.forEach(product => {
+                const card = createProductCard(product, 'futbol');
+                grid.appendChild(card);
+            });
+        }
+
+        function loadRetroProducts() {
+            const grid = document.getElementById('retroGrid');
+            grid.innerHTML = '';
+            
+            productosRetro.forEach(product => {
+                const card = createProductCard(product, 'retro');
+                grid.appendChild(card);
+            });
+        }
+
+        function loadAbrigosProducts() {
+            const grid = document.getElementById('abrigosGrid');
+            grid.innerHTML = '';
+            
+            productosAbrigos.forEach(product => {
+                const card = createSimpleProductCard(product, 'abrigos');
+                grid.appendChild(card);
+            });
+        }
+
+        function loadConjuntosProducts() {
+            const grid = document.getElementById('conjuntosGrid');
+            grid.innerHTML = '';
+            
+            productosConjuntos.forEach(product => {
+                const card = createSimpleProductCard(product, 'conjuntos');
+                grid.appendChild(card);
+            });
+        }
+
+        function createProductCard(product, type) {
+            const col = document.createElement('div');
+            col.className = 'col';
+            
+            const precio = type === 'futbol' ? product.precio_fan : product.precio_retro;
+            
+            col.innerHTML = `
+                <div class="card product-card h-100" data-id="${product.id}" data-type="${type}">
+                    <div class="position-relative">
+                        <img src="${product.imagen}" class="card-img-top product-thumb" alt="${product.equipo}">
+                    </div>
+                    <div class="card-body text-start">
+                        <h5 class="card-title text-xl font-bold">${product.equipo}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">${product.temporada}</h6>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <p class="price-tag mb-0">₡${precio.toLocaleString('es-CR')}</p>
+                            ${product.disponible ? 
+                                '<span class="badge bg-success">Disponible</span>' : 
+                                '<span class="badge bg-danger">Agotado</span>'}
+                        </div>
+                    </div>
+                    <div class="card-footer bg-green-700">
+                        <small class="text-white font-bold">Haz clic para comprar</small>
+                    </div>
+                </div>
+            `;
+            
+            // EVENTO CLICK CORREGIDO - usando addEventListener correctamente
+            const cardElement = col.querySelector('.card');
+            cardElement.addEventListener('click', function() {
+                console.log(`Clic en producto ${type} - ID: ${product.id}`);
+                selectProduct(product.id, type);
+            });
+            
+            return col;
+        }
+
+        function createSimpleProductCard(product, type) {
+            const col = document.createElement('div');
+            col.className = 'col';
+            
+            col.innerHTML = `
+                <div class="card product-card h-100" data-id="${product.id}" data-type="${type}">
+                    <div class="position-relative">
+                        <img src="${product.imagen}" class="card-img-top product-thumb" alt="${product.equipo}">
+                    </div>
+                    <div class="card-body text-start">
+                        <h5 class="card-title text-xl font-bold">${product.equipo}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">${product.descripcion_corta || product.version}</h6>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <p class="price-tag mb-0">₡${product.precio.toLocaleString('es-CR')}</p>
+                            ${product.disponible ? 
+                                '<span class="badge bg-success">Disponible</span>' : 
+                                '<span class="badge bg-danger">Agotado</span>'}
+                        </div>
+                    </div>
+                    <div class="card-footer bg-green-700">
+                        <small class="text-white font-bold">Haz clic para comprar</small>
+                    </div>
+                </div>
+            `;
+            
+            // EVENTO CLICK CORREGIDO
+            const cardElement = col.querySelector('.card');
+            cardElement.addEventListener('click', function() {
+                console.log(`Clic en producto ${type} - ID: ${product.id}`);
+                selectSimpleProduct(product.id, type);
+            });
+            
+            return col;
+        }
+
+        // =============================================
+        // FUNCIONES PARA FORMULARIOS
+        // =============================================
+
+        function setupFormControls(type) {
+            const prefix = type;
+            
+            // Controles de cantidad
+            const decrementBtn = document.getElementById(`${prefix}Decrement`);
+            const incrementBtn = document.getElementById(`${prefix}Increment`);
+            const quantityInput = document.getElementById(`${prefix}Quantity`);
+            
+            if (decrementBtn && incrementBtn && quantityInput) {
+                decrementBtn.addEventListener('click', () => {
+                    if (quantityInput.value > 1) {
+                        quantityInput.value = parseInt(quantityInput.value) - 1;
+                        updateOrderSummaryForType(type);
+                    }
+                });
+                
+                incrementBtn.addEventListener('click', () => {
+                    if (quantityInput.value < 10) {
+                        quantityInput.value = parseInt(quantityInput.value) + 1;
+                        updateOrderSummaryForType(type);
+                    }
+                });
+                
+                quantityInput.addEventListener('change', function() {
+                    if (this.value < 1) this.value = 1;
+                    if (this.value > 10) this.value = 10;
+                    updateOrderSummaryForType(type);
+                });
+            }
+            
+            // Configuraciones específicas
+            if (type === 'futbol') {
+                const versionSelect = document.getElementById('futbolVersion');
+                if (versionSelect) {
+                    versionSelect.addEventListener('change', () => updateOrderSummaryForType(type));
+                }
+                
+                // Configurar guías de tallas para Fútbol (FAN y RETRO)
+                const sizeGuideToggleFan = document.getElementById('futbolSizeGuideToggleFan');
+                const sizeTableContainerFan = document.getElementById('futbolSizeTableContainerFan');
+                const sizeGuideToggleRetro = document.getElementById('futbolSizeGuideToggleRetro');
+                const sizeTableContainerRetro = document.getElementById('futbolSizeTableContainerRetro');
+                
+                if (sizeGuideToggleFan && sizeTableContainerFan) {
+                    sizeGuideToggleFan.addEventListener('click', function() {
+                        // Ocultar la otra tabla
+                        sizeTableContainerRetro.classList.add('d-none');
+                        // Mostrar/ocultar esta tabla
+                        sizeTableContainerFan.classList.toggle('d-none');
+                        this.innerHTML = sizeTableContainerFan.classList.contains('d-none') ? 
+                            '<i class="fa-solid fa-ruler"></i> Ver guía de tallas (FAN)' : 
+                            '<i class="fa-solid fa-ruler"></i> Ocultar guía de tallas (FAN)';
+                        // Restaurar texto del otro toggle
+                        sizeGuideToggleRetro.innerHTML = '<i class="fa-solid fa-ruler"></i> Ver guía de tallas (PLAYER)';
+                    });
+                }
+                
+                if (sizeGuideToggleRetro && sizeTableContainerRetro) {
+                    sizeGuideToggleRetro.addEventListener('click', function() {
+                        // Ocultar la otra tabla
+                        sizeTableContainerFan.classList.add('d-none');
+                        // Mostrar/ocultar esta tabla
+                        sizeTableContainerRetro.classList.toggle('d-none');
+                        this.innerHTML = sizeTableContainerRetro.classList.contains('d-none') ? 
+                            '<i class="fa-solid fa-ruler"></i> Ver guía de tallas (PLAYER)' : 
+                            '<i class="fa-solid fa-ruler"></i> Ocultar guía de tallas (PLAYER)';
+                        // Restaurar texto del otro toggle
+                        sizeGuideToggleFan.innerHTML = '<i class="fa-solid fa-ruler"></i> Ver guía de tallas (FAN)';
+                    });
+                }
+            }
+            
+            if (type === 'retro') {
+                const sizeGuideToggle = document.getElementById(`${prefix}SizeGuideToggle`);
+                const sizeTableContainer = document.getElementById(`${prefix}SizeTableContainer`);
+                
+                if (sizeGuideToggle && sizeTableContainer) {
+                    sizeGuideToggle.addEventListener('click', function() {
+                        sizeTableContainer.classList.toggle('d-none');
+                        this.innerHTML = sizeTableContainer.classList.contains('d-none') ? 
+                            '<i class="fa-solid fa-ruler"></i> Ver guía de tallas' : 
+                            '<i class="fa-solid fa-ruler"></i> Ocultar guía de tallas';
+                    });
+                }
+            }
+            
+            // Cambios que afectan el resumen
+            const sizeSelect = document.getElementById(`${prefix}Size`);
+            if (sizeSelect) {
+                sizeSelect.addEventListener('change', () => updateOrderSummaryForType(type));
+            }
+            
+            // Agregar al carrito
+            const addToCartBtn = document.getElementById(`${prefix}AddToCartBtn`);
+            if (addToCartBtn) {
+                addToCartBtn.addEventListener('click', function() {
+                    addToCart(type);
+                });
+            }
+            
+            // Reset del formulario
+            const resetBtn = document.getElementById(`${prefix}ResetBtn`);
+            if (resetBtn) {
+                resetBtn.addEventListener('click', function() {
+                    const form = document.getElementById(`${prefix}OrderForm`);
+                    if (form) form.reset();
+                    updateOrderSummaryForType(type);
+                });
+            }
+        }
+
+        function hideAllForms() {
+            const formSections = ['futbol', 'retro', 'abrigos', 'conjuntos'];
+            formSections.forEach(type => {
+                const section = document.getElementById(`${type}FormSection`);
+                if (section) section.classList.add('d-none');
+            });
+        }
+
+        function selectProduct(productId, type) {
+            console.log(`Seleccionando producto ${productId} de tipo ${type}`);
+            
+            const products = type === 'futbol' ? productosFutbol : productosRetro;
+            const product = products.find(p => p.id == productId);
+            
+            if (!product) {
+                console.error(`Producto no encontrado: ID ${productId}, Tipo ${type}`);
+                return;
+            }
+            
+            const prefix = type;
+            const section = document.getElementById(`${prefix}FormSection`);
+            
+            if (!section) {
+                console.error(`Sección no encontrada: ${prefix}FormSection`);
+                return;
+            }
+            
+            // Ocultar otros formularios
+            hideAllForms();
+            
+            // Actualizar información del producto
+            document.getElementById(`${prefix}ProductName`).textContent = `${product.equipo} - ${product.temporada}`;
+            document.getElementById(`${prefix}ProductImage`).src = product.imagen;
+            document.getElementById(`${prefix}ProductDescription`).textContent = product.descripcion;
+            document.getElementById(`${prefix}SelectedProductId`).value = product.id;
+            
+            // Actualizar características
+            const featuresList = document.getElementById(`${prefix}ProductFeatures`);
+            if (featuresList) {
+                featuresList.innerHTML = `
+                    <li><i class="fas fa-check text-success me-2"></i>Equipo: ${product.equipo}</li>
+                    <li><i class="fas fa-check text-success me-2"></i>Temporada: ${product.temporada}</li>
+                    <li><i class="fas fa-check text-success me-2"></i>Material: Premium</li>
+                    <li><i class="fas fa-check text-success me-2"></i>Diseño oficial</li>
+                `;
+            }
+            
+            // Actualizar disponibilidad
+            const availabilityElement = document.getElementById(`${prefix}ProductAvailability`);
+            if (availabilityElement) {
+                availabilityElement.innerHTML = product.disponible ? 
+                    '<span class="badge bg-success">Disponible</span>' : 
+                    '<span class="badge bg-danger">Agotado</span>';
+            }
+            
+            // Actualizar tallas
+            const sizeSelect = document.getElementById(`${prefix}Size`);
+            if (sizeSelect) {
+                sizeSelect.innerHTML = '<option value="" selected disabled>Selecciona una talla</option>';
+                if (product.tallas) {
+                    product.tallas.forEach(size => {
+                        const option = document.createElement('option');
+                        option.value = size;
+                        option.textContent = size;
+                        sizeSelect.appendChild(option);
+                    });
+                }
+            }
+            
+            // Mostrar sección del formulario
+            section.classList.remove('d-none');
+            section.scrollIntoView({ behavior: 'smooth' });
+            
+            // Actualizar resumen inicial
+            updateOrderSummary(type);
+            
+            console.log(`Formulario ${type} mostrado correctamente`);
+        }
+
+        function selectSimpleProduct(productId, type) {
+            console.log(`Seleccionando producto simple ${productId} de tipo ${type}`);
+            
+            const products = type === 'abrigos' ? productosAbrigos : productosConjuntos;
+            const product = products.find(p => p.id == productId);
+            
+            if (!product) {
+                console.error(`Producto simple no encontrado: ID ${productId}, Tipo ${type}`);
+                return;
+            }
+            
+            const prefix = type;
+            const section = document.getElementById(`${prefix}FormSection`);
+            
+            if (!section) {
+                console.error(`Sección no encontrada: ${prefix}FormSection`);
+                return;
+            }
+            
+            // Ocultar otros formularios
+            hideAllForms();
+            
+            // Actualizar información del producto
+            document.getElementById(`${prefix}ProductName`).textContent = `${product.equipo} - ${product.descripcion_corta || product.version}`;
+            document.getElementById(`${prefix}ProductImage`).src = product.imagen;
+            document.getElementById(`${prefix}ProductDescription`).textContent = product.descripcion;
+            document.getElementById(`${prefix}SelectedProductId`).value = product.id;
+            
+            // Actualizar características
+            const featuresList = document.getElementById(`${prefix}ProductFeatures`);
+            if (featuresList) {
+                featuresList.innerHTML = `
+                    <li><i class="fas fa-check text-success me-2"></i>Producto: ${product.equipo}</li>
+                    <li><i class="fas fa-check text-success me-2"></i>${product.descripcion_corta || product.version}</li>
+                    <li><i class="fas fa-check text-success me-2"></i>Material: Premium</li>
+                    <li><i class="fas fa-check text-success me-2"></i>Calidad garantizada</li>
+                `;
+            }
+            
+            // Actualizar disponibilidad
+            const availabilityElement = document.getElementById(`${prefix}ProductAvailability`);
+            if (availabilityElement) {
+                availabilityElement.innerHTML = product.disponible ? 
+                    '<span class="badge bg-success">Disponible</span>' : 
+                    '<span class="badge bg-danger">Agotado</span>';
+            }
+            
+            // Actualizar precio
+            const priceElement = document.getElementById(`${prefix}ProductPrice`);
+            if (priceElement) {
+                priceElement.textContent = `₡${product.precio.toLocaleString('es-CR')}`;
+            }
+            
+            // Mostrar sección del formulario
+            section.classList.remove('d-none');
+            section.scrollIntoView({ behavior: 'smooth' });
+            
+            // Actualizar resumen inicial
+            updateSimpleOrderSummary(type);
+            
+            console.log(`Formulario simple ${type} mostrado correctamente`);
+        }
+
+        function updateOrderSummary(type) {
+            const prefix = type;
+            const products = type === 'futbol' ? productosFutbol : productosRetro;
+            const productId = document.getElementById(`${prefix}SelectedProductId`).value;
+            
+            if (!productId) return;
+            
+            const product = products.find(p => p.id == productId);
+            if (!product) return;
+            
+            const quantity = parseInt(document.getElementById(`${prefix}Quantity`).value) || 1;
+            let unitPrice;
+            
+            if (type === 'futbol') {
+                const version = document.getElementById('futbolVersion').value;
+                unitPrice = version === 'player' ? product.precio_player : product.precio_fan;
+                const versionElement = document.getElementById('futbolSummaryVersion');
+                if (versionElement) {
+                    versionElement.textContent = version === 'player' ? 'Player' : 'Fan';
+                }
+            } else {
+                unitPrice = product.precio_retro;
+            }
+            
+            const totalPrice = unitPrice * quantity;
+            
+            // Actualizar elementos de precio
+            const productPriceElement = document.getElementById(`${prefix}ProductPrice`);
+            if (productPriceElement) {
+                productPriceElement.textContent = `₡${unitPrice.toLocaleString('es-CR')}`;
+            }
+            
+            const summaryProductElement = document.getElementById(`${prefix}SummaryProduct`);
+            if (summaryProductElement) {
+                summaryProductElement.textContent = `${product.equipo} - ${product.temporada}`;
+            }
+            
+            const unitPriceElement = document.getElementById(`${prefix}SummaryUnitPrice`);
+            if (unitPriceElement) {
+                unitPriceElement.textContent = `₡${unitPrice.toLocaleString('es-CR')}`;
+            }
+            
+            const totalElement = document.getElementById(`${prefix}SummaryTotal`);
+            if (totalElement) {
+                totalElement.textContent = `₡${totalPrice.toLocaleString('es-CR')}`;
+            }
+            
+            // Actualizar personalización en el resumen
+            const customizationElement = document.getElementById(`${prefix}SummaryCustomization`);
+            if (customizationElement) {
+                const customizationValue = document.getElementById(`${prefix}PlayerCustomization`).value;
+                customizationElement.textContent = customizationValue || '-';
+            }
+            
+            // Actualizar talla en el resumen
+            const sizeElement = document.getElementById(`${prefix}SummarySize`);
+            if (sizeElement) {
+                const sizeValue = document.getElementById(`${prefix}Size`).value;
+                sizeElement.textContent = sizeValue || '-';
+            }
+        }
+
+        function updateSimpleOrderSummary(type) {
+            const prefix = type;
+            const products = type === 'abrigos' ? productosAbrigos : productosConjuntos;
+            const productId = document.getElementById(`${prefix}SelectedProductId`).value;
+            
+            if (!productId) return;
+            
+            const product = products.find(p => p.id == productId);
+            if (!product) return;
+            
+            const quantity = parseInt(document.getElementById(`${prefix}Quantity`).value) || 1;
+            const totalPrice = product.precio * quantity;
+            
+            // Actualizar elementos de precio
+            const summaryProductElement = document.getElementById(`${prefix}SummaryProduct`);
+            if (summaryProductElement) {
+                summaryProductElement.textContent = `${product.equipo} - ${product.descripcion_corta || product.version}`;
+            }
+            
+            const unitPriceElement = document.getElementById(`${prefix}SummaryUnitPrice`);
+            if (unitPriceElement) {
+                unitPriceElement.textContent = `₡${product.precio.toLocaleString('es-CR')}`;
+            }
+            
+            const totalElement = document.getElementById(`${prefix}SummaryTotal`);
+            if (totalElement) {
+                totalElement.textContent = `₡${totalPrice.toLocaleString('es-CR')}`;
+            }
+        }
+
+        function updateOrderSummaryForType(type) {
+            if (type === 'futbol' || type === 'retro') {
+                updateOrderSummary(type);
+            } else {
+                updateSimpleOrderSummary(type);
+            }
+        }
+
+        // =============================================
+        // FUNCIONES DEL CARRITO
+        // =============================================
+
+        function setupCartButton(buttonId) {
+            const button = document.getElementById(buttonId);
+            if (button) {
+                button.addEventListener('click', function() {
+                    const cartModal = new bootstrap.Modal(document.getElementById('cartModal'));
+                    cartModal.show();
+                    loadCartItems();
+                });
+            }
+        }
+
+        function addToCart(type) {
+            const prefix = type;
+            const sizeSelect = document.getElementById(`${prefix}Size`);
+            
+            if (!sizeSelect || !sizeSelect.value) {
+                alert('Por favor selecciona una talla');
+                return;
+            }
+            
+            let product, price, version;
+            
+            if (type === 'futbol') {
+                const productId = document.getElementById(`${prefix}SelectedProductId`).value;
+                product = productosFutbol.find(p => p.id == productId);
+                version = document.getElementById('futbolVersion').value;
+                price = version === 'player' ? product.precio_player : product.precio_fan;
+            } 
+            else if (type === 'retro') {
+                const productId = document.getElementById(`${prefix}SelectedProductId`).value;
+                product = productosRetro.find(p => p.id == productId);
+                price = product.precio_retro;
+                version = 'Retro';
+            }
+            else if (type === 'abrigos') {
+                const productId = document.getElementById(`${prefix}SelectedProductId`).value;
+                product = productosAbrigos.find(p => p.id == productId);
+                price = product.precio;
+                version = 'Abrigo';
+            }
+            else if (type === 'conjuntos') {
+                const productId = document.getElementById(`${prefix}SelectedProductId`).value;
+                product = productosConjuntos.find(p => p.id == productId);
+                price = product.precio;
+                version = 'Conjunto';
+            }
+            
+            if (!product) {
+                alert('Error: Producto no encontrado');
+                return;
+            }
+            
+            const cartItem = {
+                id: product.id,
+                type: type,
+                name: `${product.equipo} - ${product.descripcion_corta || product.temporada}`,
+                price: price,
+                quantity: parseInt(document.getElementById(`${prefix}Quantity`).value),
+                size: sizeSelect.value,
+                image: product.imagen,
+                version: version
+            };
+            
+            if (type === 'futbol' || type === 'retro') {
+                cartItem.playerCustomization = document.getElementById(`${prefix}PlayerCustomization`).value;
+                cartItem.parches = document.getElementById(`${prefix}Parches`).value;
+            }
+            
+            addItemToCart(cartItem);
+            showCartNotification();
+        }
+
+        function addItemToCart(item) {
+            const existingIndex = cart.findIndex(cartItem => 
+                cartItem.id === item.id && 
+                cartItem.size === item.size &&
+                cartItem.playerCustomization === item.playerCustomization
+            );
+            
+            if (existingIndex !== -1) {
+                cart[existingIndex].quantity += item.quantity;
+            } else {
+                cart.push(item);
+            }
+            
+            localStorage.setItem('futbolCart', JSON.stringify(cart));
+            updateCartCount();
+        }
+
+        function updateCartCount() {
+            const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+            document.getElementById('cartCount').textContent = totalItems;
+            document.getElementById('cartCountMobile').textContent = totalItems;
+        }
+
+        function showCartNotification() {
+            const notification = document.querySelector('.cart-notification');
+            if (notification) {
+                notification.style.display = 'block';
+                setTimeout(() => {
+                    notification.style.display = 'none';
+                }, 3000);
+            }
+        }
+
+        function loadCartItems() {
+            const container = document.getElementById('cartItemsContainer');
+            
+            if (cart.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-4">
+                        <i class="fa-solid fa-cart-shopping fa-3x mb-3 text-muted"></i>
+                        <h4>Tu carrito está vacío</h4>
+                        <p class="text-muted">Agrega algunos productos para verlos aquí</p>
+                    </div>
+                `;
+                document.getElementById('cartTotalAmount').textContent = '₡0';
+                return;
+            }
+            
+            let html = '';
+            let total = 0;
+            
+            cart.forEach((item, index) => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                
+                html += `
+                    <div class="cart-item border-bottom pb-3 mb-3">
+                        <div class="row align-items-center">
+                            <div class="col-3">
+                                <img src="${item.image}" class="img-fluid rounded" alt="${item.name}">
+                            </div>
+                            <div class="col-9">
+                                <h6>${item.name}</h6>
+                                <div class="text-muted small">
+                                    <div>Talla: ${item.size}</div>
+                                    ${item.playerCustomization ? `<div>Personalización: ${item.playerCustomization}</div>` : ''}
+                                    ${item.parches ? `<div>Parches: ${item.parches}</div>` : ''}
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mt-2">
+                                    <div class="fw-bold">₡${itemTotal.toLocaleString('es-CR')}</div>
+                                    <div class="d-flex align-items-center">
+                                        <button class="btn btn-sm btn-outline-secondary decrease-cart" data-index="${index}">-</button>
+                                        <span class="mx-2">${item.quantity}</span>
+                                        <button class="btn btn-sm btn-outline-secondary increase-cart" data-index="${index}">+</button>
+                                        <button class="btn btn-sm btn-outline-danger ms-2 remove-cart" data-index="${index}">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = html;
+            document.getElementById('cartTotalAmount').textContent = `₡${total.toLocaleString('es-CR')}`;
+            
+            // Configurar botones del carrito
+            document.querySelectorAll('.increase-cart').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const index = parseInt(this.getAttribute('data-index'));
+                    cart[index].quantity += 1;
+                    localStorage.setItem('futbolCart', JSON.stringify(cart));
+                    updateCartCount();
+                    loadCartItems();
+                });
+            });
+            
+            document.querySelectorAll('.decrease-cart').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const index = parseInt(this.getAttribute('data-index'));
+                    if (cart[index].quantity > 1) {
+                        cart[index].quantity -= 1;
+                    } else {
+                        cart.splice(index, 1);
+                    }
+                    localStorage.setItem('futbolCart', JSON.stringify(cart));
+                    updateCartCount();
+                    loadCartItems();
+                });
+            });
+            
+            document.querySelectorAll('.remove-cart').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const index = parseInt(this.getAttribute('data-index'));
+                    cart.splice(index, 1);
+                    localStorage.setItem('futbolCart', JSON.stringify(cart));
+                    updateCartCount();
+                    loadCartItems();
+                });
+            });
+        }
+
+        // =============================================
+        // FUNCIONES DE WHATSAPP - ESTRUCTURA UNIFICADA
+        // =============================================
+
+        function setupWhatsAppButtons() {
+            const types = ['futbol', 'retro', 'abrigos', 'conjuntos'];
+            types.forEach(type => {
+                const button = document.getElementById(`${type}OrderNowBtn`);
+                if (button) {
+                    button.addEventListener('click', () => {
+                        createWhatsAppOrder(type);
+                    });
+                }
+            });
+            
+            const checkoutButton = document.getElementById('checkoutWhatsApp');
+            if (checkoutButton) {   
+                checkoutButton.addEventListener('click', function() {
+                    if (cart.length === 0) {
+                        alert('Tu carrito está vacío');
+                        return;
+                    }
+                    createWhatsAppCartOrder();
+                });
+            }
+        }
+
+        // =============================================
+        // FUNCIÓN PRINCIPAL PARA PEDIDOS INDIVIDUALES
+        // =============================================
+        function createWhatsAppOrder(type) {
+            const prefix = type;
+            let products, product, price, version;
+            
+            // DETERMINAR QUÉ CONJUNTO DE PRODUCTOS USAR SEGÚN EL TIPO
+            if (type === 'futbol') {
+                products = productosFutbol;
+            } else if (type === 'retro') {
+                products = productosRetro;
+            } else if (type === 'abrigos') {
+                products = productosAbrigos;
+            } else if (type === 'conjuntos') {
+                products = productosConjuntos;
+            }
+            
+            // VALIDAR QUE SE HAYA SELECCIONADO UNA TALLA
+            const sizeSelect = document.getElementById(`${prefix}Size`);
+            if (!sizeSelect || !sizeSelect.value) {
+                alert('Por favor selecciona una talla');
+                return;
+            }
+            
+            // OBTENER EL PRODUCTO SELECCIONADO
+            const productId = document.getElementById(`${prefix}SelectedProductId`).value;
+            product = products.find(p => p.id == productId);
+            
+            if (!product) {
+                alert('Error: Producto no encontrado');
+                return;
+            }
+            
+            // OBTENER LA CANTIDAD
+            const quantity = parseInt(document.getElementById(`${prefix}Quantity`).value);
+            
+            // DETERMINAR PRECIO Y VERSIÓN SEGÚN EL TIPO DE PRODUCTO
+            if (type === 'futbol') {
+                version = document.getElementById('futbolVersion').value;
+                price = version === 'player' ? product.precio_player : product.precio_fan;
+                version = version === 'player' ? 'Player' : 'Fan';
+            } else if (type === 'retro') {
+                price = product.precio_retro;
+                version = 'Retro';
+            } else {
+                price = product.precio;
+                version = type === 'abrigos' ? 'Abrigo' : 'Conjunto';
+            }
+            
+            // OBTENER DATOS DE PERSONALIZACIÓN
+            const playerCustomization = document.getElementById(`${prefix}PlayerCustomization`).value;
+            const parches = document.getElementById(`${prefix}Parches`).value;
+            
+            // CALCULAR PRECIO TOTAL
+            const totalPrice = price * quantity;
+            const size = sizeSelect.value;
+
+            // CONSTRUIR EL MENSAJE CON EL FORMATO SOLICITADO
+            let message = 
+                "Tienda Oficial de las Chemas del Mapa | Pedido camisa de futbol%0A%0A" +
+                "Cantidad: " + quantity + "%0A" +
+                "Producto: " + product.equipo + " - " + (product.descripcion_corta || product.temporada) + "%0A" +
+                "Version: " + version + "%0A" +
+                "Talla: " + size + "%0A" +
+                "Personalizacion: " + (playerCustomization || "Sin personalizar") + "%0A" +
+                "Parche: " + (parches || "Sin parches") + "%0A%0A" +
+                "Precio: ₡" + totalPrice.toLocaleString('es-CR') + "%0A%0A" +
+                "-------------------------------%0A%0A" +
+                "https://laschemasdelmapa.com/";
+            
+            // ABRIR WHATSAPP CON EL MENSAJE
+            window.open(`https://wa.me/50685808670?text=${message}`, '_blank');
+        }
+
+        // =============================================
+        // FUNCIÓN PARA PEDIDOS DESDE EL CARRITO
+        // =============================================
+        function createWhatsAppCartOrder() {
+            let message = 
+                "Tienda Oficial de las Chemas del Mapa | Pedido camisa de futbol%0A%0A";
+            let totalPrice = 0;
+            
+            // ITERAR SOBRE CADA PRODUCTO EN EL CARRITO
+            cart.forEach((item, index) => {
+                const itemTotal = item.price * item.quantity;
+                totalPrice += itemTotal;
+                
+                // AGREGAR INFORMACIÓN DE CADA PRODUCTO CON EL FORMATO SOLICITADO
+                message += 
+                    "Cantidad: " + item.quantity + "%0A" +
+                    "Producto: " + item.name + "%0A" +
+                    "Version: " + item.version + "%0A" +
+                    "Talla: " + item.size + "%0A" +
+                    "Personalizacion: " + (item.playerCustomization || "Sin personalizar") + "%0A" +
+                    "Parche: " + (item.parches || "Sin parches") + "%0A%0A" +
+                    "Precio: ₡" + itemTotal.toLocaleString('es-CR') + "%0A%0A";
+            });
+            
+            // AGREGAR TOTAL GENERAL
+            message += "Total: ₡" + totalPrice.toLocaleString('es-CR') + "%0A%0A" +
+                "-------------------------------%0A%0A" +
+                "https://laschemasdelmapa.com/";
+            
+            // ABRIR WHATSAPP CON EL MENSAJE
+            window.open(`https://wa.me/50685808670?text=${message}`, '_blank');
+        }
+
+        // =============================================
+        // FUNCIÓN PARA CONSULTAS DE CONTACTO
+        // =============================================
+        function enviarWhatsApp() {
+            // OBTENER DATOS DEL FORMULARIO DE CONTACTO
+            const nombre = document.getElementById('nombre').value;
+            const asunto = document.getElementById('asunto').value;
+            const descripcion = document.getElementById('descripcion').value;
+            
+            // CONSTRUIR MENSAJE PARA CONSULTAS
+            let message = "Las Chemas del Mapa - Consulta%0A%0A";
+            message += `Nombre: ${nombre}%0A`;
+            message += `Asunto: ${asunto}%0A`;
+            message += `Descripción: ${descripcion}%0A%0A`;
+            message += "Por favor responder a la brevedad.%0A";
+            message += "https://laschemasdelmapa.com/";
+            
+            // ABRIR WHATSAPP CON EL MENSAJE
+            window.open(`https://wa.me/50685808670?text=${message}`, '_blank');
+        }
+
+        // MONITOREO BOTONES WHATSAPP
+
+        
+        document.getElementById("futbolOrderNowBtn").addEventListener("click", () => {
+            gtag("event", "click_whatsapp", {
+                event_category: "engagement",
+                event_label: "Botón WhatsApp",
+            });
+        });
+
+        document.getElementById("retroOrderNowBtn").addEventListener("click", () => {
+            gtag("event", "click_whatsapp", {
+                event_category: "engagement",
+                event_label: "Botón WhatsApp",
+            });
+        });
+
+        document.getElementById("abrigosOrderNowBtn").addEventListener("click", () => {
+            gtag("event", "click_whatsapp", {   
+                event_category: "engagement",
+                event_label: "Botón WhatsApp",
+            });
+        });
+        
+        document.getElementById("conjuntosOrderNowBtn").addEventListener("click", () => {
+            gtag("event", "click_whatsapp", {   
+                event_category: "engagement",
+                event_label: "Botón WhatsApp",
+            });
+        });
+
+    </script>
 </body>
 </html>

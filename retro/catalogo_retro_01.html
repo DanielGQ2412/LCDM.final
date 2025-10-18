@@ -1,518 +1,1548 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0ZJ57PCKCQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-0ZJ57PCKCQ');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../css/producto_carta.css">
-    <link rel="stylesheet" href="../css/producto_carta_retro.css">
-    <title>catalogo_retro_1</title>
-    
 
+    <!-- Frameworks primero -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tus estilos personalizados al final -->
+    <link rel="stylesheet" href="/css/new_formulario.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/hero_abrigos.css">
+    
+    <title>Catálogo Fútbol Retro</title>
+
+    <style>
+        /* Estilos específicos para el formulario de fútbol retro */
+        .parche-preview {
+            max-width: 100px;
+            max-height: 100px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-top: 5px;
+        }
+        
+        .form-section {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-section-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        .parche-example {
+            max-width: 200px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        /* Estilos para la funcionalidad de búsqueda */
+        .no-results {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+        }
+        
+        .search-highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+        
+        /* Estilos para hacer las tarjetas clickeables */
+        .product-info-card {
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .product-info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-footer.bg-green-700 {
+            background-color: #15803d !important;
+        }
+        
+        /* Estilos para el formulario */
+        .form-container {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+            border: none;
+        }
+        
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-
-
     <header>
         <div class="nav1-container">
             <nav>
                 <a href="/index.html">
-                <img src="/logo-deporte/letras-chemasmapa.png" alt="logo" class="logo">
+                    <img src="/logo-deporte/letras-chemasmapa.png" alt="logo" class="logo">
                 </a>
                 
-                <form class="barra-busqueda">
-                    <input type="text" placeholder="Buscar..." class="busqueda">
+                <!-- BARRA DE BÚSQUEDA ESCRITORIO - CON FUNCIONALIDAD -->
+                <form class="barra-busqueda" id="searchFormDesktop">
+                    <input type="text" placeholder="Buscar..." class="busqueda" id="searchInputDesktop">
                     <button type="submit" class="buscar">
                         <img src="/logo-deporte/magnifying-glass-solid-full.svg" alt="buscar" class="icono-buscar">
                     </button>
                 </form>
 
-                <!-- <img src="/logo-deporte/shopping-cart-svgrepo-com.svg" alt="carrito" class="carrito"> -->
+                <!-- Botón del carrito de compras -->
+                <div class="d-flex">
+                    <button class="btn btn-outline-light position-relative" id="cartButton">
+                        <i class="fa-solid fa-cart-shopping"></i> Carrito
+                        <!-- Contador de productos en el carrito -->
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cartCount">0</span>
+                    </button>
+                </div>
             </nav>
         </div>
     </header>
 
-    
+    <!-- Nueva sección Fútbol Retro minimalista -->
+    <section class="nba-minimal-section">
+        <div class="nba-minimal-content">
+            <h1 class="nba-title">Colección Fútbol Retro</h1>
+            <p class="nba-subtitle">Revive la magia del fútbol con nuestras camisetas retro de edición limitada</p>
+        </div>
+    </section>
+
     <div class="nav2-container hidden md:block">
-
-        <!-- Botón menú hamburguesa -->
-        <!-- <button class="menu-toggle">☰</button> -->
-
         <nav class="main-menu">
             <ul>
                 <li class="dropdown-futbol">
                     <a href="#">
-                        <img src="/logo-deporte/futbol-svgrepo-com 2.svg" alt="logo-futbol" class="logo-futbol"
-                        >Futbol</a>
+                        <img src="/logo-deporte/futbol-svgrepo-com 2.svg" alt="logo-futbol" class="logo-futbol">Futbol
+                    </a>
                     <div class="dropdown-content">
-                        <a href="#"><img src="/logo-deporte/clothes-svgrepo-com.svg" alt="conjuto" class="conjuntos">Conjuntos</a>
-                        <a href="#"><img src="/logo-deporte/clothes-clothing-hooded-top-svgrepo-com.svg" alt="abrigos" class="abrigos">Abrigos</a>
-                        <a href="#"><img src="/logo-deporte/soccer-jersey-soccer-svgrepo-com.svg" alt="camisas" class="camisas">Camisas</a>
+                        <a href="/catalogo_abrigos_01.html"><img src="/logo-deporte/clothes-clothing-hooded-top-svgrepo-com.svg" alt="abrigos" class="abrigos">Abrigos</a>
+                        <a href="/futbol/catalogo_futbol_01.html"><img src="/logo-deporte/soccer-jersey-soccer-svgrepo-com.svg" alt="camisas" class="camisas">Camisas</a>
+                        <a href="/conjuntos/catalogo_conjuntos_01.html"><img src="/logo-deporte/clothes-svgrepo-com.svg" alt="conjuto" class="conjuntos">Conjuntos</a>
                     </div>
                 </li>
-
-                <li><a href="#" class="retro"><img src="/logo-deporte/futbol-svgrepo-com 2.svg" alt="logo-futbol" class="logo-futbol">Retro</a></li>
+                <li><a href="/retro/catalogo_retro_01.html" class="retro"><img src="/logo-deporte/futbol-svgrepo-com 2.svg" alt="logo-futbol" class="logo-futbol">Retro</a></li>
                 <li><a href="/nba/catalogo_nba_01.html" class="nba"><img src="/logo-deporte/game.png" alt="logo-nba" class="logo-nba">NBA</a></li>
-                <li><a href="#" class="nfl"><img src="/logo-deporte/football-svgrepo-com.svg" alt="logo-nfl" class="logo-nfl">NFL</a></li>
-                <li><a href="#" class="mlb"><img src="/logo-deporte/baseball-svgrepo-com.svg" alt="logo-mlb" class="logo-mlb">MLB</a></li>
-                <li><a href="#" class="formula"><img src="/logo-deporte/racing-car-svgrepo-com.svg" alt="logo-formula" class="logo-formula">F1</a></li>
-                <li><a href="#" class="contacto"><img src="/logo-deporte/contact-book-svgrepo-com.svg" alt="logo-contacto" class="logo-contacto"></a></li>
+                <li><a href="/nfl/catalogo_nfl_01.html" class="nfl"><img src="/logo-deporte/football-svgrepo-com.svg" alt="logo-nfl" class="logo-nfl">NFL</a></li>
+                <li><a href="/mlb/catalogo_mlb_01.html" class="mlb"><img src="/logo-deporte/baseball-svgrepo-com.svg" alt="logo-mlb" class="logo-mlb">MLB</a></li>
+                <li><a href="/formula/catalogo_formula_01.html" class="formula"><img src="/logo-deporte/racing-car-svgrepo-com.svg" alt="logo-formula" class="logo-formula">F1</a></li>
+                <li><a href="/index.html" class="contacto"><img src="/logo-deporte/contact-book-svgrepo-com.svg" alt="logo-contacto" class="logo-contacto"></a></li>
             </ul>
         </nav>
-
     </div>
-    
-
-
-
 
     <!-- Side menu SOLO móvil -->
-    
     <nav class="navbar navbar-dark bg-dark fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/index.html"> <img src="/logo-deporte/letras-chemasmapa.png" alt=""></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title bg-dark" id="offcanvasNavbarLabel">Las Chemas del Mapa</h5>
-        <button type="button" class="btn-close bg-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-
-            <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle flex items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <img src="/logo-deporte/futbol-svgrepo-com 2.svg" alt="" class="w-6 h-6 mr-4">Futbol
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/index.html"> 
+                <img src="/logo-deporte/letras-chemasmapa.png" alt="">
             </a>
-            <ul class="dropdown-menu bg-dark">
-              <li><a class="dropdown-item flex items-center" href="#"> 
-                <img src="/logo-deporte/clothes-clothing-hooded-top-svgrepo-com.svg" alt="" class="w-6 h-6 mr-4">Abrigos
-              </a></li>
-              <li><a class="dropdown-item flex items-center" href="#">
-                <img src="/logo-deporte/soccer-jersey-soccer-svgrepo-com.svg" alt="" class="w-6 h-6 mr-4">Camisas
-              </a></li>
-              <li><a class="dropdown-item flex items-center" href="#">
-                <img src="/logo-deporte/clothes-svgrepo-com.svg" alt="" class="w-6 h-6 mr-4">Conjuntos Deportivos
-              </a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item flex items-center" href="#">
-                <img src="/logo-deporte/futbol-svgrepo-com 2.svg" alt="" class="w-6 h-6 mr-4">Retro
-              </a></li>
-            </ul>
+            
+            <!-- Botón del carrito para móvil -->
+            <div class="d-flex align-items-center">
+                <button class="btn btn-outline-light position-relative me-2" id="cartButtonMobile">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cartCountMobile">0</span>
+                </button>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
 
-          </li>
-          <li class="nav-item">
-            <a class="nav-link flex items-center" aria-current="page" href="/nba/catalogo_nba_01.html">
-              <img src="/logo-deporte/game.png" alt="" class="w-6 h-6 mr-4">NBA
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link flex items-center" href="#">
-              <img src="/logo-deporte/football-svgrepo-com.svg" alt="" class="w-6 h-6 mr-4">NFL
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link flex items-center" href="#">
-              <img src="/logo-deporte/baseball-svgrepo-com.svg" alt="" class="w-6 h-6 mr-4">MLB
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link flex items-center" href="#">
-              <img src="/logo-deporte/racing-car-svgrepo-com.svg" alt="" class="w-6 h-6 mr-4">Formula 1
-            </a>
-          </li>
-          
-        </ul>
-        <form class="d-flex mt-3" role="search">
-          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"/>
-          <button class="btn btn-outline-success" type="submit">Buscar</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</nav>
+            <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title bg-dark" id="offcanvasNavbarLabel">Las Chemas del Mapa</h5>
+                    <button type="button" class="btn-close bg-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
 
- 
-
-    <!-- Fin Side menu SOLO móvil -->
-
-
-
-<main>
-
-  <div class="w-full flex items-center justify-center my-8 mt-32">
-  <span class="h-px flex-1 bg-gray-300"></span>
-  <span class="shrink-0 px-4 text-gray-900 font-bold text-4xl text-center">RETRO</span>
-  <span class="h-px flex-1 bg-gray-300"></span>
-  </div>
-
-
-
-<div class="contenedorCards ">
-
-
-
-  <!-- ALEMANIA 2014 -->
-
-
-   <div class="card">
-    <div class="wrapper">
-      <div class="bg_alemania_wc2014"></div>
-      <div class="imgProd_alemania_wc2014" style="background-image: url(/Productos/camisas_retro/alemania_2014.png);"></div>
-      <div class="infoProd">
-        <p class="nombreProd">ALEMANIA 2014 | LOCAL</p>
-        <p class="extraInfo">₡20.000 - 25.000 CRC</p>
-      </div>
-    </div>
-  </div>
-
-
-    <!-- CAMISA BAYERN MUNICH 11-12 -->
-
-
-
-  <div class="card">
-    <div class="wrapper">
-      <div class="bg_bayern_munich_2012" style="background-color: #153a82;"></div>
-      <div class="imgProd_bayern_munich_2012" style="background-image: url(/Productos/camisas_retro/bayern_munich_11-12.jpg);"></div>
-      <div class="infoProd">
-        <p class="nombreProd">BAYERN MUNICH 11-12 | LOCAL</p>
-        <p class="extraInfo">₡20.000 - 25.000 CRC</p>
-      </div>
-    </div>
-  </div>
-
-
-    <!-- FRANCIA 2006 VISITA -->
-
-  <div class="card">
-    <div class="wrapper">
-      <div class="bg_francia2006" style="background-color: #3f4a69;"></div>
-      <div class="imgProd_francia2006" style="background-image: url(/Productos/camisas_retro/francia_2006.png);"></div>
-      <div class="infoProd">
-        <p class="nombreProd">FRANCIA 2006 | VISITANTE</p>
-        <p class="extraInfo">₡20.000 - 25.000 CRC</p>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- HOLANDA 1988 LOCAL -->
-
-  <div class="card">
-    <div class="wrapper">
-      <div class="bg_holanda1988"></div>
-      <div class="imgProd_holanda1988" style="background-image: url(/Productos/camisas_retro/holanda_1988.png);"></div>
-      <div class="infoProd">
-        <p class="nombreProd">HOLANDA 1988 | LOCAL</p>
-        <p class="extraInfo">₡20.000 - 25.000 CRC</p>
-      </div>
-    </div>
-  </div>
-
-
-
-<!-------------------------------------------------------------------------->
-<!-------------------------------------------------------------------------->
-<!-------------------------------------------------------------------------->
-<!-------------------------------------------------------------------------->
-
-
-
-  <!-- ARSENAL 14-15 LOCAL -->
-
-
-   <div class="card">
-    <div class="wrapper">
-      <div class="bg_arsenal_14-15_local"></div>
-      <div class="imgProd_arsenal_14-15_local" style="background-image: url(/Productos/camisas_retro/arsenal_14-15_local.jpg);"></div>
-      <div class="infoProd">
-        <p class="nombreProd">ARSENAL 14-15 | LOCAL</p>
-        <p class="extraInfo">₡20.000 - 25.000 CRC</p>
-      </div>
-    </div>
-  </div>
-
-
-    <!-- CAMISA ATLETICO DE MADRID 13-14 LOCAL-->
-
-
-
-  <div class="card">
-    <div class="wrapper">
-      <div class="bg_atletico_madrid_13-14_local"></div>
-      <div class="imgProd_atletico_madrid_13-14_local" style="background-image: url(/Productos/camisas_retro/atletico_madrid_13-14.jpg);"></div>
-      <div class="infoProd">
-        <p class="nombreProd">ATLETICO DE MADRID 13-14  LOCAL</p>
-        <p class="extraInfo">₡20.000 - 25.000 CRC</p>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- BOCA JUNIORS 14-15 LOCAL -->
-
-  <div class="card">
-    <div class="wrapper">
-      <div class="bg_boca_juniors_14-15_local"></div>
-      <div class="imgProd_boca_juniors_14-15_local" style="background-image: url(/Productos/camisas_retro/boca_juniors_14-15.jpg);"></div>
-      <div class="infoProd">
-        <p class="nombreProd">BOCA JUNIORS 14-15 | LOCAL</p>
-        <p class="extraInfo">₡20.000 - 25.000 CRC</p>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- BRASIL 2013 LOCAL -->
-
-  <div class="card">
-    <div class="wrapper">
-      <div class="bg_brasil_2013_local" ></div>
-      <div class="imgProd_brasil_2013_local" style="background-image: url(/Productos/camisas_retro/brasil_2013.jpg);"></div>
-      <div class="infoProd">
-        <p class="nombreProd">BRASIL 2013 | LOCAL</p>
-        <p class="extraInfo">₡20.000 - 25.000 CRC</p>
-      </div>
-    </div>
-  </div>
-
-
-
-  
-<!-------------------------------------------------------------------------->
-<!-------------------------------------------------------------------------->
-<!-------------------------------------------------------------------------->
-<!-------------------------------------------------------------------------->
-
-
-
-<!-- CAMERUN 2013 LOCAL -->
-    <div class="card">
-      <div class="wrapper">
-        <div class="bg_camerun_2010_local"></div>
-        <div class="imgProd_camerun_2010_local" style="background-image: url(/Productos/camisas_retro/cameroon_2010.jpg);"></div>
-        <div class="infoProd">
-          <p class="nombreProd">CAMERUN 2010 | LOCAL</p>
-          <p class="extraInfo">₡20.000 - 25.000 CRC</p>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle flex items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="/logo-deporte/futbol-svgrepo-com 2.svg" alt="" class="w-6 h-6 mr-4">Futbol
+                            </a>
+                            <ul class="dropdown-menu bg-dark">
+                                <li><a class="dropdown-item flex items-center" href="/abrigos/catalogo_abrigos_01.html"> 
+                                    <img src="/logo-deporte/clothes-clothing-hooded-top-svgrepo-com.svg" alt="" class="w-6 h-6 mr-4">Abrigos
+                                </a></li>
+                                <li><a class="dropdown-item flex items-center" href="/futbol/catalogo_futbol_01.html">
+                                    <img src="/logo-deporte/soccer-jersey-soccer-svgrepo-com.svg" alt="" class="w-6 h-6 mr-4">Camisas
+                                </a></li>
+                                <li><a class="dropdown-item flex items-center" href="/conjuntos/catalogo_conjuntos_01.html">
+                                    <img src="/logo-deporte/clothes-svgrepo-com.svg" alt="" class="w-6 h-6 mr-4">Conjuntos Deportivos
+                                </a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item flex items-center" href="/retro/catalogo_retro_01.html">
+                                    <img src="/logo-deporte/futbol-svgrepo-com 2.svg" alt="" class="w-6 h-6 mr-4">Retro
+                                </a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link flex items-center" aria-current="page" href="/nba/catalogo_nba_01.html">
+                                <img src="/logo-deporte/game.png" alt="" class="w-6 h-6 mr-4">NBA
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link flex items-center" href="/nfl/catalogo_nfl_01.html">
+                                <img src="/logo-deporte/football-svgrepo-com.svg" alt="" class="w-6 h-6 mr-4">NFL
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link flex items-center" href="/mlb/catalogo_mlb_01.html">
+                                <img src="/logo-deporte/baseball-svgrepo-com.svg" alt="" class="w-6 h-6 mr-4">MLB
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link flex items-center" href="/formula/catalogo_formula_01.html">
+                                <img src="/logo-deporte/racing-car-svgrepo-com.svg" alt="" class="w-6 h-6 mr-4">Formula 1
+                            </a>
+                        </li>
+                    </ul>
+                    
+                    <!-- BARRA DE BÚSQUEDA MÓVIL - CON FUNCIONALIDAD -->
+                    <form class="d-flex mt-3" role="search" id="searchFormMobile">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" id="searchInputMobile"/>
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="container mt-4">
+        <!-- Sección de selección de productos -->
+        <div class="row mb-4 ml-4" id="productSelection">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="productGrid">
+                <!-- Los productos se cargarán dinámicamente con JavaScript -->
+                <div class="loading">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Cargando...</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mensaje cuando no hay resultados -->
+            <div class="no-results d-none" id="noResultsMessage">
+                <i class="fas fa-search fa-3x mb-3"></i>
+                <h4>No se encontraron productos</h4>
+                <p>Intenta con otros términos de búsqueda</p>
+            </div>
+        </div>
+        
+        <!-- Sección del formulario (inicialmente oculta) -->
+        <div class="d-none form-container" id="formSection">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-section">
+                        <h3 class="form-section-title">Información del Producto</h3>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="text-center mb-3">
+                                    <img id="productImage" src="" alt="Producto" class="img-fluid rounded" style="max-height: 300px;">
+                                </div>
+                                <h4 id="productName" class="card-title"></h4>
+                                <p id="productDescription" class="card-text"></p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h5 id="productPrice" class="text-primary mb-0"></h5>
+                                    <span id="productAvailability"></span>
+                                </div>
+                                <ul id="productFeatures" class="mt-3 list-unstyled">
+                                    <!-- Características se cargarán aquí -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3 class="form-section-title">Personalización</h3>
+                        
+                        <div class="mb-3">
+                            <label for="size" class="form-label">Talla *</label>
+                            <select class="form-select" id="size" required>
+                                <option value="" selected disabled>Selecciona una talla</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="playerCustomization" class="form-label">Personalización del Jugador</label>
+                            <input type="text" class="form-control" id="playerCustomization" placeholder="Ej: Messi 10">
+                            <div class="form-text">Nombre y número del jugador (opcional)</div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="parches" class="form-label">Parches Especiales</label>
+                            <input type="text" class="form-control" id="parches" placeholder="Ej: Parche de campeón mundial">
+                            <div class="form-text">Parches adicionales (opcional)</div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Cantidad</label>
+                            <div class="input-group" style="max-width: 150px;">
+                                <button class="btn btn-outline-secondary" type="button" id="decrement">-</button>
+                                <input type="number" class="form-control text-center" id="quantity" value="1" min="1" max="10">
+                                <button class="btn btn-outline-secondary" type="button" id="increment">+</button>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-outline-secondary mb-3" id="sizeGuideToggle">
+                            <i class="fa-solid fa-ruler"></i> Ver guía de tallas
+                        </button>
+                        
+                        <div id="sizeTableContainer" class="d-none">
+                            <!-- Tabla de tallas se cargará aquí -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="form-section">
+                        <h3 class="form-section-title">Resumen del Pedido</h3>
+                        <div class="card">
+                            <div class="card-body">
+                                <table class="table table-borderless">
+                                    <tr>
+                                        <td>Producto:</td>
+                                        <td id="summaryProduct">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Precio unitario:</td>
+                                        <td id="summaryUnitPrice">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Personalización:</td>
+                                        <td id="summaryCustomization">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Talla:</td>
+                                        <td id="summarySize">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Parches:</td>
+                                        <td id="summaryParche">-</td>
+                                    </tr>
+                                    <tr class="border-top">
+                                        <td><strong>Total:</strong></td>
+                                        <td><strong id="summaryTotal">₡0</strong></td>
+                                    </tr>
+                                </table>
+                                
+                                <div class="d-grid gap-2 mt-4">
+                                    <button class="btn btn-primary" id="addToCartBtn">
+                                        <i class="fa-solid fa-cart-plus"></i> Agregar al Carrito
+                                    </button>
+                                    <button class="btn btn-whatsapp" id="orderNowBtn">
+                                        <i class="fa-brands fa-whatsapp"></i> Ordenar por WhatsApp
+                                    </button>
+                                    <button class="btn btn-outline-secondary" id="resetBtn">
+                                        <i class="fa-solid fa-rotate-left"></i> Limpiar Selección
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <input type="hidden" id="selectedProductId" value="">
+                </div>
+            </div>
+        </div>
     </div>
 
+    <!-- Footer -->
+    <footer class="text-white py-8 mt-64">
+        <h4 class="text-center font-bold">LAS CHEMAS DEL MAPA</h4>
+        <p class="text-center text-sm text-gray-100 mt-2 ">San José, Mora, Ciudad Colón</p>
+        <p class="text-center text-sm text-gray-100 mt-2">10701  Costa Rica</p>
+        <img src="/assets/logoOriginal2.0.png" alt="" class="mx-auto mb-4 mt-4" style="width: 150px; height: 125px;">
+        <p class="text-center text-base text-gray-100 mt-2 font-bold">Desde los clásicos inolvidables hasta los ídolos de hoy, nuestras chemas te acompañan con estilo y autenticidad</p>
+        <p class="text-center text-xl text-gray-100 mt-2 font-bold mt-8">Encuéntranos en nuestras plataformas</p>
 
-<!-- BARCELONA 08-09 VISITA -->
-      <div class="card">
-        <div class="wrapper">
-          <div class="bg_barcelona_08-09_visita"></div>
-          <div class="imgProd_barcelona_08-09_visita" style="background-image: url(/Productos/camisas_retro/fc_barcelona_08-09_visita.jpg);"></div>
-          <div class="infoProd">
-            <p class="nombreProd">BARCELONA 08-09 | VISITA</p>
-            <p class="extraInfo">₡20.000 - 25.000 CRC</p>
-          </div>
+        <a href="https://www.instagram.com/laschemasdelmapa?igsh=MXdkdWkwbmt2Zm9pOA==">
+            <img src="/assets/instagram_logo.svg" alt="instagram" class="mx-auto mb-4 mt-4" style="width: 60px; height: 40px;">
+        </a>
+
+        <p class="text-center text-sm text-gray-100">
+            &copy; 2023 Your Company. All rights reserved | <a href="/html/terminos-servicio.html">Terminos de servicio</a> | <a href="/html/politica-privacidad.html">Política de privacidad</a>
+        </p>
+    </footer>
+
+    <!-- Notificación del carrito -->
+    <div class="cart-notification alert alert-success alert-dismissible fade show" role="alert" style="display: none;">
+        <strong>¡Producto agregado!</strong> Tu camiseta se ha añadido al carrito.
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+
+    <!-- Modal para el carrito -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">
+                        <i class="fa-solid fa-cart-shopping"></i> Tu Carrito de Compras
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="cartItemsContainer">
+                        <!-- Los elementos del carrito se cargarán aquí -->
+                    </div>
+                    <div class="d-flex justify-content-between mt-4 pt-3 border-top">
+                        <h5>Total del Pedido:</h5>
+                        <h5 id="cartTotalAmount">₡0</h5>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir Comprando</button>
+                    <button type="button" class="btn btn-whatsapp" id="checkoutWhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i> Finalizar Pedido por WhatsApp
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // =============================================
+        // DATOS DE PRODUCTOS - FÚTBOL RETRO
+        // =============================================
+        const productosFutbolRetro = [
+            {
+                "id": 350,
+                "equipo": "Argentina",
+                "version": "Retro",
+                "temporada": "1986",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/999rt52L/argentina-1986-local.png",
+                "descripcion": "Camisa oficial de la selección argentina del mundial de México 1986 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+           {
+                "id": 351,
+                "equipo": "Brasil",
+                "version": "Retro",
+                "temporada": "2002",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/p6T06Qhw/brasil-2002-local.png",
+                "descripcion": "Camisa oficial de la selección brasileña del mundial de Corea-Japón 2002 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            {
+                "id": 352,
+                "equipo": "Manchester United",
+                "version": "Retro",
+                "temporada": "1999",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/MyF852wn/man-united-1999-local.png",
+                "descripcion": "Camisa oficial del Manchester United temporada 1998-1999 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            {
+                "id": 353,
+                "equipo": "Ac Milan",
+                "version": "Retro",
+                "temporada": "1993-94",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/5gJwGwST/ac-milan-1998-99-local.png",
+                "descripcion": "Camisa oficial del AC Milan temporada 1993-1994 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            {
+                "id": 354,
+                "equipo": "Alemania",
+                "version": "Retro",
+                "temporada": "2014",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/XrgzChqB/alemania-2014.png",
+                "descripcion": "Camisa oficial de la selección alemana del mundial de Brasil 2014 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            {
+                "id": 355,
+                "equipo": "Ac Milan",
+                "version": "Retro",
+                "temporada": "2006-07",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/JRmb1H4F/ac-milan-06-07-visita.png",
+                "descripcion": "Camisa oficial del AC Milan temporada 2006-2007 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            {
+                "id": 356,
+                "equipo": "Arsenal",
+                "version": "Retro",
+                "temporada": "2005-06",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/qFLwGkdh/arsenal-05-06-local.png",
+                "descripcion": "Camisa oficial del Arsenal temporada 2005-2006 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            {
+                "id": 357,
+                "equipo": "Atletico de Madrid",
+                "version": "Retro",
+                "temporada": "2014-15",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/dwTX26dq/atletico-madrid-13-14.png",
+                "descripcion": "Camisa oficial del Atletico de Madrid temporada 2014-2015 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            {
+                "id": 358,
+                "equipo": "Barcelona",
+                "version": "Retro",
+                "temporada": "1998 - 99",
+                "precio_retro": 25000,
+                "imagen": "https://i.ibb.co/QvyYBFRR/barcelona99-00.png",
+                "descripcion": "Camisa oficial del Barcelona temporada 1998-1999 Manga Larga | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            {
+                "id": 359,
+                "equipo": "Bayern Munich",
+                "version": "Retro",
+                "temporada": "2011 - 12",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/xS472PPj/bayern-munich-11-12.png",
+                "descripcion": "Camisa oficial del Chelsea temporada 2004-2005 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL"]
+            },
+            {
+                "id": 360,
+                "equipo": "Boca Juniors",
+                "version": "Retro",
+                "temporada": "2014-15",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/jkZZHMtM/boca-juniors-14-15.png",
+                "descripcion": "Camisa retro oficial del Boca Juniors, temporada 2014-15 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 361,
+                "equipo": "Brasil",
+                "version": "Retro",
+                "temporada": "2013",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/DDq6fWCh/brasil-2013.png",
+                "descripcion": "Camisa retro oficial de la selección de Brasil, temporada 2013 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 362,
+                "equipo": "Camerún",
+                "version": "Retro",
+                "temporada": "2010",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/39LQ4xMF/cameroon-2010.png",
+                "descripcion": "Camisa retro oficial de la selección de Camerún, temporada 2010 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 363,
+                "equipo": "Croacia",
+                "version": "Retro",
+                "temporada": "1998-99",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/cKNQy2zG/croacia-98-99-locla.png",
+                "descripcion": "Camisa retro oficial de la selección de Croacia, temporada 1998-99 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 364,
+                "equipo": "España",
+                "version": "Retro",
+                "temporada": "2010",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/ZzD9ggDb/espana-2010-visita.png",
+                "descripcion": "Camisa retro oficial de la selección de España, temporada 2010 | VISITA",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 365,
+                "equipo": "Barcelona",
+                "version": "Retro",
+                "temporada": "2008-09",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/dsxLFrH5/fcbarcelona-08-09.png",
+                "descripcion": "Camisa retro oficial del Barcelona, temporada 2008-09 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 366,
+                "equipo": "Fiorentina",
+                "version": "Retro",
+                "temporada": "1998-99",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/MvhDrb7/fiorentina-98-99-visita.png",
+                "descripcion": "Camisa retro oficial de la Fiorentina, temporada 1998-99 | VISITA",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 367,
+                "equipo": "Portugal",
+                "version": "Retro",
+                "temporada": "2012",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/KjFVxhpg/portugal-2012-visita.png",
+                "descripcion": "Camisa retro oficial de la selección de Portugal, temporada 2012 | VISITA",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 368,
+                "equipo": "Barcelona",
+                "version": "Retro",
+                "temporada": "2009-10",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/xSRRsbVN/fc-barcelona-09-10.png",
+                "descripcion": "Camisa retro oficial del Barcelona, temporada 2009-10 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 369,
+                "equipo": "Holanda",
+                "version": "Retro",
+                "temporada": "2010",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/FqLdzqnG/holanda-2010.png",
+                "descripcion": "Camisa retro oficial de la selección de Holanda, temporada 2010 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 370,
+                "equipo": "Inter Milan",
+                "version": "Retro",
+                "temporada": "2009-10",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/Gv0G3RQV/inter-milan-09-10.png",
+                "descripcion": "Camisa retro oficial del Inter Milan, temporada 2009-10 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 371,
+                "equipo": "Manchester United",
+                "version": "Retro",
+                "temporada": "2009-10",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/dJsmYhXk/man-united-09-10.png",
+                "descripcion": "Camisa retro oficial del Manchester United, temporada 2009-10 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 372,
+                "equipo": "Holanda",
+                "version": "Retro",
+                "temporada": "1988",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/23qSWGJm/holanda-1988.png",
+                "descripcion": "Camisa retro oficial de la selección de Holanda, temporada 1988 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 373,
+                "equipo": "Francia",
+                "version": "Retro",
+                "temporada": "1998",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/V0z7T5xx/francia98.png",
+                "descripcion": "Camisa retro oficial de la selección de Francia, temporada 1998 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 374,
+                "equipo": "Gremio",
+                "version": "Retro",
+                "temporada": "2017",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/B2YBYHFM/gremio2017.png",
+                "descripcion": "Camisa retro oficial del Gremio, temporada 2017 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 375,
+                "equipo": "Juventus",
+                "version": "Retro",
+                "temporada": "2002-03",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/GQYz8RbB/juventus02-03.png",
+                "descripcion": "Camisa retro oficial de la Juventus, temporada 2002-03 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 376,
+                "equipo": "Japón",
+                "version": "Retro",
+                "temporada": "1998",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/KjQ9MXzM/japon98.png",
+                "descripcion": "Camisa retro oficial de la selección de Japón, temporada 1998 | VISITA",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 377,
+                "equipo": "Real Madrid",
+                "version": "Retro",
+                "temporada": "2000-01",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/VhQc23X/real-madrid-00-01-local.png",
+                "descripcion": "Camisa retro oficial del Real Madrid, temporada 2000-01 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 378,
+                "equipo": "Inter Milan",
+                "version": "Retro",
+                "temporada": "2001-02",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/d42ypdKD/inter-milan-01-02.png",
+                "descripcion": "Camisa retro oficial del Inter Milan, temporada 2001-02 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 379,
+                "equipo": "Barcelona",
+                "version": "Retro",
+                "temporada": "2006-07",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/SwyjwpWQ/barcelona-06-07-local.png",
+                "descripcion": "Camisa retro oficial del Barcelona, temporada 2006-07 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 380,
+                "equipo": "Sporting Lisboa",
+                "version": "Retro",
+                "temporada": "2001-03",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/PZBDM0Bh/sporting-cp-02-03.png",
+                "descripcion": "Camisa retro oficial del Sporting Lisboa, temporada 2001-03 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 381,
+                "equipo": "Manchester United",
+                "version": "Retro",
+                "temporada": "2007-08",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/zTkhRc04/man-united-07-08-local.png",
+                "descripcion": "Camisa retro oficial del Manchester United, temporada 2007-08 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 382,
+                "equipo": "Barcelona",
+                "version": "Retro",
+                "temporada": "2015-16",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/k2CyZvPk/barcelona-15-16-3equipacion.png",
+                "descripcion": "Camisa retro oficial del Barcelona, temporada 2015-16 | TERCERA EQUIPACIÓN",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 383,
+                "equipo": "Argentina",
+                "version": "Retro",
+                "temporada": "1994",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/6cCrLhq2/argentina-94-local.png",
+                "descripcion": "Camisa retro oficial de la selección argentina, temporada 1994 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 384,
+                "equipo": "SSC Napoli",
+                "version": "Retro",
+                "temporada": "1991-93",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/ks6gnhx2/napoli-91-93-local.png",
+                "descripcion": "Camisa retro oficial del Napoli, temporada 1991-93 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 385,
+                "equipo": "Real Madrid",
+                "version": "Retro",
+                "temporada": "2000-01",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/Z646VxFK/real-madrid-00-01-visita.png",
+                "descripcion": "Camisa retro oficial del Real Madrid, temporada 2000-01 | VISITA",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 386,
+                "equipo": "Brasil",
+                "version": "Retro",
+                "temporada": "2006",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/F4dsWms8/brasil-2006-local.png",
+                "descripcion": "Camisa retro oficial de la selección de Brasil, temporada 2006 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 387,
+                "equipo": "Argentina",
+                "version": "Retro",
+                "temporada": "2006",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/5hw6Wp1D/argentina-2006-local.png",
+                "descripcion": "Camisa retro oficial de la selección argentina, temporada 2006 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            },
+            {
+                "id": 388,
+                "equipo": "AC Milan",
+                "version": "Retro",
+                "temporada": "2009-10",
+                "precio_retro": 22000,
+                "imagen": "https://i.ibb.co/qLm9Bwdw/ac-milan-2009-10.png",
+                "descripcion": "Camisa retro oficial del AC Milan, temporada 2009-10 | LOCAL",
+                "disponible": true,
+                "tallas": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"]
+            }
+            
 
 
-<!-- FRANCIA 2018 LOCAL -->
-      <div class="card">
-        <div class="wrapper">
-          <div class="bg_francia_2018_local" style="background-color: #3f4a69;"></div>
-          <div class="imgProd_francia_2018_local" style="background-image: url(/Productos/camisas_retro/francia_2018.jpg);"></div>
-          <div class="infoProd">
-            <p class="nombreProd">FRANCIA 2018 | LOCAL</p>
-            <p class="extraInfo">₡20.000 - 25.000 CRC</p>
-          </div>
-        </div>
-      </div>
+        ];
 
+        // =============================================
+        // CONFIGURACIÓN INICIAL Y VARIABLES GLOBALES
+        // =============================================
 
-<!-- INTER MILAN 09-10 LOCAL -->
-      <div class="card">
-        <div class="wrapper">
-          <div class="bg_inter_milan_09-10_local" style="background-color: #000000;"></div>
-          <div class="imgProd_inter_milan_09-10_local" style="background-image: url(/Productos/camisas_retro/inter_milan_09-10.jpg);"></div>
-          <div class="infoProd">
-            <p class="nombreProd">INTER MILAN 09-10 | LOCAL</p>
-            <p class="extraInfo">₡20.000 - 25.000 CRC</p>
-          </div>
-        </div>
-      </div>
+        // Carrito de compras (almacenado en localStorage para persistencia)
+        let cart = JSON.parse(localStorage.getItem('futbolRetroCart')) || [];
 
-  
-<!-------------------------------------------------------------------------->
-<!-------------------------------------------------------------------------->
-<!-------------------------------------------------------------------------->
-<!-------------------------------------------------------------------------->
+        // =============================================
+        // FUNCIONES PRINCIPALES - INICIALIZACIÓN
+        // =============================================
 
+        // Esperar a que cargue completamente el DOM antes de ejecutar el código
+        document.addEventListener('DOMContentLoaded', function() {
+            // Cargar productos en la cuadrícula de la página
+            loadProducts();
+            
+            // Actualizar el contador del carrito
+            updateCartCount();
+            
+            // Configurar los botones del carrito para desktop y móvil
+            setupCartButton('cartButton');      // Botón desktop
+            setupCartButton('cartButtonMobile'); // Botón móvil
 
-<!--BARCELONA 09-10 LOCAL-->
-      <div class="card">
-        <div class="wrapper">
-          <div class="bg_barcelona_09-10_local"></div>
-          <div class="imgProd_barcelona_09-10_local" style="background-image: url(/Productos/camisas_retro/fc_barcelona_09-10.png);"></div>
-          <div class="infoProd">
-            <p class="nombreProd">BARCELONA 09-10 | LOCAL</p>
-            <p class="extraInfo">₡20.000 - 25.000 CRC</p>
-          </div>
-        </div>
-      </div>
+            // =============================================
+            // CONFIGURACIÓN DE LA FUNCIONALIDAD DE BÚSQUEDA
+            // =============================================
+            
+            // Configurar búsqueda para escritorio
+            const searchFormDesktop = document.getElementById('searchFormDesktop');
+            const searchInputDesktop = document.getElementById('searchInputDesktop');
+            
+            searchFormDesktop.addEventListener('submit', function(e) {
+                e.preventDefault();
+                performSearch(searchInputDesktop.value);
+            });
+            
+            // Configurar búsqueda para móvil
+            const searchFormMobile = document.getElementById('searchFormMobile');
+            const searchInputMobile = document.getElementById('searchInputMobile');
+            
+            searchFormMobile.addEventListener('submit', function(e) {
+                e.preventDefault();
+                performSearch(searchInputMobile.value);
+                // Cerrar el offcanvas después de buscar en móvil
+                const offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('offcanvasNavbar'));
+                if (offcanvas) offcanvas.hide();
+            });
+            
+            // Búsqueda en tiempo real (opcional)
+            searchInputDesktop.addEventListener('input', function() {
+                if (this.value.length >= 2) {
+                    performSearch(this.value);
+                } else if (this.value.length === 0) {
+                    loadProducts(); // Recargar todos los productos si se borra la búsqueda
+                }
+            });
+            
+            searchInputMobile.addEventListener('input', function() {
+                if (this.value.length >= 2) {
+                    performSearch(this.value);
+                } else if (this.value.length === 0) {
+                    loadProducts(); // Recargar todos los productos si se borra la búsqueda
+                }
+            });
 
+            // Obtener ID del producto desde la URL si existe (para enlaces directos)
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id');
+            if (productId) {
+                // Simular clic en el producto con el ID de la URL después de un breve delay
+                setTimeout(() => {
+                    const productElement = document.querySelector(`.product-card[data-id="${productId}"]`);
+                    if (productElement) {
+                        productElement.click();
+                    }
+                }, 500);
+            }
 
-<!--CROACIA 98-99-->
-      <div class="card">
-        <div class="wrapper">
-          <div class="bg_croacia_98-99"></div>
-          <div class="imgProd_croacia_98-99" style="background-image: url(/Productos/camisas_retro/croacia-98-99-locla.jpg);"></div>
-          <div class="infoProd">
-            <p class="nombreProd">CROACIA 98-99 | LOCAL</p>
-            <p class="extraInfo">₡20.000 - 25.000 CRC</p>
-          </div>
-        </div>
-      </div>
+            // =============================================
+            // CONFIGURACIÓN DE CONTROLES DE CANTIDAD
+            // =============================================
+            const quantityInput = document.getElementById('quantity');
+            
+            // Botón para disminuir cantidad
+            document.getElementById('decrement').addEventListener('click', () => {
+                if (quantityInput.value > 1) {
+                    quantityInput.value = parseInt(quantityInput.value) - 1;
+                    updateOrderSummary();
+                }
+            });
+            
+            // Botón para aumentar cantidad
+            document.getElementById('increment').addEventListener('click', () => {
+                if (quantityInput.value < 10) {
+                    quantityInput.value = parseInt(quantityInput.value) + 1;
+                    updateOrderSummary();
+                }
+            });
+            
+            // Validación manual de entrada de cantidad
+            quantityInput.addEventListener('change', () => {
+                if (quantityInput.value < 1) quantityInput.value = 1;
+                if (quantityInput.value > 10) quantityInput.value = 10;
+                updateOrderSummary();
+            });
+            
+            // =============================================
+            // CONFIGURACIÓN DE GUÍA DE TALLAS
+            // =============================================
+            document.getElementById('sizeGuideToggle').addEventListener('click', function() {
+                const tableContainer = document.getElementById('sizeTableContainer');
+                if (tableContainer.classList.contains('d-none')) {
+                    tableContainer.classList.remove('d-none');
+                    tableContainer.innerHTML = `
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Guía de Tallas</h5>
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Talla</th>
+                                            <th>Pecho (cm)</th>
+                                            <th>Largo (cm)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>S</td>
+                                            <td>90-95</td>
+                                            <td>70-72</td>
+                                        </tr>
+                                        <tr>
+                                            <td>M</td>
+                                            <td>96-101</td>
+                                            <td>72-74</td>
+                                        </tr>
+                                        <tr>
+                                            <td>L</td>
+                                            <td>102-107</td>
+                                            <td>74-76</td>
+                                        </tr>
+                                        <tr>
+                                            <td>XL</td>
+                                            <td>108-113</td>
+                                            <td>76-78</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2XL</td>
+                                            <td>114-119</td>
+                                            <td>78-80</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    `;
+                    this.innerHTML = '<i class="fa-solid fa-ruler"></i> Ocultar guía de tallas';
+                } else {
+                    tableContainer.classList.add('d-none');
+                    this.innerHTML = '<i class="fa-solid fa-ruler"></i> Ver guía de tallas';
+                }
+            });
+            
+            // =============================================
+            // CONFIGURACIÓN DE EVENTOS QUE ACTUALIZAN EL RESUMEN
+            // =============================================
+            
+            // Actualizar resumen cuando cambian los campos
+            document.getElementById('size').addEventListener('change', updateOrderSummary);
+            document.getElementById('playerCustomization').addEventListener('input', updateOrderSummary);
+            document.getElementById('parches').addEventListener('input', updateOrderSummary);
+            
+            // =============================================
+            // CONFIGURACIÓN DE BOTONES DE ACCIÓN
+            // =============================================
+            
+            // Agregar al carrito
+            document.getElementById('addToCartBtn').addEventListener('click', function() {
+                // Validar que se haya seleccionado una talla
+                if (!document.getElementById('size').value) {
+                    alert('Por favor selecciona una talla');
+                    return;
+                }
+                
+                // Obtener datos del producto seleccionado
+                const productId = document.getElementById('selectedProductId').value;
+                const product = productosFutbolRetro.find(p => p.id == productId);
+                
+                if (!product) {
+                    alert('Error: Producto no encontrado');
+                    return;
+                }
+                
+                // Obtener datos de personalización
+                const playerCustomization = document.getElementById('playerCustomization').value;
+                const parches = document.getElementById('parches').value;
+                
+                // Crear objeto del item del carrito
+                const cartItem = {
+                    id: product.id,
+                    name: `${product.equipo} - ${product.temporada}`,
+                    price: product.precio_retro,
+                    quantity: parseInt(document.getElementById('quantity').value),
+                    size: document.getElementById('size').value,
+                    image: product.imagen,
+                    version: "Retro",
+                    customization: {
+                        playerCustomization: playerCustomization,
+                        parches: parches
+                    }
+                };
+                
+                // Agregar al carrito
+                addToCart(cartItem);
+                
+                // Mostrar notificación de éxito
+                showCartNotification();
+            });
+            
+            // Ordenar producto individual por WhatsApp
+            document.getElementById('orderNowBtn').addEventListener('click', function() {
+                const size = document.getElementById('size').value;
+                if (!size) {
+                    alert('Por favor selecciona una talla');
+                    return;
+                }
 
+                const productId = document.getElementById('selectedProductId').value;
+                const product = productosFutbolRetro.find(p => p.id == productId);
 
-<!--ESPANA 2010-->
-      <div class="card">
-        <div class="wrapper">
-          <div class="bg_espana_2010"></div>
-          <div class="imgProd_espana_2010" style="background-image: url(/Productos/camisas_retro/espana_2010_visita.jpg);"></div>
-          <div class="infoProd">
-            <p class="nombreProd">ESPAÑA 2010 | LOCAL</p>
-            <p class="extraInfo">₡20.000 - 25.000 CRC</p>
-          </div>
-        </div>
-      </div>
+                if (!product) {
+                    alert('Error: Producto no encontrado');
+                    return;
+                }
 
+                const quantity = document.getElementById('quantity').value;
+                const playerCustomization = document.getElementById('playerCustomization').value;
+                const parches = document.getElementById('parches').value;
+                const totalPrice = product.precio_retro * quantity;
 
-<!--PORTUGAL 2012-->
-      <div class="card">
-        <div class="wrapper">
-          <div class="bg_portugal_2012"></div>
-          <div class="imgProd_portugal_2012" style="background-image: url(/Productos/camisas_retro/portugal_2012_visita.jpg);"></div>
-          <div class="infoProd">
-            <p class="nombreProd">PORTUGAL 2012 | LOCAL</p>
-            <p class="extraInfo">₡20.000 - 25.000 CRC</p>
-          </div>
-        </div>
-      </div>
+                // CONSTRUIR EL MENSAJE CON EL FORMATO SOLICITADO
+                let message = 
+                    "Tienda Oficial de las Chemas del Mapa | Pedido camisa de futbol%0A%0A" +
+                    "Cantidad: " + quantity + "%0A" +
+                    "Producto: " + product.equipo + " - " + product.temporada + "%0A" +
+                    "Version: Retro%0A" +
+                    "Talla: " + size + "%0A" +
+                    "Personalizacion: " + (playerCustomization || "Sin personalizar") + "%0A" +
+                    "Parche: " + (parches || "Sin parches") + "%0A%0A" +
+                    "Precio: ₡" + totalPrice.toLocaleString('es-CR') + "%0A%0A" +
+                    "-------------------------------%0A%0A" +
+                    "https://laschemasdelmapa.com/";
 
+                window.open(`https://wa.me/50685828670?text=${message}`, '_blank');
+            });
 
+            // Reset del formulario
+            document.getElementById('resetBtn').addEventListener('click', function() {
+                document.getElementById('playerCustomization').value = '';
+                document.getElementById('parches').value = '';
+                document.getElementById('quantity').value = 1;
+                document.getElementById('size').selectedIndex = 0;
+                updateOrderSummary();
+            });
 
-  </div> <!-- Fin contenedorCards -->
+            // Finalizar pedido desde el carrito por WhatsApp
+            document.getElementById('checkoutWhatsApp').addEventListener('click', function() {
+                if (cart.length === 0) {
+                    alert('Tu carrito está vacío');
+                    return;
+                }
 
-</main>
+                const totalPrice = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
 
+                // CONSTRUIR EL MENSAJE CON EL FORMATO SOLICITADO PARA EL CARRITO
+                let message = 
+                    "Tienda Oficial de las Chemas del Mapa | Pedido camisa de futbol%0A%0A";
 
+                cart.forEach((item, index) => {
+                    message += 
+                        "Cantidad: " + item.quantity + "%0A" +
+                        "Producto: " + item.name + "%0A" +
+                        "Version: " + item.version + "%0A" +
+                        "Talla: " + item.size + "%0A" +
+                        "Personalizacion: " + (item.customization.playerCustomization || "Sin personalizar") + "%0A" +
+                        "Parche: " + (item.customization.parches || "Sin parches") + "%0A%0A" +
+                        "Precio: ₡" + (item.price * item.quantity).toLocaleString('es-CR') + "%0A%0A";
+                });
 
+                message += "Total: ₡" + totalPrice.toLocaleString('es-CR') + "%0A%0A" +
+                    "-------------------------------%0A%0A" +
+                    "https://laschemasdelmapa.com/";
 
-    
+                window.open(`https://wa.me/50685828670?text=${message}`, '_blank');
+            });
+        });
 
-    <!-- Pagination -->
-<div class="pt-16 mb-24">
-  <ul class="flex justify-center gap-1 text-gray-900">
-  <li>
-    <!-- <a
-      href="#"
-      class="grid size-8 place-content-center rounded border border-gray-200 transition-colors hover:bg-gray-50 rtl:rotate-180"
-      aria-label="Previous page"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="size-4"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-          clip-rule="evenodd"
-        />
-      </svg> -->
-    </a>
-  </li>
+        // =============================================
+        // FUNCIÓN PARA REALIZAR BÚSQUEDA
+        // =============================================
+        function performSearch(searchTerm) {
+            if (!searchTerm || searchTerm.trim() === '') {
+                loadProducts(); // Mostrar todos los productos si no hay término de búsqueda
+                return;
+            }
+            
+            const filteredProducts = productosFutbolRetro.filter(product => {
+                // Buscar en equipo, temporada y descripción
+                const searchableText = `${product.equipo} ${product.temporada} ${product.descripcion}`.toLowerCase();
+                return searchableText.includes(searchTerm.toLowerCase());
+            });
+            
+            displaySearchResults(filteredProducts, searchTerm);
+        }
 
-  <li>
-    <a
-      href="/html/NBA/catalogo_nba_uno.html"
-      class="block size-8 rounded border border-indigo-600 bg-indigo-600 text-center text-sm/8 font-medium text-white"
-    >
-      1
-    </a>
-  </li>
+        // =============================================
+        // FUNCIÓN PARA MOSTRAR RESULTADOS DE BÚSQUEDA
+        // =============================================
+        function displaySearchResults(products, searchTerm) {
+            const productGrid = document.getElementById('productGrid');
+            const noResultsMessage = document.getElementById('noResultsMessage');
+            
+            productGrid.innerHTML = ''; // Limpiar grid
+            
+            if (products.length === 0) {
+                // Mostrar mensaje de no resultados
+                noResultsMessage.classList.remove('d-none');
+                return;
+            }
+            
+            // Ocultar mensaje de no resultados
+            noResultsMessage.classList.add('d-none');
+            
+            // Crear tarjetas para los productos filtrados
+            products.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'col';
+                
+                // Resaltar el término de búsqueda en el título
+                const highlightedTitle = highlightSearchTerm(`${product.equipo} - ${product.temporada}`, searchTerm);
+                
+                productCard.innerHTML = `
+                    <div class="card product-info-card h-100" data-id="${product.id}">
+                        <img src="${product.imagen}" class="card-img-top product-thumb" alt="${product.equipo} - ${product.version}">
+                        <div class="card-body text-start">
+                            <h5 class="card-title">${highlightedTitle}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">${product.temporada}</h6>
+                            
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <p class="price-tag mb-0">₡${product.precio_retro.toLocaleString('es-CR')}</p>
+                                    ${product.disponible ? 
+                                        '<span class="badge bg-success">Disponible</span>' : 
+                                        '<span class="badge bg-danger">Agotado</span>'}
+                            </div>
+                        </div>
+                        <div class="card-footer bg-green-700">
+                            <small class="text-white font-bold">Haz clic para Comprar</small>
+                        </div>
+                    </div>
+                `;
+                
+                // Agregar evento de clic para seleccionar el producto
+                const cardElement = productCard.querySelector('.product-info-card');
+                cardElement.addEventListener('click', function() {
+                    selectProduct(product.id);
+                });
+                
+                // Agregar la tarjeta al grid
+                productGrid.appendChild(productCard);
+            });
+        }
 
-  <li
-    ><a
-      href="/retro/catalogo_retro_02.html"
-      class="block size-8 rounded border border-gray-200 text-center text-sm/8 font-medium transition-colors hover:bg-gray-50"
-    >
-      2
-    </a>
-  </li>
+        // =============================================
+        // FUNCIÓN PARA RESALTAR TÉRMINOS DE BÚSQUEDA
+        // =============================================
+        function highlightSearchTerm(text, searchTerm) {
+            if (!searchTerm) return text;
+            
+            const regex = new RegExp(`(${searchTerm})`, 'gi');
+            return text.replace(regex, '<span class="search-highlight">$1</span>');
+        }
 
+        // =============================================
+        // FUNCIÓN PARA CONFIGURAR BOTONES DEL CARRITO
+        // =============================================
+        function setupCartButton(buttonId) {
+            document.getElementById(buttonId).addEventListener('click', function() {
+                // Mostrar el modal del carrito usando Bootstrap
+                const cartModal = new bootstrap.Modal(document.getElementById('cartModal'));
+                cartModal.show();
+                
+                // Cargar los elementos del carrito en el modal
+                loadCartItems();
+            });
+        }
 
-  <li>
-    <a
-      href="/retro/catalogo_retro_02.html"
-      class="grid size-8 place-content-center rounded border border-gray-200 transition-colors hover:bg-gray-50 rtl:rotate-180 top-6"
-      aria-label="Next page"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="size-4"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </a>
-  </li>
-</ul>
-</div>
-    <!-- Fin Pagination -->
+        // =============================================
+        // FUNCIÓN PARA CARGAR PRODUCTOS EN LA CUADRÍCULA
+        // =============================================
+        function loadProducts() {
+            const productGrid = document.getElementById('productGrid');
+            const noResultsMessage = document.getElementById('noResultsMessage');
+            
+            productGrid.innerHTML = ''; // Limpiar indicador de carga
+            noResultsMessage.classList.add('d-none'); // Ocultar mensaje de no resultados
+            
+            // Crear una tarjeta para cada producto
+            productosFutbolRetro.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'col';
+                productCard.innerHTML = `
+                    <div class="card product-info-card h-100" data-id="${product.id}">
+                        <img src="${product.imagen}" class="card-img-top product-thumb" alt="${product.equipo} - ${product.version}">
+                        <div class="card-body text-start">
+                            <h5 class="card-title">${product.equipo}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">${product.temporada}</h6>
+                            
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <p class="price-tag mb-0">₡${product.precio_retro.toLocaleString('es-CR')}</p>
+                                    ${product.disponible ? 
+                                        '<span class="badge bg-success">Disponible</span>' : 
+                                        '<span class="badge bg-danger">Agotado</span>'}
+                            </div>
+                        </div>
+                        <div class="card-footer bg-green-700">
+                            <small class="text-white font-bold">Haz clic para Comprar</small>
+                        </div>
+                    </div>
+                `;
+                
+                // Agregar evento de clic para seleccionar el producto
+                const cardElement = productCard.querySelector('.product-info-card');
+                cardElement.addEventListener('click', function() {
+                    selectProduct(product.id);
+                });
+                
+                // Agregar la tarjeta al grid
+                productGrid.appendChild(productCard);
+            });
+        }
 
+        // =============================================
+        // FUNCIÓN PARA SELECCIONAR UN PRODUCTO
+        // =============================================
+        function selectProduct(productId) {
+            const product = productosFutbolRetro.find(p => p.id == productId);
+            if (!product) return;
+            
+            // Actualizar UI con la información del producto seleccionado
+            document.getElementById('productName').textContent = `${product.equipo} - ${product.version}`;
+            document.getElementById('productImage').src = product.imagen;
+            document.getElementById('productDescription').textContent = product.descripcion;
+            document.getElementById('productPrice').textContent = `₡${product.precio_retro.toLocaleString('es-CR')}`;
+            document.getElementById('selectedProductId').value = product.id;
+            
+            // Actualizar lista de características
+            const featuresList = document.getElementById('productFeatures');
+            featuresList.innerHTML = `
+                <li><i class="fa-solid fa-check"></i> Equipo: ${product.equipo}</li>
+                <li><i class="fa-solid fa-check"></i> Versión: ${product.version}</li>
+                <li><i class="fa-solid fa-check"></i> Temporada: ${product.temporada}</li>
+                <li><i class="fa-solid fa-check"></i> Diseño retro auténtico</li>
+                <li><i class="fa-solid fa-check"></i> Personalizable</li>
+            `;
+            
+            // Actualizar indicador de disponibilidad
+            const availabilityElement = document.getElementById('productAvailability');
+            availabilityElement.innerHTML = product.disponible ? 
+                '<span class="badge bg-success">Disponible</span>' : 
+                '<span class="badge bg-danger">Agotado</span>';
+            
+            // Actualizar opciones de tallas disponibles
+            const sizeSelect = document.getElementById('size');
+            sizeSelect.innerHTML = '<option value="" selected disabled>Selecciona una talla</option>';
+            
+            product.tallas.forEach(size => {
+                const option = document.createElement('option');
+                option.value = size;
+                option.textContent = size;
+                sizeSelect.appendChild(option);
+            });
+            
+            // Limpiar campos de personalización
+            document.getElementById('playerCustomization').value = '';
+            document.getElementById('parches').value = '';
+            
+            // Actualizar resumen del pedido
+            document.getElementById('summaryProduct').textContent = `${product.equipo} - ${product.version}`;
+            document.getElementById('summaryUnitPrice').textContent = `₡${product.precio_retro.toLocaleString('es-CR')}`;
+            
+            // Mostrar sección del formulario (oculta inicialmente)
+            document.getElementById('formSection').classList.remove('d-none');
+            
+            // Desplazarse suavemente hacia el formulario
+            document.getElementById('formSection').scrollIntoView({ behavior: 'smooth' });
+            
+            // Actualizar resumen del pedido
+            updateOrderSummary();
+        }
 
+        // =============================================
+        // FUNCIÓN PARA ACTUALIZAR EL RESUMEN DEL PEDIDO
+        // =============================================
+        function updateOrderSummary() {
+            const productId = document.getElementById('selectedProductId').value;
+            if (!productId) return;
+            
+            const product = productosFutbolRetro.find(p => p.id == productId);
+            if (!product) return;
+            
+            // Calcular precios
+            const quantity = parseInt(document.getElementById('quantity').value) || 1;
+            const totalPrice = product.precio_retro * quantity;
+            
+            // Actualizar elementos del resumen
+            document.getElementById('summaryTotal').textContent = `₡${totalPrice.toLocaleString('es-CR')}`;
+            
+            // Actualizar detalles de personalización en el resumen
+            const playerCustomization = document.getElementById('playerCustomization').value;
+            const size = document.getElementById('size').value;
+            const parches = document.getElementById('parches').value;
+            
+            document.getElementById('summaryCustomization').textContent = playerCustomization || '-';
+            document.getElementById('summarySize').textContent = size || '-';
+            document.getElementById('summaryParche').textContent = parches || '-';
+        }
 
+        // =============================================
+        // FUNCIONES DEL CARRITO DE COMPRAS
+        // =============================================
 
+        // Función para agregar un producto al carrito
+        function addToCart(item) {
+            // Verificar si el producto ya está en el carrito
+            const existingItemIndex = cart.findIndex(cartItem => 
+                cartItem.id === item.id && 
+                cartItem.size === item.size &&
+                cartItem.customization.playerCustomization === item.customization.playerCustomization
+            );
+            
+            if (existingItemIndex !== -1) {
+                // Si ya existe, actualizar la cantidad
+                cart[existingItemIndex].quantity += item.quantity;
+            } else {
+                // Si no existe, agregar nuevo item
+                cart.push(item);
+            }
+            
+            // Guardar en localStorage para persistencia
+            localStorage.setItem('futbolRetroCart', JSON.stringify(cart));
+            
+            // Actualizar contador del carrito
+            updateCartCount();
+        }
 
+        // Función para actualizar el contador del carrito
+        function updateCartCount() {
+            const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+            document.getElementById('cartCount').textContent = totalItems;
+            document.getElementById('cartCountMobile').textContent = totalItems;
+        }
 
-    
+        // =============================================
+        // FUNCIÓN PARA MOSTRAR NOTIFICACIÓN DEL CARRITO
+        // =============================================
+        function showCartNotification() {
+            const notification = document.querySelector('.cart-notification');
+            notification.style.display = 'block';
+            
+            // Ocultar notificación después de 3 segundos
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 3000);
+        }
 
-<!-- Footer -->
-
-
-
-  <footer class="text-white py-8 mt-64" >
-
-    <h4 class="text-center font-bold">LAS CHEMAS DEL MAPA</h4>
-    <p class="text-center text-sm text-gray-100 mt-2 ">San José, Mora, Ciudad Colón</p>
-    <p class="text-center text-sm text-gray-100 mt-2">10701  Costa Rica</p>
-    <img src="/assets/logoOriginal2.0.png" alt="" class="mx-auto mb-4 mt-4" style="width: 150px; height: 125px;">
-    <p class="text-center text-base text-gray-100 mt-2 font-bold">Desde los clásicos inolvidables hasta los ídolos de hoy, nuestras chemas te acompañan con estilo y autenticidad</p>
-    <p class="text-center text-xl text-gray-100 mt-2 font-bold mt-8">Encuéntranos en nuestras plataformas</p>
-
-    <a href="https://www.instagram.com/laschemasdelmapa?igsh=MXdkdWkwbmt2Zm9pOA==">
-    <img src="/assets/instagram_logo.svg" alt="instagram" class="mx-auto mb-4 mt-4" style="width: 60px; height: 40px;">
-    </a>
-
-    <p class="text-center text-sm text-gray-100">
-      &copy; 2023 Your Company. All rights reserved | <a href="/html/terminos-servicio.html">Terminos de servicio</a> | <a href="/html/politica-privacidad.html">Política de privacidad</a>
-    </p>
-  </footer>
-<!-- Fin Footer -->
-
-
-    
+        // =============================================
+        // FUNCIÓN PARA CARGAR ELEMENTOS EN EL MODAL DEL CARRITO
+        // =============================================
+        function loadCartItems() {
+            const cartItemsContainer = document.getElementById('cartItemsContainer');
+            
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = `
+                    <div class="empty-cart text-center py-4">
+                        <i class="fa-solid fa-cart-shopping fa-3x mb-3 text-muted"></i>
+                        <h4>Tu carrito está vacío</h4>
+                        <p class="text-muted">Agrega algunas camisetas retro para verlas aquí</p>
+                    </div>
+                `;
+                document.getElementById('cartTotalAmount').textContent = '₡0';
+                return;
+            }
+            
+            let cartHTML = '';
+            let totalAmount = 0;
+            
+            cart.forEach((item, index) => {
+                const itemTotal = item.price * item.quantity;
+                totalAmount += itemTotal;
+                
+                cartHTML += `
+                    <div class="cart-item d-flex align-items-center mb-3 pb-3 border-bottom">
+                        <img src="${item.image}" class="cart-item-image me-3" alt="${item.name}" style="width: 80px; height: auto;">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">${item.name}</h6>
+                            <div class="text-muted small">
+                                <span>Talla: ${item.size}</span>
+                            </div>
+                            ${item.customization.playerCustomization ? 
+                                `<div class="text-muted small">
+                                    <span>Personalización: ${item.customization.playerCustomization}</span>
+                                </div>` : ''}
+                            ${item.customization.parches ? 
+                                `<div class="text-muted small">
+                                    <span>Parches: ${item.customization.parches}</span>
+                                </div>` : ''}
+                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                <div>
+                                    <span class="fw-bold">₡${itemTotal.toLocaleString('es-CR')}</span>
+                                    <small class="text-muted"> (₡${item.price.toLocaleString('es-CR')} x ${item.quantity})</small>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <button class="btn btn-sm btn-outline-secondary decrease-quantity" data-index="${index}">-</button>
+                                    <span class="mx-2">${item.quantity}</span>
+                                    <button class="btn btn-sm btn-outline-secondary increase-quantity" data-index="${index}">+</button>
+                                    <button class="btn btn-sm btn-outline-danger ms-2 remove-item" data-index="${index}">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            cartItemsContainer.innerHTML = cartHTML;
+            document.getElementById('cartTotalAmount').textContent = `₡${totalAmount.toLocaleString('es-CR')}`;
+            
+            // Agregar event listeners a los botones del carrito
+            document.querySelectorAll('.increase-quantity').forEach(button => {
+                button.addEventListener('click', function() {
+                    const index = parseInt(this.getAttribute('data-index'));
+                    cart[index].quantity += 1;
+                    localStorage.setItem('futbolRetroCart', JSON.stringify(cart));
+                    updateCartCount();
+                    loadCartItems();
+                });
+            });
+            
+            document.querySelectorAll('.decrease-quantity').forEach(button => {
+                button.addEventListener('click', function() {
+                    const index = parseInt(this.getAttribute('data-index'));
+                    if (cart[index].quantity > 1) {
+                        cart[index].quantity -= 1;
+                    } else {
+                        cart.splice(index, 1);
+                    }
+                    localStorage.setItem('futbolRetroCart', JSON.stringify(cart));
+                    updateCartCount();
+                    loadCartItems();
+                });
+            });
+            
+            document.querySelectorAll('.remove-item').forEach(button => {
+                button.addEventListener('click', function() {
+                    const index = parseInt(this.getAttribute('data-index'));
+                    cart.splice(index, 1);
+                    localStorage.setItem('futbolRetroCart', JSON.stringify(cart));
+                    updateCartCount();
+                    loadCartItems();
+                });
+            });
+        }
+    </script>
 </body>
 </html>

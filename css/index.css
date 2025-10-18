@@ -102,6 +102,9 @@ main {
 
 
 
+
+
+
 /*ALERTA DE INFORMACION*/
 
 #alert-additional-content-5 {
@@ -279,6 +282,23 @@ main {
     }
 
 
+    /* Menú desplegable oculto por defecto */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #fff;
+  min-width: 180px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+.dropdown-futbol {
+  position: relative;
+}
+/* Mostrar al activar */
+.dropdown-futbol.active .dropdown-content {
+  display: block;
+}
+
     
 
     
@@ -339,7 +359,7 @@ footer {
     }
 
     #myCarousel {
-        margin-top: 51px !important;
+        margin-top: 1px !important;
     }
 
     .navbar-brand img {
@@ -481,15 +501,6 @@ footer {
     }
 
     /* ====== MENU HAMBURGUESA (MÓVIL) ====== */
-    .menu-toggle {
-        display: block;
-        background: none;
-        border: none;
-        color: rgb(255, 255, 255);
-        font-size: 28px;
-        cursor: pointer;
-        margin: 10px 15px;
-        z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
-    } 
+
 
     

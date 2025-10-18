@@ -187,13 +187,13 @@
         }
 
       .card-img-top {
-        
-        height: 100%;
+        width: 100%;
+        }
+
+        .row.mb-4 {
+            margin-left:4px;
         }
         
-
-
-
 
 
 
